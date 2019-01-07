@@ -1,0 +1,66 @@
+lab 01
+Enter your chosen Unix environment.  For the word ‘command’ assume it is a one line command unless explicitly stated otherwise.  
+
+*******************************************************************************
+*********State what command(s) you used to accomplish each task.***************
+*******************************************************************************
+
+1. What unix-based OS you are using (Ubuntu, Fedora, OSX, etc...)?
+
+
+2. What are command line options (also called parameters)?
+
+
+3. What are ALL the files in your home directory (the directory you start in) whose name contains the word ‘bash’?  What command did you use?
+
+
+4. Create a new directory in your home and call it lab01.
+
+
+5. Create a directory inside of lab01 named lab01sub while still in the home directory.
+
+
+6. Create a file inside lab01sub named readme.please.txt, the file can be empty
+
+
+7. What is the full (absolute) path of lab01sub? What command did you use?
+
+
+8. If your present working directory is lab01, name three 1 line commands that will return you to your home directory?
+
+
+9. Copy the readme.please.txt (that is in the current working directory) file into your home directory (not the directory named home, the top level directory of your personal files)
+
+
+10. Rename this new file to be useless.txt
+
+
+11. Explain what |, <, >, and >> do when used on the command prompt.
+
+
+12. What is the difference between * and ? in filename wildcards?
+
+
+13. What command would you type in order to determine the number of lines in somefile.txt that do NOT contain HI hi Hi or hI?  Hint, grep is your friend.
+
+
+14. What 1 line command would you type to generate a file names.txt that contains a list of users currently on the system sorted lexicographically (default order of sort) (hint: who is on the system)?
+
+
+15. What does the –r option do for the rm command?  How about –f?  Hint: use man.
+
+
+16. Is executing the command “rm –r *” from your home directory a good idea?  Why/why not (what would it do)?
+
+
+Turn in: Please edit this document and submit via github as a .pdf or .txt.
+Due: January 16, 2019 2359
+
+How to Turn in:  Make sure you unix-commands.txt is in your lab01 directory.  Then enter the directory and type:
+$ git pull
+$ git add unix-commands.txt
+$ git commit -m “lab01”
+$ git push
+
+
+Note: There is no auto-grader for this assignment.
