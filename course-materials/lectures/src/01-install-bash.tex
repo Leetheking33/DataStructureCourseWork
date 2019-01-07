@@ -1,0 +1,207 @@
+%Paul E. West
+
+%\documentclass[xcolor=svgnames]{beamer}
+\documentclass{beamer}
+\usepackage[boxed,vlined,figure]{algorithm2e}
+
+%\usecolortheme[named=FireBrick]{structure}
+%\usecolortheme[named=black]{structure}
+%\usecolortheme{beetle}
+%\usecolortheme{beaver}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\setbeamercolor{background canvas}{bg=Gold!25}
+%\setbeamercolor{background canvas}{bg=Black!100}
+%\setbeamercolor{foreground}{bg=Gold!25}
+%\setbeamercolor{normal text}{fg=green,bg=black}
+%\setbeamercolor*{palette primary}{use=structure,fg=green,bg=black}
+
+\mode<presentation>{
+    \usetheme{Darmstadt}
+    \setbeamercovered{invisible}
+    %\setbeamercovered{transparent}
+    \setbeamercolor*{palette primary}{use=structure,fg=white,bg=blue}
+    \setbeamercolor*{palette secondary}{use=structure,fg=white,bg=blue}
+    \setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=blue}
+}
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+%\usepackage{epsfig}
+\usepackage{ulem}
+\usepackage{color,soul}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{url,hyperref}
+\definecolor{beamer@blendedblue}{rgb}{1,.6,.2}
+%\usepackage{tikz}
+%\usetikzlibrary{shapes}
+%\usetikzlibrary{arrows}
+%\tikzstyle{block}=[draw opacity=0.7, line width=1.4cm]
+\usepackage{listings}
+\lstset{language=Java}
+\lstset{showspaces=false}
+\lstset{showstringspaces=false}
+\lstset{tabsize=4}
+\lstset{basicstyle=\tiny}
+
+
+%\usecolortheme[overlystylish]{albatross}
+%\usecolortheme[]{lily}
+%\usecolortheme[]{albatross}
+%\usecolortheme[]{orchid}
+%\setbeamercolor{normal text}{fg=green!10}
+
+\title{CSCI 315: Data Structures \\ Installing Bash on Ubuntu on Windows}
+\author{Paul E. West, PhD}
+
+\institute{
+  Department of Computer Science\\
+  Charleston Southern University
+}
+
+\subject{Software Programming}
+%\keywords{Performance Counters, Multicore}
+
+%\pgfdeclareimage[height=1.0cm]{university-logo}{../imgs/csu-logo}
+\pgfdeclareimage[height=0.75cm]{university-logo}{../imgs/csu-logo}
+%\pgfdeclareimage[height=0.50cm]{university-logo}{../imgs/csu-logo}
+\logo{\pgfuseimage{university-logo}}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section{Introduction}
+\subsection{}
+
+\begin{frame}{What is it?}
+\begin{itemize}
+\item I have always taught this course from a *nix environment.
+\item Recently, Microsoft has create a Linux Subsystem for Windows.
+\item With this subsystem we can run *nix commands without needing to virtualize resources
+\end{itemize}
+\end{frame}
+
+\section{How}
+\subsection{}
+
+\begin{frame}{Overview}
+\begin{itemize}
+\item There are two main steps to install Bash:
+\begin{enumerate}
+\item First enable to subsystem for Windows
+\item Install the Ubuntu environment
+\end{enumerate}
+\item Afterwards you can install any software that would work under Ubuntu 16.04.
+\item Our machines already have the subsystem enabled, but you are in charge of installing bash!
+\item Keep in mind each part of this can take awhile as Windows enjoys rebooting.
+\end{itemize}
+\end{frame}
+
+\subsection{}
+
+\begin{frame}{Enabling Bash Part 1 of 3}
+\begin{itemize}
+\item First ensure you have Windows 10 with at least the creator's update.
+\begin{enumerate}
+\item Press Windows key + R
+\item type in winver and press enter
+\item Make sure you have version 1703 or higher
+\item If you don't you will need to install the Creator's update first.
+\end{enumerate}
+\item Warning: If you don't install the Creator's update than Ubuntu will not have the necessary software for this course!
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Enabling Bash Part 2 of 3}
+\begin{itemize}
+\item Now Enable Developer mode:
+\begin{enumerate}
+\item Settings->Update and Security->For Developers
+\item Turn on Developer Mode:
+\item You may need to wait for components to install and then reboot.
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Enabling Bash Part 3 of 3}
+\begin{itemize}
+\item Now Enable the subsystem:
+\begin{enumerate}
+\item Open Control Panel
+\item Click Programs-> Turn Windows features on and off
+\item Check "Windows Subsystem for Linux (Beta)
+\item Click okay.
+\item You will have wait for components to install and then reboot.
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\subsection{}
+
+\begin{frame}{Bash Installation}
+\begin{itemize}
+\item Now install Bash:
+\begin{enumerate}
+\item open up the command line
+\item type in 'bash' and hit enter\\
+    - If you get an "Cannot launch bash because the LX subsystem has an install, uninstall, or servicing operation pending." Get me because you will need to run "sc stop lxssmanager" as administrator first
+\item Press y and enter to download and install
+\item Create a unix username and password for you
+\item Now install some basic packages: \\
+\$ sudo apt install g++ make vim-gtk valgrind gnuplot
+\end{enumerate}
+\item This whole process will take a long time, be ready for it!
+\end{itemize}
+\end{frame}
+
+\section{Alternative}
+\subsection{}
+
+\begin{frame}{SSH over to Zion}
+\begin{itemize}
+\item An alternative to all of this is to SSH (putty) over to Zion.
+\item Zion is a machine running on the CSU network.
+\item To SSH over:
+\begin{itemize}
+\item Linux: \$ ssh -p 2222 coins.csuniv.edu
+\item Windows: Download putty and enter coins.csuniv.edu with port 2222
+\item For either OS, use your CS CSU username and password.
+\end{itemize}
+\item All packages should be installed.
+\item Keep in mind that the system does go down from time to time, but should remain up.
+\end{itemize}
+\end{frame}
+%\begin{frame}{Event Based Processor}
+%\begin{columns}[c]
+%\column{0.25\textwidth}
+%\begin{block}{OS driven Execution}
+    %\includegraphics[width=1.0\textwidth]{imgs/normproc.png}
+%\end{block}
+%\column{0.25\textwidth}
+%\begin{block}{Event Driven Execution}
+    %\includegraphics[width=1.0\textwidth]{diagrams/eventproc.png}
+%\end{block}
+%\column{0.5\textwidth}
+%\begin{itemize}
+    %\item Normal execution: kernel/software driven
+    %\item Event based : event driven
+    %\item Performance monitoring is event based
+    %\item Next task based on event not scheduled by kernel
+    %\item 5.92 times speedup for control dominated programs
+%\end{itemize}
+%\end{columns}
+%\end{frame}
+
+\end{document}
