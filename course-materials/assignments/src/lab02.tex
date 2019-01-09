@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{listings}
+\usepackage{color}
+\textwidth=7in
+\textheight=9.5in
+\topmargin=-1in
+\headheight=0in
+\headsep=.5in
+\hoffset  -.85in
+
+\definecolor{mygray}{rgb}{0.4,0.4,0.4}
+\definecolor{mygreen}{rgb}{0,0.8,0.6}
+\definecolor{myorange}{rgb}{1.0,0.4,0}
+
+\lstset{
+basicstyle = \ttfamily,columns=fullflexible,
+commentstyle=\color{mygray},
+frame=single,
+numbers=left,
+numbersep=5pt,
+numberstyle=\tiny\color{mygray},
+keywordstyle=\color{mygreen},
+showspaces=false,
+showstringspaces=false,
+stringstyle=\color{myorange},
+tabsize=2
+}
+
+\pagestyle{empty}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{document}
+
+\begin{center}
+{\bf lab 02 Makefiles}
+
+\end{center}
+
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\renewcommand{\arraystretch}{2}
+\setlength{\tabcolsep}{6pt} % General space between cols (6pt standard)
+\renewcommand{\arraystretch}{.5} % General space between rows (1 standard)
+
+\vskip.15in
+\noindent\textbf{Instructions:} In this lab please develop a makefile for the code provided in your lab02 directory.
+
+Please ensure the following:
+\begin{enumerate}
+\item Rules to compile each .cpp file into a .o file.  Those .o files should be create in an objs directory. 
+\begin{itemize}
+\item You will need a rule to create a obj directory and then put the .o file in there when compiling.
+\end{itemize}
+\item Add an ``all'' rule that:
+\begin{enumerate}
+\item Compiles all cpp files to .o files into the objs directory
+\item After creating the .o files, link them into an executable file in the lab02 directory.
+\end{enumerate}
+\item Create a rule ``run'' that runs your program with valgrind.
+\item Finally create a rule ``clean'' that removes the object files, and the executable.
+\end{enumerate}
+
+\vskip.15in
+\noindent\textbf{Google Help:} \\
+For this assignment feel free to Google help.  Just make sure you cite!  I recommend putting a comment in your makefile telling me which website you used.
+
+\vskip.15in
+\noindent\textbf{How to turn in:} \\
+Turn in via GitHub.  Ensure the file(s) are in your directory and then:
+\begin{itemize}
+\item \$ git add $<$files$>$
+\item \$ git commit 
+\item \$ git push
+\end{itemize}
+
+\vskip.15in
+\noindent\textbf{Due Date:}
+January 02, 2019 2359
+
+\vskip.15in
+\noindent\textbf{Teamwork:} No teamwork, your work must be your own.
+
+\end{document}
