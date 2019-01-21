@@ -90,7 +90,11 @@ Lines 3 and 4 create ints on the heap and line 7 only deletes one of the of them
 
 16) (2 points) Describe the difference between statically (stack) and dynamically(heap) allocated memory. Why does C++ support both types?
 
+Data allocated on the stack are strored to the memory and access to this memory is fast. Its allocation is dealt with when the program is compiled.
 
+Data allocated on the heap has its memory allocated at run time and accessing this memory is a bit slower. Heap size is limited by the size of virtual memory. Tis mean data on the heap can be allocated and freed at anytime making the heap harder to keep track of. 
+
+The reason c++ allows this is because it allows for effecient coding not all data needs to exist throughout the entirety of the program. This can allow for much faster processing. So finding the perfect balence between the two can be for the processes benfit.
 
 
 
