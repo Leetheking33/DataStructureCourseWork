@@ -19,28 +19,40 @@ int *p2 = arr;
 p2[2] = 15;
 
 6) Change the 4th value (the 30) in arr to 35 without using [ ] and without using arr. 
-
+*(p2 + 3) = 35;
 
 7) Change p2 to point to the third item in arr without using arr. 
-
+p2 = (p2 + 2);
 
 8) Change the item pointed at by p2 to 77 without using arr. 
-
+*p2 = 77;
 
 9) Write a Boolean expression that returns true iff p1 and p2 are pointing to an equivalent value. 
-
+if (*p1 == *p2)
+                cout << "true" << endl;
  
 10) Write a Boolean expression that returns true iff p1 and p2 are pointing to the exact same location. 
-
+if (p1 == p2)
+        cout << "true" << endl;
  
 11) Make p1 point to a dynamically allocated integer (make sure to create that integer!) 
+//first two lines create integer
+int *c = new int;
+        *c = 5;
 
+// this line of code answers the question
+        p1 = c;
 
 12) Free the memory at p1. 
-
+delete p1;
 
 13) Make p1 point to a dynamically allocated array of x integers (again, create that array!) 
+int *ar = new int[x];
+        for (int i=0; i < x; i++){
+                ar[i] = 0;
+        }
 
+p1 = ar;
 
 14) Free the memory at p1.
 
@@ -57,8 +69,11 @@ p2[2] = 15;
 (8) *p=15;
 
 Problems: 
+1 creates a int pointer on the stack that points to random memory location this is bad programming and not safe. I instead would have codeded it like so:
+int *p = NULL; 
+This way it points to null instead of random memory.
 
-
+Lines 3 and 4 create ints on the heap and line 7 only deletes one of the of them so by the end of the code there is still memory on the heap which results in memory loss. This is bad coding. It is also bad practice to have the same pointer point to two ints created on the heap before freeing memory. I would have fixed this by introducing a new pointer to hold the new int on line 5. I would also delete the new pointer I made and p before moving to line 8.
 
 
 
