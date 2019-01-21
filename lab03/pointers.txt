@@ -4,19 +4,19 @@ int x=7, arr[5]={0, 10, 20, 30, 40};
 For questions 1-14, the answers are each exactly ONE line of C++ code.  Also, you may assume an previous line of code you wrote are active.
 
 1) Declare a pointer p1 that is initially pointing at x. 
-
+int *p1 = &x;
 
 2) Change the value of x to 33 without using x. 
-
+*p1 = 33;
 
 3) Declare a pointer named p2 pointing at the first item in arr. 
-
+int *p2 = arr;
 
 4) Change the first item in arr to 5 without using arr. 
-
+*p2 = 5;
 
 5) Change the 3rd value (the 20) in arr to 15 using [ ] and without using arr. 
-
+p2[2] = 15;
 
 6) Change the 4th value (the 30) in arr to 35 without using [ ] and without using arr. 
 
