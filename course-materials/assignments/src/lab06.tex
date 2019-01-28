@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage{listings}
+\usepackage{color}
+\textwidth=7in
+\textheight=9.5in
+\topmargin=-1in \headheight=0in
+\headsep=.5in
+\hoffset  -.85in
+
+\definecolor{mygray}{rgb}{0.4,0.4,0.4}
+\definecolor{mygreen}{rgb}{0,0.8,0.6}
+\definecolor{myorange}{rgb}{1.0,0.4,0}
+
+\lstset{
+basicstyle = \ttfamily,columns=fullflexible,
+commentstyle=\color{mygray},
+frame=single,
+numbers=left,
+numbersep=5pt,
+numberstyle=\tiny\color{mygray},
+keywordstyle=\color{mygreen},
+showspaces=false,
+showstringspaces=false,
+stringstyle=\color{myorange},
+tabsize=2
+}
+
+\pagestyle{empty}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{document}
+
+\begin{center}
+{\bf lab 06: Review of C++ Arrays}
+
+\end{center}
+
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\renewcommand{\arraystretch}{2}
+\setlength{\tabcolsep}{6pt} % General space between cols (6pt standard)
+\renewcommand{\arraystretch}{.5} % General space between rows (1 standard)
+
+\vskip.15in
+\noindent\textbf{How to Add the Webhook:}
+To add the webhook:\\
+\begin{enumerate}
+\item Open up \textbf{your} github on Github.com
+\item Go to settings.
+\item Click Webhooks.
+\item Click add webhooks.
+\item The Payload URL is: \\
+http://csci.csuniv.edu:2234/github/build-csci-315-spring-2019.php \\
+\textbf{\underline{Select json for content type.}}
+\item Click add webhook.
+\end{enumerate}
+Remember, after the first push, please wait 5-10 minutes for the auto-grader to get your repository.  Then subsequent pushes should receive a grade.
+
+
+\vskip.15in
+\noindent\textbf{Instructions:} This lab is to review arrays in C++.  While Java arrays have similarities with C++ arrays, there are differences.  First, Java arrays are objects, while C++ arrays are just sequential list of elements.  The key usage difference is that C++ does not store any information about the array (like length.)  Therefore any extraneous information must be stored separately. \\
+
+\textbf{Note:}Your header file should be in src/arrays.hpp, your C++ code should be in src/arrays.cpp \\
+
+I do not need a main file.
+
+Implement the following functions:
+\begin{lstlisting}[language=C++]{Name=test2}
+/* Returns the number of elements in the array that are less than 0. */
+int countNegatives(const int array[], int size);
+
+/* Find the smallest odd value in the array. 
+ * Returns -1 if there is no odd value in the array.
+ */
+int findMinOdd(const int array[], int size);
+
+/* Returns the index in the array where value is found.  
+ * Return -1 if the value is not present in the array.
+ */
+int search(const int array[], int size, int value);
+
+/* Removes an item at position index by shifting later elements left.
+ * Returns true iff 0 <= index < size.
+ */
+bool remove(int array[], int size, int index);
+\end{lstlisting}
+
+\vskip.15in
+\noindent\textbf{Testing:} \\
+Please write some test cases to ensure you code is working correctly.  You may utilize CXXtestgen or write you own manual test cases in a main file.
+
+\vskip.15in
+\noindent\textbf{How to turn in:} \\
+Turn in via GitHub.  Ensure the file(s) are in your directory and then:
+\begin{itemize}
+\item \$ git add $<$files$>$
+\item \$ git commit 
+\item \$ git push
+\end{itemize}
+
+\vskip.15in
+\noindent\textbf{Due Date:}
+February 04, 2019 2359
+
+\vskip.15in
+\noindent\textbf{Teamwork:} No teamwork, your work must be your own.
+
+\end{document}
