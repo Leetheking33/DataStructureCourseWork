@@ -29,7 +29,7 @@ class MyTestSuite1 : public CxxTest::TestSuite {
             }
         }
 
-        void test2(void) {
+        void test4(void) {
             int array[] = { 7,34,342,-12,518,-3,12,14};
             TS_ASSERT_EQUALS(remove(array, 8, 7), true);
             int ans1[] = { 7,34,342,-12,518,-3,12,14};
