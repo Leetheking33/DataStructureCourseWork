@@ -1,0 +1,7 @@
+problem1 = O(n)
+problem2 = O(n)
+problem3 = O(n^2)
+problem4 = O(log(base2)n)
+problem5 = O(n*log(base2)n) 
+ 
+
