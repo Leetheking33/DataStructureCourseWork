@@ -1,0 +1,5 @@
+g++ -Wall -O2 src/second.cpp src/add.cpp src/main.cpp -o first
+./first
+car2.getName() = batmobile
+dodge.getName() = batmobile
+makefile:23: recipe for target 'run' failed
