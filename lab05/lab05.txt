@@ -18,11 +18,13 @@
 	a. in line 4 when *y was assigned to point at x+10 it made y point to the 11th element of the array or 10. So when y[10] is printed it goes up 10 elements to the 21st element of the array which is 20.
 	b. delete x; 
 	c. delete (int *)(y-10);
+DPW: You forgot the [].
 
 5.
 	a. the value of x is the memory address of the first element in the first array that was dynamically allocated. The value of y is the memory address of the first element in the 2nd array dynamically allocated.
 	b. The value of Z in line 14 holds the memory address of x. The value of Z in 16 holds the memory adress of y
 	c. The code fragment (*z)[10] mean that the code is going to the 10 index in the arrays memory location and dereferncing it to get the 11th element of the array and an actual value.
+DPW: No, z is dereferenced first then jumps to the 10th element.
 	d. in line 13 the code z = &x; makes z hold the memory location of x which points to the memory location of the first element of the first array that was dynamically allocated. So when (*z)[10] is printed it prints the 11th element in that array, 10. In line 15 the code z = &y; makes z hold the memory location of y which points to the memory location of the first element of the 2nd array that was dynamically allocated. So when (*z)[10] is printed it prints the 11th element in that array, 90.
 	e. delete x;
 	   delete y;
