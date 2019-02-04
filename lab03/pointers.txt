@@ -43,6 +43,8 @@ int *c = new int;
 // this line of code answers the question
         p1 = c;
 
+DPW: p1 = new int;  also works.
+
 12) Free the memory at p1. 
 delete p1;
 
@@ -54,8 +56,11 @@ int *ar = new int[x];
 
 p1 = ar;
 
+DPW: No need to initialize to 0.
+
 14) Free the memory at p1.
 
+DPW: =(
 
 15) (4 points) Describe what is wrong with the following code segment, assuming it is all part of main(). Indicate if something is a compile time or runtime error or just bad programming. Also indicate how you would fix it. Line numbers have been added in ( ) for ease of reference.  There are several things with the code and for full credit you must find all of them.
 

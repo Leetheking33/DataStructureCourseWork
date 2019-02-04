@@ -1,0 +1,36 @@
+1.
+	a. z = 32.
+	b. the variable y holds the memory address of the variable x.
+	c. all three exist on the stack.
+
+2.
+	a. z = 200
+	b. both z and x exist on the stack
+	c. in line 4 the code is casting the integer 200 into a pointer to an integer which is bad coding that can result in a seg fault when you try to dereferance x because the memory address of 200 was never set so there is no telling what x is pointing to.
+
+3.
+	a. the output will be undefined because the elements of the dynacically alocated array have not been set.
+	b. x and z both exist on the stack
+	c. on line 4 the new int[100] array exist on the heap because it was allocated dynamically.
+	d. the dyamically allocated array was never deleted leading to memory leak.
+
+4.
+	a. in line 4 when *y was assigned to point at x+10 it made y point to the 11th element of the array or 10. So when y[10] is printed it goes up 10 elements to the 21st element of the array which is 20.
+	b. delete x; 
+	c. delete (int *)(y-10);
+
+5.
+	a. the value of x is the memory address of the first element in the first array that was dynamically allocated. The value of y is the memory address of the first element in the 2nd array dynamically allocated.
+	b. The value of Z in line 14 holds the memory address of x. The value of Z in 16 holds the memory adress of y
+	c. The code fragment (*z)[10] mean that the code is going to the 10 index in the arrays memory location and dereferncing it to get the 11th element of the array and an actual value.
+	d. in line 13 the code z = &x; makes z hold the memory location of x which points to the memory location of the first element of the first array that was dynamically allocated. So when (*z)[10] is printed it prints the 11th element in that array, 10. In line 15 the code z = &y; makes z hold the memory location of y which points to the memory location of the first element of the 2nd array that was dynamically allocated. So when (*z)[10] is printed it prints the 11th element in that array, 90.
+	e. delete x;
+	   delete y;
+
+6.
+	a. student is a pointer to a student datatype that points to the memory location of the first element in the new dynamic array
+ 
+	b. ** studentsPtr points to the memory location of the dynamically created student pointer that points to the first element in the array being created in line 12.
+	c. studentsPtr  
+	e. delete studentsPtr;
+	   delete students; 
