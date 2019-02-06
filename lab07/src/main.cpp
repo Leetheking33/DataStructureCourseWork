@@ -7,7 +7,6 @@ using namespace std;
 int main(int argc, char *argv[]) {
     /* You may write manual tests here. */
 	int Arr[10] = {3,33,9,3,20,59,69,93,6,43};
- 	int *ptr = NULL;
 	int deez = 0;
 
 	//Print origanal array
