@@ -66,6 +66,7 @@ bool Array<T>::remove(const int index){
 		for(int i= index; i < mSize - 1; i++){
 			mArr[i] = mArr[i + 1];
                 }
+		mSize -= 1;
                 return true;
         }
 return false;
