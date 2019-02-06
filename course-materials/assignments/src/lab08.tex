@@ -1,0 +1,185 @@
+\documentclass[12pt]{article}
+\usepackage{listings}
+\usepackage{color}
+\textwidth=7in
+\textheight=9.5in
+\topmargin=-1in
+\headheight=0in
+\headsep=.5in
+\hoffset  -.85in
+
+\definecolor{mygray}{rgb}{0.4,0.4,0.4}
+\definecolor{mygreen}{rgb}{0,0.8,0.6}
+\definecolor{myorange}{rgb}{1.0,0.4,0}
+
+\lstset{
+basicstyle = \ttfamily,columns=fullflexible,
+commentstyle=\color{mygray},
+frame=single,
+numbers=left,
+numbersep=5pt,
+numberstyle=\tiny\color{mygray},
+keywordstyle=\color{mygreen},
+showspaces=false,
+showstringspaces=false,
+stringstyle=\color{myorange},
+tabsize=2
+}
+
+\pagestyle{empty}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{document}
+
+\begin{center}
+{\bf lab 08: Linked Lists}
+\end{center}
+
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\renewcommand{\arraystretch}{2}
+\setlength{\tabcolsep}{6pt} % General space between cols (6pt standard)
+\renewcommand{\arraystretch}{.5} % General space between rows (1 standard)
+
+\vskip.15in
+\noindent\textbf{Instructions:} For this lab we will complete our implementation of a Singly Linked List and a Doubly Linked List
+
+Implement the following classes and functions:
+\begin{lstlisting}[language=C++]{Name=test2}
+/* SLL = Singly Linked List */
+template<class T>
+class SLList {
+    private:
+        /* Class exercise to fill in. */
+    public:
+        /* Empty constructor shall create an empty Linked List! */
+        SLList();
+
+        /* Do a deep copy of sll into the this.
+         * Note: This one uses a reference to a Singly Linked List!
+         */
+        SLList(const SLList<T> &sll);
+
+        /* Deconstructor shall free up memory */
+        ~SLList();
+
+        /* Return the current length of the Singly Linked List */
+        int getLength() const;
+
+        /* Insert at the end of the list.*/
+        bool append(const T &val);
+
+        /* Insert val at position pos.
+         * Return true if successful (it can be placed.)
+         * Otherwise return false.
+         */
+        bool insert(const int pos, const T &val);
+
+        /* Print out the Singly Linked List */
+        void print() const;
+
+        /* Remove the first instance of val
+         * Return true if found and removed.
+         * Otherwise return false.
+         */
+        bool remove(const T &val);
+
+        /* Retrieves the element at position pos */
+        T& operator[](const int pos);
+
+        /* Returns if the two lists contain the same elements in the
+         * same order.
+         */
+        bool operator==(const SLList<T> &list) const;
+};
+
+
+/* DLL = Doubly Linked List */
+template<class T>
+class DLList {
+    private:
+        /* Class exercise to fill in. */
+    public:
+        /* Empty constructor shall create an empty Linked List! */
+        DLList();
+
+        /* Do a deep copy of dll into the this.
+         * Note: This one uses a reference to a Singly Linked List!
+         */
+        DLList(const DLList<T> &dll);
+
+        /* Deconstructor shall free up memory */
+        ~DLList();
+
+        /* Return the current length of the Singly Linked List */
+        int getLength() const;
+
+        /* Insert at the end of the list.*/
+        bool append(const T &val);
+
+        /* Insert val at position pos.
+         * Return true if successful (it can be placed.)
+         * Otherwise return false.
+         */
+        bool insert(const int pos, const T &val);
+
+        /* Print out the Singly Linked List */
+        void print() const;
+
+        /* Remove the first instance of val
+         * Return true if found and removed.
+         * Otherwise return false.
+         */
+        bool remove(const T &val);
+
+        /* Retrieves the element at position pos */
+        T& operator[](const int pos);
+
+        /* Returns if the two lists contain the same elements in the
+         * same order.
+         */
+        bool operator==(const DLList<T> &list) const;
+};
+
+\end{lstlisting}
+
+\vskip.15in
+\noindent\textbf{Some Questions to Answer:} \\
+1) What is the performance difference for append between an Array, SLList, and DLList?\\
+2) What is the performance difference for insert between an Array, SLList, and DLList?\\
+3) What is the performance difference for operator$[]$ between an Array, SLList, and DLList?\\
+4) What is the performance difference for remove between an Array, SLList, and DLList?\\
+5) What is the performance difference for search between an Array, SLList, and DLList?\\
+You may answer in the comments of your code or in a separate .txt/.doc document.
+
+\vskip.15in
+\noindent\textbf{Write some test cases:} \\
+Create some test cases, using cxxtestgen, that you believe would cover all aspects of your code. We will be creating some of these test cases in class.
+
+\vskip.15in
+\noindent\textbf{Memory Management:} \\
+Now that are using new, we must ensure that there is a corresponding delete to free the memory.  Ensure there are no memory leaks in your code!
+\vskip.15in
+
+\vskip.15in
+\noindent\textbf{How to turn in:} \\
+Turn in via GitHub.  Ensure the file(s) are in your directory and then:
+\begin{itemize}
+\item \$ git add $<$files$>$
+\item \$ git commit 
+\item \$ git push
+\end{itemize}
+
+\vskip.15in
+\noindent\textbf{Due Date:}
+February 11, 2019 2359
+
+\vskip.15in
+\noindent\textbf{Teamwork:} No teamwork, your work must be your own.
+
+\end{document}
