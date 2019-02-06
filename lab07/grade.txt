@@ -1,32 +1,18 @@
-******************* Length Test *********************
+******************* Equal Test *********************
 g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = /srv/auto-grader/csci-315-spring-2019/run/000177/lab07/tests/length-test.cpp:4:24: fatal error: IntArray.hpp: No such file or directory
-+ 0 pts of 20.000
-Total grade so far: 0
+MAKE_ERROR = 
++ 33.333 pts of 33.333
+Total grade so far: 33.333
 ******************* Index Of Test *********************
 g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = /srv/auto-grader/csci-315-spring-2019/run/000177/lab07/tests/index-of-test.cpp:4:24: fatal error: IntArray.hpp: No such file or directory
-+ 0 pts of 20.000
-Total grade so far: 0
+MAKE_ERROR = 
++ 33.333 pts of 33.333
+Total grade so far: 66.666
 ******************* Remove Test *********************
 g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = /srv/auto-grader/csci-315-spring-2019/run/000177/lab07/tests/remove-test.cpp:4:24: fatal error: IntArray.hpp: No such file or directory
-+ 0 pts of 20.000
-Total grade so far: 0
-******************* Subsequence Test *********************
-g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = /srv/auto-grader/csci-315-spring-2019/run/000177/lab07/tests/isSubsequence-test.cpp:4:24: fatal error: IntArray.hpp: No such file or directory
-+ 0 pts of 20.000
-Total grade so far: 0
-******************* Find Intersection Test *********************
-g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = /srv/auto-grader/csci-315-spring-2019/run/000177/lab07/tests/find-intersection-test.cpp:4:24: fatal error: IntArray.hpp: No such file or directory
-+ 0 pts of 20.000
-Total grade so far: 0
-Auto-grader grade: 0
-*****************Finished lab07****************
+Failures = 1
+MAKE_ERROR = 
++ 16.667 pts of 33.334
+Total grade so far: 83.333
