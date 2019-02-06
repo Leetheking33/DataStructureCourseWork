@@ -12,9 +12,7 @@ MAKE_ERROR =
 Total grade so far: 66.666
 ******************* Remove Test *********************
 g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 1
+Failures = 
 MAKE_ERROR = 
-+ 16.667 pts of 33.334
-Total grade so far: 83.333
-Auto-grader grade: 83.333
-*****************Finished lab07****************
++ 33.334 pts of 33.334
+Total grade so far: 100.000
