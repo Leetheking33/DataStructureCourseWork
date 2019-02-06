@@ -1,26 +1,2 @@
-I am run number 000183.
+I am run number 000184.
 Pulling source code...
-------------------------------------------------
-Changes found in course-materials
-Changes found in create
-Changes found in lab09
-------------------------------------------------
-*****************Examining course-materials****************
-Auto-grader grade: *****************Finished course-materials****************
-*****************Examining create****************
-Auto-grader grade: *****************Finished create****************
-*****************Examining lab09****************
-******************* Stack PART *********************
-g++ -o bt-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = /srv/auto-grader/csci-315-spring-2019/run/000183/lab09/tests/stack-test.cpp:4:21: fatal error: stack.hpp: No such file or directory
-+ 0 pts of 50.000
-Total grade so far: 0
-******************* Queue PART *********************
-g++ -o bt-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = /srv/auto-grader/csci-315-spring-2019/run/000183/lab09/tests/queue-test.cpp:4:21: fatal error: queue.hpp: No such file or directory
-+ 0 pts of 50.000
-Total grade so far: 0
-Auto-grader grade: 0
-*****************Finished lab09****************
