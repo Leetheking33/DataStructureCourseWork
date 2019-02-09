@@ -1,11 +1,21 @@
 #ifndef SLLIST_HPP
 #define SLLIST_HPP
 
+/* Node */
+template<class T>
+class sNode {
+	public:
+	T mData;
+	sNode *mNext;
+};
+
 /* SLL = Singly Linked List */
 template<class T>
 class SLList {
     private:
         /* Class exercise to fill in. */
+	sNode<T> *mHead;
+	int mSize =0;	
     public:
 
         /* Empty constructor shall create an empty Linked List! */
