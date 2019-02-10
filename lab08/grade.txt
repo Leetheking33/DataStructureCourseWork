@@ -24,3 +24,5 @@ MAKE_ERROR =
 Total grade so far: 31.250
 WARNING: this lab requires an inspection from the Professor.
 The given grade is not final.
+Auto-grader grade: 31.250
+*****************Finished lab08****************
