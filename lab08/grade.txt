@@ -1,28 +1,26 @@
 ******************* Append Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
-Failures = 1
+Failures = 
 MAKE_ERROR = 
-+ 0 pts of 25.000
-Total grade so far: 0
++ 25.000 pts of 25.000
+Total grade so far: 25.000
 ******************* Equal Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
-Failures = 3
+Failures = 
 MAKE_ERROR = 
-+ 6.250 pts of 25.000
-Total grade so far: 6.250
++ 25.000 pts of 25.000
+Total grade so far: 50.000
 ******************* Insert Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
 + 25.000 pts of 25.000
-Total grade so far: 31.250
+Total grade so far: 75.000
 ******************* Remove Test *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
-Failures = 4
+Failures = 
 MAKE_ERROR = 
-+ 0 pts of 25.000
-Total grade so far: 31.250
++ 25.000 pts of 25.000
+Total grade so far: 100.000
 WARNING: this lab requires an inspection from the Professor.
 The given grade is not final.
-Auto-grader grade: 31.250
-*****************Finished lab08****************
