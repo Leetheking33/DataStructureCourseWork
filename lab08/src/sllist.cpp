@@ -13,24 +13,32 @@ template<class T>
 SLList<T>::SLList(const SLList<T> &sll) {
 	sNode<T> *rover = sll.mHead;
 	sNode<T> *newRov = NULL;
+	
+	if(sll.mHead == NULL){
+		mHead = NULL;
+	}
+	else{
 
-	for(int i=0; i < sll.mSize; i++){
-		if(i == 0){
+		for(int i=0; i < sll.mSize; i++){
+			if(i == 0){
+				sNode<T> *node = new sNode<T>();
+                		node->mData = rover->mData;
+				node->mNext = NULL;
+				mHead = node;
+				rover = rover->mNext;
+				newRov = mHead;
+				mSize +=1;
+			}
+			else{
 			sNode<T> *node = new sNode<T>();
-                	node->mData = rover->mData;
+			node->mData = rover->mData;
 			node->mNext = NULL;
-			mHead = node;
+			newRov->mNext = node;
 			rover = rover->mNext;
-			newRov = mHead;
+			newRov = newRov->mNext;
+			mSize +=1;	
+			}	
 		}
-		else{
-		sNode<T> *node = new sNode<T>();
-		node->mData = rover->mData;
-		node->mNext = NULL;
-		newRov->mNext = node;
-		rover = rover->mNext;
-		newRov = newRov->mNext;	
-		}	
 	}
 }
 
@@ -87,9 +95,13 @@ bool SLList<T>::insert(const int pos, const T &val) {
 	sNode<T> *prev = NULL;
 
 	sNode<T> *toAdd = new sNode<T>();
-
-	toAdd->mData = val;
 	
+	toAdd->mData = val;
+	if(mHead == NULL){
+		toAdd->mNext = NULL;
+		mHead = toAdd;
+	}
+
 	for(int i=0; i < pos; i++){
 		if(rover->mNext == NULL){
 			return false;
@@ -101,13 +113,8 @@ bool SLList<T>::insert(const int pos, const T &val) {
 	}
 	
 	toAdd->mNext = rover;
-	if(pos == 0){
-		mHead = toAdd;
-		return true;
-	}
-	else
-		prev->mNext = toAdd;
-	
+	prev->mNext = toAdd;
+	mSize += 1;	
 	return true;
 }
 
@@ -151,9 +158,9 @@ T& SLList<T>::operator[](const int pos) {
 		if(i == pos){
 			return rover->mData;
 		}
-		rover->mNext;
+		rover = rover->mNext;
 	}
-	return mHead->mData;
+	return rover->mData;
 }
 
 template<class T>
