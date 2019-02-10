@@ -23,6 +23,8 @@ int main(int argc, char *argv[]) {
 		cout << NewArr[i] << ", ";	
    	}
 	cout << endl;
+	
+	cout << "This index doees not exist " << NewArr[20] << endl;
 
         //test constructor using Referance
 	Array<int> RefArr(NewArr);
