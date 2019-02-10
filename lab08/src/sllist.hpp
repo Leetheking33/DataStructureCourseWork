@@ -76,7 +76,7 @@ template<class T>
 class DLList {
     private:
         /* Class exercise to fill in. */
-        sNode<T> *mHead;
+        dNode<T> *mHead;
         int mSize =0;
     public:
 
@@ -117,7 +117,7 @@ class DLList {
 
         /* Returns if the two lists contain the same elements in the
          * same order.*/
-        bool operator==(const SLList<T> &list) const;
+        bool operator==(const DLList<T> &list) const;
 };
 
 #include "sllist.cpp"
