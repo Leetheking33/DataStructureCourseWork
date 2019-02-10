@@ -8,39 +8,49 @@ int main(int argc, char *argv[]) {
     /* You may write manual tests here. */
    
 	//test empty constructor
-	SLList<int> list;
+	DLList<int> list;
 
 	      	
 	//test append and print
 	list.print();
-	cout << "The length of empty list "<< list.getLength() << endl;
+	cout << "The length of empty dll "<< list.getLength() << endl;
 	list.append(3);
-	cout << endl << "The length of list after 1 append is "<< list.getLength() << endl;
+	cout << endl << "The length of dll after 1 append is "<< list.getLength() << endl;
         list.print();
 	list.append(10);
-	cout << endl << "The length of list after 2 appends is "<< list.getLength() << endl;
+	cout << endl << "The length of dll after 2 appends is "<< list.getLength() << endl;
         list.print();
 	list.append(8);
-	cout << endl << "The length of list after 3 appends is "<< list.getLength() << endl;
+	cout << endl << "The length of dll after 3 appends is "<< list.getLength() << endl;
         list.print();
 	
+	list.insert(0,25);
+	cout << endl << "Dll after inserting 25 at 0 index: ";
+        list.print();
+
+	list.remove(8);
+	cout << endl << "Dll after removing 8: ";
+	list.print();
 	
+	cout << endl << "Append 50: ";
+	list.append(50);
+	list.print();
+	
+	cout << endl << "Insert 67 at index 1: ";
+	list.insert(1,67);
+	list.print();
+
+	cout << endl << "Length of dll: " << list.getLength() << endl;
+		
+	/*	
 	//This is the copy constructor test	
-	cout << "This is the new deep copy array: ";
-	SLList<int> newList(list);
+	cout << "This is the new deep copy dll: ";
+	DLList<int> newList(list);
 	newList.print();
 	cout << endl;
-	
-	cout << "Another deep copy of list: ";
-	SLList<int> shit(list);
-	shit.print();
-	cout << endl;
-	
-	cout << "Bullshit seg fault: ";
-	SLList<int> why(shit);
-	why.print();
-	cout << endl;	
-	
+	*/
+
+	/*
 	//test insert funct
 	cout << "This is list before the insert of 20 at index 2: ";
 	list.print();
@@ -68,7 +78,8 @@ int main(int argc, char *argv[]) {
 	cout << "list and newList are equal: " << (list == newList) << endl;
 
 	//test [] operator
-	cout << "20 + 3 = " << (list[1] + list[0]) << endl;	
+	cout << "20 + 3 = " << (list[1] + list[0]) << endl;
+	*/	
 	return 0;
 }
 
