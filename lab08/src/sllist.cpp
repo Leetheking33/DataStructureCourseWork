@@ -83,6 +83,32 @@ int SLList<T>::getLength() const {
  */
 template<class T>
 bool SLList<T>::insert(const int pos, const T &val) {
+	sNode<T> *rover = mHead;
+	sNode<T> *prev = NULL;
+
+	sNode<T> *toAdd = new sNode<T>();
+
+	toAdd->mData = val;
+	
+	for(int i=0; i < pos; i++){
+		if(rover->mNext == NULL){
+			return false;
+		}
+		
+		prev = rover;
+		rover = rover->mNext;
+
+	}
+	
+	toAdd->mNext = rover;
+	if(pos == 0){
+		mHead = toAdd;
+		return true;
+	}
+	else
+		prev->mNext = toAdd;
+	
+	return true;
 }
 
 /* Remove the first instance of val
@@ -91,6 +117,31 @@ bool SLList<T>::insert(const int pos, const T &val) {
  */
 template<class T>
 bool SLList<T>::remove(const T &val) {
+	sNode<T> *rover = mHead;
+	sNode<T> *prev = NULL;
+
+	if(mHead == NULL){
+		return false;
+	}
+
+	if(rover->mData == val){
+			mHead = rover->mNext;
+                        delete rover;
+			mSize -=1;
+                        return true;
+	}
+
+	while(rover != NULL){
+		if(rover->mData == val){
+			prev->mNext = rover->mNext;
+			delete rover;
+			mSize -= 1;
+			return true;
+		}
+		prev = rover;
+		rover = rover->mNext;
+	}
+	return false;
 }
 
 template<class T>
@@ -107,6 +158,26 @@ T& SLList<T>::operator[](const int pos) {
 
 template<class T>
 bool SLList<T>::operator==(const SLList<T> &list) const {
+	sNode<T> *rover = mHead;
+	sNode<T> *lover = list.mHead;
+	
+	if(mSize != list.mSize){
+		return false;
+	}
+	
+	if(mHead == NULL && list.mHead == NULL){
+		return true;
+	}
+
+	while(rover != NULL){
+		if(rover->mData == lover->mData){
+			rover = rover->mNext;
+			lover = lover->mNext;
+			continue;
+		}
+		return false;
+	}
+	return true;
 }
 
 #endif
