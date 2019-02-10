@@ -9,16 +9,6 @@ int main(int argc, char *argv[]) {
    
 	//test empty constructor
 	SLList<int> list;
-	/*list.append(10);
-	list.append(23);
-	list.append(55);
-	list.remove(10);
-	SLList<int> list2(list);
-	cout << "List: ";
-	list.print();
-	
-	cout << "List2: ";
-	list2.print(); */
 
 	      	
 	//test append and print
@@ -52,23 +42,11 @@ int main(int argc, char *argv[]) {
 	cout << endl;	
 	
 	//test insert funct
-	/*
-	SLList<int> Deez(list);
-	cout << "Deez: ";
-	Deez.print();
-	*/
 	cout << "This is list before the insert of 20 at index 2: ";
 	list.print();
 	cout << "This is list after: ";
 	list.insert(2,20);
-	list.print();
-	
-	/*
-	SLList<int> Boop(list);
-	cout << "Boop: ";
-	Boop.print();
-	cout << endl;
-	*/	
+	list.print();	
 	
 	//test remove funct
 	cout << "This is list before 10 is removed: ";
