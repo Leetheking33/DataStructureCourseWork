@@ -5,11 +5,13 @@ template <class T>
 class Array {
     private:
     /* You fill out the private contents. */
-
+	T *mArr = NULL;
+	int mSize = 0;
     public:
     /* Do a deep copy of the array into the list.
      * Note: This one uses a pointer!
      */
+
     Array(const T *array, const int size);
     /* Do a deep copy of the array into the list
      * Note: This one uses a reference to a List!
