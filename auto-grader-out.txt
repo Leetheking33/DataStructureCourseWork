@@ -1,34 +1,32 @@
-I am run number 000436.
+I am run number 000528.
 Pulling source code...
 ------------------------------------------------
-Changes found in lab08
+Changes found in Removing
+Changes found in delete
+Changes found in lab07
 ------------------------------------------------
-*****************Examining lab08****************
-******************* Append Test *********************
-g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = 
-+ 25.000 pts of 25.000
-Total grade so far: 25.000
+*****************Examining Removing****************
+Auto-grader grade: *****************Finished Removing****************
+*****************Examining delete****************
+Auto-grader grade: *****************Finished delete****************
+*****************Examining lab07****************
 ******************* Equal Test *********************
-g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
+g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
-+ 25.000 pts of 25.000
-Total grade so far: 50.000
-******************* Insert Test *********************
-g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
++ 33.333 pts of 33.333
+Total grade so far: 33.333
+******************* Index Of Test *********************
+g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
-+ 25.000 pts of 25.000
-Total grade so far: 75.000
++ 33.333 pts of 33.333
+Total grade so far: 66.666
 ******************* Remove Test *********************
-g++ -o sll-test -g -I src/ --std=c++14 src/sllist.cpp src/main.cpp
+g++ -o array-test -O2 -I src/ --std=c++14 src/array.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
-+ 25.000 pts of 25.000
++ 33.334 pts of 33.334
 Total grade so far: 100.000
-WARNING: this lab requires an inspection from the Professor.
-The given grade is not final.
 Auto-grader grade: 100.000
-*****************Finished lab08****************
+*****************Finished lab07****************
