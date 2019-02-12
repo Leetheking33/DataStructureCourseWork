@@ -34,6 +34,8 @@ class SLList {
          * Note: This one uses a reference to a Singly Linked List!
          */
         SLList(const SLList<T> &sll);
+	
+	void destroyList(); 
 
         /* Deconstructor shall free up memory */
         ~SLList();
@@ -87,6 +89,8 @@ class DLList {
          * Note: This one uses a reference to a Doubly Linked List!
          */
         DLList(const DLList<T> &dll);
+	
+	void destroyList();	
 
         /* Deconstructor shall free up memory */
         ~DLList();
