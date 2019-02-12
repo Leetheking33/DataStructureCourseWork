@@ -43,7 +43,24 @@ SLList<T>::SLList(const SLList<T> &sll) {
 }
 
 template<class T>
+void SLList<T>::destroyList(){
+        sNode<T> *rover = mHead;
+        sNode<T> *prev = mHead;
+
+        while(rover != NULL){
+                prev = rover;
+                rover = rover->mNext;
+                delete prev;
+        }
+        mHead = NULL;
+        delete rover;
+	mSize = 0;
+}
+
+
+template<class T>
 SLList<T>::~SLList() {
+	destroyList();
 }
 
 template<class T>
@@ -253,7 +270,23 @@ DLList<T>::DLList(const DLList<T> &dll) {
 }
 
 template<class T>
+void DLList<T>::destroyList(){
+	dNode<T> *rover = mHead;
+	dNode<T> *prev = mHead;
+
+	while(rover != NULL){
+		prev = rover;
+		rover = rover->mNext;
+		delete prev;
+	}
+	mHead = NULL;
+	delete rover;
+	mSize = 0;
+}
+
+template<class T>
 DLList<T>::~DLList() {
+	destroyList();
 }
 
 template<class T>

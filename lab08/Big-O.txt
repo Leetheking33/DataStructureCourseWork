@@ -1,0 +1,24 @@
+1. append
+array: best-O(1) avg-O(1)  worst-O(n)
+sll: O(1) if mTail is kept else O(n) as in my implementation
+dll: O(1) if mTail is kept else O(n) as in my implementation
+
+2. insert
+array: O(n)
+sll: O(n)
+dll: O(n) 
+
+3. [] operator
+array: O(1)
+sll: O(n)
+dll: O(n) 
+
+4. remove
+array: O(n)
+sll: O(n)
+dll: O(n)
+
+5. search
+array: O(n)
+sll: O(n)
+dll: O(n)
