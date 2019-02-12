@@ -52,8 +52,9 @@ void SLList<T>::destroyList(){
                 rover = rover->mNext;
                 delete prev;
         }
-        delete mHead;
+        mHead = NULL;
         delete rover;
+	mSize = 0;
 }
 
 
@@ -278,8 +279,9 @@ void DLList<T>::destroyList(){
 		rover = rover->mNext;
 		delete prev;
 	}
-	delete mHead;
+	mHead = NULL;
 	delete rover;
+	mSize = 0;
 }
 
 template<class T>
