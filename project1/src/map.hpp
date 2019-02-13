@@ -1,7 +1,33 @@
 #ifndef MAP_H
 #define MAP_H
+#include <list>
+using namespace std;
+
+/*
+class pair{
+	public:
+	const char *key;
+	int val;
+
+};
+*/
+
+class mNode{
+	public:
+	mNode *mNext;
+	mNode *mPrev;
+	const char *key;
+        int val;	
+
+};
+
 
 class Map{
+    private:
+	mNode *mHead;	    
+	int mSize = 0;
+
+
     public:
         Map();
         /* Adds (inserts) val with the associated key.
@@ -23,12 +49,16 @@ class Map{
          * Returns true if there was something to remove, false otherwise.
          */
         bool remove(const char *key);
+
+	void print() const;
     
         int howMany(const char *prefix);
-    
+   	
+       	void destroyMap();
+
         /* Frees all memory */
         ~Map();
-    private:
+	//private:
         /* Store you data here.  I highly recommend talking to me about your
          * data structure before implementing. */
 };
