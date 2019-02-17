@@ -30,14 +30,6 @@ int main(int argc, char *argv[]) {
 	*/
 	
 	srand(100);
-	
-
-	int *bigArray = new int[10000000];
-	for(int j=0; j < 10000000; j++){
-		bigArray[j] = rand();
-	}
-
-	Array<int> time(bigArray, 10000000);
 
 	//This is where timing starts
 	clock_t start, diff;
@@ -46,13 +38,22 @@ int main(int argc, char *argv[]) {
     double timeAmount;
 
     // We want to run our algorithm over varying sizes.
-    for (int i = 10000; i < 2000000; i += 10000) {
-        // Capture the start clock
+    for (int i = 10000; i < 3000000; i += 100000) {
+        
+	    int *bigArray = new int[i];
+       		for(int j=0; j < i; j++){
+		bigArray[j] = rand();
+		}
+
+        Array<int> time(bigArray, i);
+	
+
+	// Capture the start clock
         start = clock();
 
         // This is were your algorithm should be called.
         // Keep in mind that i is the SIZE of the input -- you may have to change it!
-        time.search(i);
+        time.binarySearch(i);
 
         // Capture the clock and subtract the start to get the total time elapsed.
         diff = clock() - start;
