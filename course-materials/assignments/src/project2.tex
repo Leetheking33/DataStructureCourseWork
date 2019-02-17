@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{hyperref}
+\textwidth=7in
+\textheight=9.5in
+\topmargin=-1in
+\headheight=0in
+\headsep=.5in
+\hoffset  -.85in
+
+\definecolor{mygray}{rgb}{0.4,0.4,0.4}
+\definecolor{mygreen}{rgb}{0,0.8,0.6}
+\definecolor{myorange}{rgb}{1.0,0.4,0}
+
+\lstset{
+basicstyle = \ttfamily,columns=fullflexible,
+commentstyle=\color{mygray},
+frame=single,
+numbers=left,
+numbersep=5pt,
+numberstyle=\tiny\color{mygray},
+keywordstyle=\color{mygreen},
+showspaces=false,
+showstringspaces=false,
+stringstyle=\color{myorange},
+tabsize=2
+}
+
+\pagestyle{empty}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{document}
+
+\begin{center}
+{\bf Project 2: Basic HTML Parsing and Crawling}
+
+\end{center}
+
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\renewcommand{\arraystretch}{2}
+\setlength{\tabcolsep}{6pt} % General space between cols (6pt standard)
+\renewcommand{\arraystretch}{.5} % General space between rows (1 standard)
+
+\vskip.15in
+\noindent\textbf{Instructions:} This project is divided into two parts: 
+\begin{enumerate}
+\item build a simple HTML parser that determines if your HTML tags are balanced, 
+\item find the number of webpages you can visit from a certain HTML page.  
+\end{enumerate}
+To keep things simple for this project, all pages will be local to your machine.
+
+\vskip.15in
+\noindent\textbf{Part 1: Basic HTML parsing} \\
+
+It is important to know if your HTML tags are balanced.  For example:
+\begin{lstlisting}[language=html]{Name=balance1}
+<html>
+    <body>
+        <b>
+            Hello World!
+        </b>
+    </body>
+</html>
+\end{lstlisting}
+is balanced since each tag has a begin tag ($<$tagname$>$) followed by an end tag ($<$tagname$>$) at the same ``level depth''.  For instance, consider the following:
+
+\begin{lstlisting}[language=html]{Name=balance1}
+<html>
+    <body>
+        <b>
+            Hello World!
+        </body>
+    </b>
+</html>
+\end{lstlisting}
+The above is not balanced because there is a $</$body$>$ ending a $<$b$>$ tag.  Given the following basic HTML definition your job is to determine if a given piece of HTML is balanced or not. \\
+
+\begin{tabular}{| l | l |} \hline
+HTML & $<$html$>$BODY$</$html$>$ \\ \hline
+BODY & $<$body$>$TEXT$</$body$>$ \\ \hline
+TEXT & STRING | STRING TEXT | TAG | TAG TEXT \\ \hline
+STRING & possibly empty string of printable characters other than '$<$ and '$>$ \\ \hline
+TAG & BOLD | ITALICS | LINK \\ \hline
+BOLD & $<$b$>$TEXT$</$b$>$ \\ \hline
+ITALICS & $<$i$>$TEXT$</$i$>$ \\ \hline
+LINK & $<$a href=URL$>$TEXT$</$a$>$ \\ \hline
+URL & STRING \\ \hline
+\end{tabular}
+
+\vskip.15in
+\noindent\textbf{Part 2: Basic Web Crawler} \\
+Now that we have a basic HTML parser, write a web crawler to determine the number of unique pages that can be visited from a certain page.  See example below:
+
+\vskip.15in
+\noindent\textbf{Example Output:} \\
+\begin{lstlisting}[language=html]{Name=balance3}
+./html-test pages/pokemon.html pages/theend.html pages/notbalanced.html pages/index.html
+Parsing: 'pages/pokemon.html'
+Parsing: 'pages/theend.html'
+Parsing: 'pages/notbalanced.html'
+Parsing: 'pages/index.html'
+pages/pokemon.html is balanced.
+pages/pokemon.html can visit 1 pages.
+pages/theend.html is balanced.
+pages/theend.html can visit 0 pages.
+pages/notbalanced.html is not balanced.
+pages/notbalanced.html can visit 0 pages.
+pages/index.html is balanced.
+pages/index.html can visit 2 pages.
+\end{lstlisting}
+
+pokemon.html, theend.html, and index.html are balanced while notbalanced.html is not.  Since notbalanced.html is not balanced, we say it can visit 0 pages since it does not parse.  Also, while an example is not given, if the link is not visit-able (IE the page does not exist), then do not count towards a possible link visit. Here is the explanation of the visit amounts:
+
+\begin{itemize}
+\item theend.html has no links in it, so the visit amount is 0.
+\item notbalanced.html has no links since it is not balanced.
+\item pokemon.html can visit one page (pages/theend.html) which is valid and a dead end.
+\item index.html can visit two pages even through it has one link.  The link goes to pages/pokemon.html, which is valid, and that page can visit another page pages/theend.html.
+\end{itemize}
+
+Keep in mind the visit amount is the amount of \textbf{unique} pages that can be visited from a certain page.
+
+\vskip.15in
+\noindent\textbf{Parsing:} \\
+The fist part of this project requires you to read a file and parse out the input.  This may seem daunting at first, but here are a couple of things to help out:
+\begin{itemize}
+\item Tags:
+\begin{itemize}
+\item begin with a ``$<$'' and end with a ``$>$''.
+\item do \textbf{not} have a $<$ or $>$ between the starting $<$ and ending $>$.  Therefore once you see a $<$ parse to a $>$ and that string is your tag.
+\item All tags, except the anchor tag ($<$a$>$), will have no attributes or whitespace.  That means the body tag will always be ``$<$body$>$'', there will be no spaces or other characters.  The same goes for the end tags.
+\item The anchor tag will \textbf{strictly} be in the form ``$<$a href=filename$>$''  In other words only one space will be there between the a and href.
+\end{itemize}
+\item If you encounter a tag that is not valid then the page is not balanced.
+\item I will ensure all tags are lower case.
+\item To ignore whitespace, parse everything one character at a time ignoring space, tab, newline, and carriage return. (`` $\backslash$t$\backslash$n$\backslash$r'')
+\end{itemize}
+
+\vskip.15in
+\noindent\textbf{Hints:} \\
+So far we have used arrays, linked lists, pointer, stacks, and queues.  Chances are you will be using more that one data structure to solve this problem, but you will only need the ones listed.
+
+Also, if you are familiar with the STL, you may use vector, stack, and queue from the STL library, but nothing else.
+
+\vskip.15in
+\noindent\textbf{Warning:} \\
+Data Structure projects are \textit{significantly} more demanding than labs.  It is imperative you start thinking about the data structure now!  If you hit a road block (and you should/will), please come talk to me.  When you talk to me be prepared to show me what you have thought of so far.  If you come in with an idea I will guide your idea to a good solution.  If you come in without and idea, I will tell you to keep thinking about it.  Keep in mind there are many good, fair, and terrible solutions to Data Structure projects.
+
+\vskip.15in
+\noindent\textbf{Write some test cases:} \\
+Part of this project grade will be how well you can write test cases.  You will be in charge of all test cases.
+
+\vskip.15in
+\noindent\textbf{How to turn in:} \\
+Turn in via GitHub.  Ensure the file(s) are in your directory and then:
+\begin{itemize}
+\item \$ git add $<$files$>$
+\item \$ git commit 
+\item \$ git push
+\end{itemize}
+
+\vskip.15in
+\noindent\textbf{Due Date:}
+March 11, 2019 2359
+
+\vskip.15in
+\noindent\textbf{Teamwork:} No teamwork, your work must be your own.
+
+\end{document}
