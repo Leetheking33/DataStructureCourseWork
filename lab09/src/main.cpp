@@ -32,12 +32,12 @@ int main(int argc, char *argv[]) {
 	srand(100);
 	
 
-	int *bigArray = new int[10000000];
-	for(int j=0; j < 10000000; j++){
+	int *bigArray = new int[20000000];
+	for(int j=0; j < 20000000; j++){
 		bigArray[j] = rand();
 	}
 
-	Array<int> time(bigArray, 10000000);
+	Array<int> time(bigArray, 20000000);
 
 	//This is where timing starts
 	clock_t start, diff;
@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
     double timeAmount;
 
     // We want to run our algorithm over varying sizes.
-    for (int i = 10000; i < 2000000; i += 10000) {
+    for (int i = 1000000; i < 2000000; i += 1000) {
         // Capture the start clock
         start = clock();
 
