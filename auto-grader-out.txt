@@ -1,2 +1,29 @@
 I am run number 000811.
 Pulling source code...
+------------------------------------------------
+Changes found in Removing
+Changes found in create
+Changes found in delete
+Changes found in lab09
+------------------------------------------------
+*****************Examining Removing****************
+Auto-grader grade: *****************Finished Removing****************
+*****************Examining create****************
+Auto-grader grade: *****************Finished create****************
+*****************Examining delete****************
+Auto-grader grade: *****************Finished delete****************
+*****************Examining lab09****************
+******************* Bubble Sort PART *********************
+g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 50.000 pts of 50.000
+Total grade so far: 50.000
+******************* Binary Search PART *********************
+g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 50.000 pts of 50.000
+Total grade so far: 100.000
+Auto-grader grade: 100.000
+*****************Finished lab09****************
