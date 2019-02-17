@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0
-%%Title: sequential.ps
+%%Title: binarySearch.ps
 %%Creator: gnuplot 5.2 patchlevel 2
-%%CreationDate: Sun Feb 17 17:27:06 2019
+%%CreationDate: Sun Feb 17 17:38:09 2019
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 554 770
 %%Orientation: Landscape
@@ -478,12 +478,12 @@ systemdict /pdfmark known not {
   userdict /pdfmark systemdict /cleartomark get put
 } if
 SDict begin [
-  /Title (sequential.ps)
+  /Title (binarySearch.ps)
   /Subject (gnuplot plot)
   /Creator (gnuplot 5.2 patchlevel 2)
 %  /Producer (gnuplot)
 %  /Keywords ()
-  /CreationDate (Sun Feb 17 17:27:06 2019)
+  /CreationDate (Sun Feb 17 17:38:09 2019)
   /DOCINFO pdfmark
 end
 } ifelse
@@ -532,136 +532,189 @@ BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {gsave BackgroundColor C 
 1.000 UL
 LTb
 LCb setrgbcolor
-854 448 M
+1022 448 M
 63 0 V
-6030 0 R
+5862 0 R
 -63 0 V
 stroke
-770 448 M
+938 448 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
 ] -46.7 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
-854 1282 M
+1022 911 M
 63 0 V
-6030 0 R
+5862 0 R
 -63 0 V
 stroke
-770 1282 M
-[ [(Helvetica) 140.0 0.0 true true 0 ( 0.005)]
-] -46.7 MRshow
+938 911 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 2x10)]
+[(Helvetica) 112.0 70.0 true true 0 (-6)]
+] -60.7 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
-854 2116 M
+1022 1375 M
 63 0 V
-6030 0 R
+5862 0 R
 -63 0 V
 stroke
-770 2116 M
-[ [(Helvetica) 140.0 0.0 true true 0 ( 0.01)]
-] -46.7 MRshow
+938 1375 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 4x10)]
+[(Helvetica) 112.0 70.0 true true 0 (-6)]
+] -60.7 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
-854 2951 M
+1022 1838 M
 63 0 V
-6030 0 R
+5862 0 R
 -63 0 V
 stroke
-770 2951 M
-[ [(Helvetica) 140.0 0.0 true true 0 ( 0.015)]
-] -46.7 MRshow
+938 1838 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 6x10)]
+[(Helvetica) 112.0 70.0 true true 0 (-6)]
+] -60.7 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
-854 3785 M
+1022 2302 M
 63 0 V
-6030 0 R
+5862 0 R
 -63 0 V
 stroke
-770 3785 M
-[ [(Helvetica) 140.0 0.0 true true 0 ( 0.02)]
-] -46.7 MRshow
+938 2302 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 8x10)]
+[(Helvetica) 112.0 70.0 true true 0 (-6)]
+] -60.7 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
-854 4619 M
+1022 2765 M
 63 0 V
-6030 0 R
+5862 0 R
 -63 0 V
 stroke
-770 4619 M
-[ [(Helvetica) 140.0 0.0 true true 0 ( 0.025)]
-] -46.7 MRshow
+938 2765 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 1x10)]
+[(Helvetica) 112.0 70.0 true true 0 (-5)]
+] -60.7 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
-854 448 M
+1022 3229 M
+63 0 V
+5862 0 R
+-63 0 V
+stroke
+938 3229 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 1.2x10)]
+[(Helvetica) 112.0 70.0 true true 0 (-5)]
+] -60.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1022 3692 M
+63 0 V
+5862 0 R
+-63 0 V
+stroke
+938 3692 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 1.4x10)]
+[(Helvetica) 112.0 70.0 true true 0 (-5)]
+] -60.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1022 4156 M
+63 0 V
+5862 0 R
+-63 0 V
+stroke
+938 4156 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 1.6x10)]
+[(Helvetica) 112.0 70.0 true true 0 (-5)]
+] -60.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1022 4619 M
+63 0 V
+5862 0 R
+-63 0 V
+stroke
+938 4619 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 1.8x10)]
+[(Helvetica) 112.0 70.0 true true 0 (-5)]
+] -60.7 MRshow
+1.000 UL
+LTb
+LCb setrgbcolor
+1022 448 M
 0 63 V
 0 4108 R
 0 -63 V
 stroke
-854 308 M
+1022 308 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
 ] -46.7 MCshow
 1.000 UL
 LTb
 LCb setrgbcolor
-1870 448 M
+2010 448 M
 0 63 V
 0 4108 R
 0 -63 V
 stroke
-1870 308 M
+2010 308 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 500000)]
 ] -46.7 MCshow
 1.000 UL
 LTb
 LCb setrgbcolor
-2885 448 M
+2997 448 M
 0 63 V
 0 4108 R
 0 -63 V
 stroke
-2885 308 M
+2997 308 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 1x10)]
 [(Helvetica) 112.0 70.0 true true 0 (6)]
 ] -60.7 MCshow
 1.000 UL
 LTb
 LCb setrgbcolor
-3900 448 M
+3985 448 M
 0 63 V
 0 4108 R
 0 -63 V
 stroke
-3900 308 M
+3985 308 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 1.5x10)]
 [(Helvetica) 112.0 70.0 true true 0 (6)]
 ] -60.7 MCshow
 1.000 UL
 LTb
 LCb setrgbcolor
-4916 448 M
+4972 448 M
 0 63 V
 0 4108 R
 0 -63 V
 stroke
-4916 308 M
+4972 308 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 2x10)]
 [(Helvetica) 112.0 70.0 true true 0 (6)]
 ] -60.7 MCshow
 1.000 UL
 LTb
 LCb setrgbcolor
-5932 448 M
+5960 448 M
 0 63 V
 0 4108 R
 0 -63 V
 stroke
-5932 308 M
+5960 308 M
 [ [(Helvetica) 140.0 0.0 true true 0 ( 2.5x10)]
 [(Helvetica) 112.0 70.0 true true 0 (6)]
 ] -60.7 MCshow
@@ -683,11 +736,11 @@ LCb setrgbcolor
 1.000 UL
 LTB
 LCb setrgbcolor
-854 4619 N
-854 448 L
-6093 0 V
+1022 4619 N
+0 -4171 V
+5925 0 V
 0 4171 V
--6093 0 V
+-5925 0 V
 Z stroke
 1.000 UP
 1.000 UL
@@ -701,13 +754,13 @@ currentpoint gsave translate -270 rotate 0 0 moveto
 grestore
 LTb
 LCb setrgbcolor
-3900 98 M
+3984 98 M
 [ [(Helvetica) 140.0 0.0 true true 0 (i)]
 ] -46.7 MCshow
 LTb
 LCb setrgbcolor
-3900 4829 M
-[ [(Helvetica) 140.0 0.0 true true 0 (Sequential)]
+3984 4829 M
+[ [(Helvetica) 140.0 0.0 true true 0 (binarySearch)]
 ] -46.7 MCshow
 % Begin plot #1
 1.000 UL
@@ -715,41 +768,41 @@ LTb
 0.58 0.00 0.83 C /Helvetica findfont 140 scalefont setfont
 LCb setrgbcolor
 6296 4486 M
-("data/sequential.out" using 1:2) Rshow
+("data/binarySearch.out" using 1:2) Rshow
 1.000 UL
 LTb
 0.58 0.00 0.83 C 6380 4486 M
 399 0 V
-874 461 M
-203 161 V
-204 105 V
-203 154 V
-203 104 V
-203 210 V
-203 92 V
-203 129 V
-203 87 V
-203 151 V
-203 108 V
-203 162 V
-204 128 V
-203 169 V
-203 93 V
-203 153 V
-203 133 V
-203 128 V
-203 129 V
-203 482 V
-203 -191 V
-203 107 V
-204 120 V
-203 124 V
-203 135 V
-203 238 V
-203 24 V
-203 120 V
-203 261 V
-203 70 V
+1042 911 M
+197 0 V
+198 0 V
+197 232 V
+1832 911 L
+197 0 V
+198 0 V
+197 232 V
+2622 911 L
+197 232 V
+198 0 V
+197 0 V
+198 0 V
+197 0 V
+198 0 V
+197 232 V
+198 3244 V
+4399 1375 L
+198 -232 V
+197 0 V
+198 232 V
+197 0 V
+198 0 V
+197 -232 V
+198 0 V
+197 232 V
+198 0 V
+197 -232 V
+198 232 V
+197 -232 V
 % End plot #1
 stroke
 2.000 UL
@@ -758,11 +811,11 @@ LCb setrgbcolor
 1.000 UL
 LTB
 LCb setrgbcolor
-854 4619 N
-854 448 L
-6093 0 V
+1022 4619 N
+0 -4171 V
+5925 0 V
 0 4171 V
--6093 0 V
+-5925 0 V
 Z stroke
 1.000 UP
 1.000 UL
