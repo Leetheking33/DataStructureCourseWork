@@ -15,3 +15,5 @@ src/queue.cpp:133:27: error: 'stack' was not declared in this scope
 src/queue.cpp:61:21: error: 'destroyQueue' was not declared in this scope
 + 0 pts of 50.000
 Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab10****************
