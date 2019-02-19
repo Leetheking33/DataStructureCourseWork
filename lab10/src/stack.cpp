@@ -94,6 +94,7 @@ void Stack<T>::pop() {
 	sNode<T> *rover = mTop;
 
 	if(mTop->mNext == NULL){
+		delete rover;
 		mTop = NULL;
 		mSize = 0;
 	}
