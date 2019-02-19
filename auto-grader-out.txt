@@ -1,2 +1,17 @@
 I am run number 000933.
 Pulling source code...
+------------------------------------------------
+Changes found in lab10
+------------------------------------------------
+*****************Examining lab10****************
+******************* Stack PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* Queue PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+Auto-grader grade: *****************Finished lab10****************

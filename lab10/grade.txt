@@ -1,14 +1,10 @@
 ******************* Stack PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
-+ 0 pts of 50.000
-Total grade so far: 0
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
 ******************* Queue PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
-+ 0 pts of 50.000
-Total grade so far: 0
-Auto-grader grade: 0
-*****************Finished lab10****************
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
