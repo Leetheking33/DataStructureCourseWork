@@ -8,3 +8,4 @@ g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
 makefile:7: recipe for target 'all' failed
 *************COMPILATION ERROR*******************
 Compilation errors, please fix...
+Auto-grader grade: *****************Finished lab10****************
