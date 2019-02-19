@@ -3,14 +3,15 @@
 
 template<class T>
 class sNode {
+	public:
 	T mData;
 	sNode *mNext;
-}
+};
 
 template<class T>
 class Stack {
     private:
-	    sNode<T> *mHead;
+	    sNode<T> *mTop;
 	    int mSize =0;
         /* Class to implement.*/
     public:
@@ -38,6 +39,8 @@ class Stack {
          * same order.
          */
         bool operator==(const Stack<T> &stack) const;
+
+	void destroyStack();
 };
 
 #include "stack.cpp"
