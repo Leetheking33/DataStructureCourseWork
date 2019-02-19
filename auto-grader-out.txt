@@ -1,2 +1,25 @@
 I am run number 000959.
 Pulling source code...
+------------------------------------------------
+Changes found in lab10
+------------------------------------------------
+*****************Examining lab10****************
+******************* Stack PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = src/queue.cpp:45:29: error: no 'void Queue<T>::destroyQueue()' member function declared in class 'Queue<T>'
+src/queue.cpp:61:22: error: there are no arguments to 'destroyQueue' that depend on a template parameter, so a declaration of 'destroyQueue' must be available [-fpermissive]
+src/queue.cpp:133:27: error: 'stack' was not declared in this scope
++ 0 pts of 50.000
+Total grade so far: 0
+******************* Queue PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = src/queue.cpp:45:29: error: no 'void Queue<T>::destroyQueue()' member function declared in class 'Queue<T>'
+src/queue.cpp:61:22: error: there are no arguments to 'destroyQueue' that depend on a template parameter, so a declaration of 'destroyQueue' must be available [-fpermissive]
+src/queue.cpp:133:27: error: 'stack' was not declared in this scope
+src/queue.cpp:61:21: error: 'destroyQueue' was not declared in this scope
++ 0 pts of 50.000
+Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab10****************
