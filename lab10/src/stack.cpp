@@ -131,7 +131,7 @@ bool Stack<T>::operator==(const Stack<T> &stack) const{
 		return false;
 	}
 
-	if(mTop == NULL && stack.mHead == NULL){
+	if(mTop == NULL && stack.mTop == NULL){
 		return true;
 	}
 
