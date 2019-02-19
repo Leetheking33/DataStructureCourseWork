@@ -2,8 +2,19 @@
 #define QUEUE_H
 
 template<class T>
+class qNode {
+        public:
+        T mData;
+        qNode *mNext;
+};
+
+
+template<class T>
 class Queue {
     private:
+	qNode<T> *mFirst;
+        int mSize =0;	
+			
         /* Class to implement.*/
     public:
         /* Empty constructor shall create an empty Queue! */
