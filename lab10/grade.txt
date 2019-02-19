@@ -1,11 +1,12 @@
 ******************* Stack PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
-makefile:7: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
+Failures = 
+MAKE_ERROR = src/stack.cpp:134:27: error: 'const class Stack<int>' has no member named 'mHead'
++ 0 pts of 50.000
+Total grade so far: 0
 ******************* Queue PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/stack.cpp src/queue.cpp src/main.cpp
-makefile:7: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
-Auto-grader grade: *****************Finished lab10****************
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 50.000
+Total grade so far: 0
