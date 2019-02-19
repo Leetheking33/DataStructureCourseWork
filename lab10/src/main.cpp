@@ -10,8 +10,16 @@ int main(int argc, char *argv[]) {
     stack.push(10);
     stack.push(30);
     stack.push(2);
+    cout << "Stack: ";
     stack.print();
     Stack<int> copyStack(stack);
+    copyStack.pop();
+    cout << "Copy stack: ";
     copyStack.print();
+    stack.pop();
+    stack.pop();
+    stack.pop();
+    cout << "Stack: ";
+    stack.print();
 }
 
