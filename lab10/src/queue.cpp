@@ -130,7 +130,7 @@ bool Queue<T>::isEmpty() const {
 template <class T>
 bool Queue<T>::operator==(const Queue<T> &queue) const{
         qNode<T> *rover = mFirst;
-        qNode<T> *lover = stack.mFirst;
+        qNode<T> *lover = queue.mFirst;
 
         if(mSize != queue.mSize){
                 return false;
