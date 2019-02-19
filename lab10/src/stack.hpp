@@ -2,8 +2,16 @@
 #define STACK_H
 
 template<class T>
+class sNode {
+	T mData;
+	sNode *mNext;
+}
+
+template<class T>
 class Stack {
     private:
+	    sNode<T> *mHead;
+	    int mSize =0;
         /* Class to implement.*/
     public:
         /* Empty constructor shall create an empty Stack! */
