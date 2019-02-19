@@ -24,6 +24,8 @@ class Queue {
          */
         Queue(const Queue<T> &queue);
         /* Deconstructor shall free up memory */
+	void destroyQueue();
+
         ~Queue();
         /* Return the current length (number of items) in the queue */
         int getLength() const;
