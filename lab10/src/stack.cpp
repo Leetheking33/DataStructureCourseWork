@@ -10,15 +10,15 @@ Stack<T>::Stack() {
 }
 
 template <class T>
-Stack<T>::Stack(const Stack<T> &sll) {
-	sNode<T> *rover = sll.mTop;
+Stack<T>::Stack(const Stack<T> &stack) {
+	sNode<T> *rover = stack.mTop;
 	sNode<T> *newRov = NULL;
 	
-	if(sll.mTop == NULL){
+	if(stack.mTop == NULL){
 		mTop = NULL;
 	}
 	else{
-		for(int i=0; i < sll.mSize; i++){
+		for(int i=0; i < stack.mSize; i++){
 			if(i == 0){
 				sNode<T> *node = new sNode<T>();
 				node->mData = rover->mData;
@@ -73,8 +73,8 @@ bool Stack<T>::push(const T &val) {
 		node->mData = val;
 		node->mNext = NULL;
 		mTop = node;
-		return true;
 		mSize = 1;
+		return true;
 	}
 	
 	sNode<T> *node = new sNode<T>();
@@ -98,8 +98,8 @@ void Stack<T>::pop() {
 		mSize = 0;
 	}
 	else{
-		mTop = mTop->mNext;
 		delete rover;
+		mTop = mTop->mNext;
 		mSize -= 1;
 	}
 }
