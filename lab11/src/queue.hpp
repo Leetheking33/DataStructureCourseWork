@@ -2,8 +2,19 @@
 #define QUEUE_H
 
 template<class T>
+class qNode {
+        public:
+        T mData;
+        qNode *mNext;
+};
+
+
+template<class T>
 class Queue {
     private:
+	qNode<T> *mFirst;
+        int mSize =0;	
+			
         /* Class to implement.*/
     public:
         /* Empty constructor shall create an empty Queue! */
@@ -13,6 +24,8 @@ class Queue {
          */
         Queue(const Queue<T> &queue);
         /* Deconstructor shall free up memory */
+	void destroyQueue();
+
         ~Queue();
         /* Return the current length (number of items) in the queue */
         int getLength() const;
@@ -30,24 +43,6 @@ class Queue {
          * same order.
          */
         bool operator==(const Queue<T> &queue) const;
-	/* Add a value to the queue with respect to priority.
-	 * For this function a lower number is a higher priority.
-	 * EX: If the Queue is of integers and is { 5, 10, 15} and I add 7, 
-	 * the new queue is { 5, 7, 10, 15}.
-	 */
-	void addWithPriority(const T& val);
-	/* Return the length of the shortest path, but with warps.  The map is
-	 * a 2D array with each cell having the following property
-	 *   0: Cell is open (passable)
-	 *  -1: Cell is a wall (unpassable)
-	 * > 0: Cell is a warp.
-	 * A warp is a value > 0 and warps to the position 
-	 *    (<first three digits, second three digits).
-	 * Hence 1000 warps to (1, 0), and 203109 warps to (203, 109)
-	 * To get the x value: <cell>/1000
-	 * To get the y value: <cell>%1000
-	 */
-	int getShortestPathWithWarps(int **map, int width, int length, int sx, int sy, int ex, int ey);
 };
 
 #include "queue.cpp"
