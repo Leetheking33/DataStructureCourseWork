@@ -8,3 +8,4 @@ g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
 makefile:7: recipe for target 'all' failed
 *************COMPILATION ERROR*******************
 Compilation errors, please fix...
+Auto-grader grade: *****************Finished lab09****************
