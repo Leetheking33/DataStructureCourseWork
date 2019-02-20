@@ -11,6 +11,7 @@ Map::Map() {
 	mHead = NULL;
 }
 
+//DPW: You need to test for duplicates!
 bool Map::add(const char *key, int val) {
 	mNode *rover = mHead;
 	mNode *node = new mNode();
@@ -52,6 +53,7 @@ bool Map::get(const char *key, int &ret) {
     return false;
 }
 
+//DPW: Good start.  That is the number of elements in the map, but not how much memory is consumed.
 int Map::size() {
 	return mSize;
 }
@@ -108,6 +110,7 @@ void Map::print() const {
 		
 }
 
+//DPW: strncmp would be easier to read (or use stl's string class!)
 int Map::howMany(const char *prefix) {
 	mNode *rover = mHead;
 	int confirmer = 0;
