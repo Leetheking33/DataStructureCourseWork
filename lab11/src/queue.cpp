@@ -1,71 +1,154 @@
 #ifdef QUEUE_H
+#include <stdlib.h>
+#include <iostream>
 #include "queue.hpp"
+using namespace std;
 
-/* Empty constructor shall create an empty Queue! */
-template<class T>
+template <class T>
 Queue<T>::Queue() {
+        mFirst = NULL;
 }
-/* Do a deep copy of queue into the this.
- * Note: This one uses a reference to a Queue!
- */
-template<class T>
+
+template <class T>
 Queue<T>::Queue(const Queue<T> &queue) {
+        qNode<T> *rover = queue.mFirst;
+        qNode<T> *newRov = NULL;
+
+        if(queue.mFirst == NULL){
+                mFirst = NULL;
+        }
+        else{
+                for(int i=0; i < queue.mSize; i++){
+                        if(i == 0){
+                                qNode<T> *node = new qNode<T>();
+                                node->mData = rover->mData;
+                                node->mNext = NULL;
+                                mFirst = node;
+                                rover = rover->mNext;
+                                newRov = mFirst;
+                                mSize +=1;
+                        }
+                        else{
+                                qNode<T> *node = new qNode<T>();
+                                node->mData = rover->mData;
+                                node->mNext = NULL;
+                                newRov->mNext = node;
+                                rover = rover->mNext;
+                                newRov = newRov->mNext;
+                                mSize +=1;
+                        }
+                }
+        }
 }
-/* Deconstructor shall free up memory */
-template<class T>
+
+template <class T>
+void Queue<T>::destroyQueue(){
+        qNode<T> *rover = mFirst;
+        qNode<T> *prev = mFirst;
+
+        while(rover != NULL){
+                prev = rover;
+                rover = rover->mNext;
+                delete prev;
+        }
+        mFirst = NULL;
+        delete rover;
+        mSize = 0;
+}
+
+template <class T>
 Queue<T>::~Queue() {
+        destroyQueue();
 }
-/* Return the current length (number of items) in the queue */
-template<class T>
+
+template <class T>
 int Queue<T>::getLength() const {
+        return mSize;
 }
-/* Returns true if the queue is empty. */
-template<class T>
-bool Queue<T>::isEmpty() const {
-}
-/* Print out the Queue */
-template<class T>
-void Queue<T>::print() const {
-}
-/* Pushes the val to the end of the queue. */
-template<class T>
+
+template <class T>
 bool Queue<T>::push(const T &val) {
+	qNode<T> *rover = mFirst;
+	qNode<T> *trailer;
+	qNode<T> *node = new qNode<T>();
+	if(mFirst == NULL){
+		node->mData = val;
+		node->mNext = mFirst;
+		mFirst = node;
+		mSize = 1;
+		return true;
+	}
+	while(rover != NULL){
+		trailer = rover;
+		rover = rover->mNext;
+	}
+	mSize +=1;
+	node->mData = val;
+	node->mNext = NULL;
+	trailer->mNext =node;
 }
-/* returns the first element from the queue. */
-template<class T>
+
+template <class T>
 T& Queue<T>::first() {
+        return mFirst->mData;
 }
-/* Removes the first element from the queue. */
-template<class T>
+
+template <class T>
 void Queue<T>::pop() {
+        qNode<T> *rover = mFirst;
+
+        if(mFirst->mNext == NULL){
+                delete rover;
+                mFirst = NULL;
+                mSize = 0;
+        }
+        else{
+                delete rover;
+                mFirst = mFirst->mNext;
+                mSize -= 1;
+        }
 }
-/* Returns if the two queues contain the same elements in the
- * same order.
- */
-template<class T>
-bool Queue<T>::operator==(const Queue<T> &queue) const {
+
+template <class T>
+void Queue<T>::print() const {
+        qNode<T> *rover = mFirst;
+        while(rover != NULL){
+                cout << rover->mData << ", ";
+                rover = rover->mNext;
+        }
+        cout << endl;
 }
-/* Add a value to the queue with respect to priority.
- * For this function a lower number is a higher priority.
- * EX: If the Queue is of integers and is { 5, 10, 15} and I add 7, 
- * the new queue is { 5, 7, 10, 15}.
- */
-template<class T>
-void Queue<T>::addWithPriority(const T& val) {
+
+template <class T>
+bool Queue<T>::isEmpty() const {
+        if(mFirst == NULL){
+                return true;
+        }
+        return false;
 }
-/* Return the length of the shortest path, but with warps.  The map is
- * a 2D array with each cell having the following property
- *   0: Cell is open (passable)
- *  -1: Cell is a wall (unpassable)
- * > 0: Cell is a warp.
- * A warp is a value > 999999 and warps to the position 
- *    (<first three digits, second three digits).
- * Hence 1000 warps to (1, 0), and 203109 warps to (203, 109)
- * To get the x value: <cell>/1000
- * To get the y value: <cell>%1000
- */
-template<class T>
-int Queue<T>::getShortestPathWithWarps(int **map, int width, int length, int sx, int sy, int ex, int ey) {
+
+template <class T>
+bool Queue<T>::operator==(const Queue<T> &queue) const{
+        qNode<T> *rover = mFirst;
+        qNode<T> *lover = queue.mFirst;
+
+        if(mSize != queue.mSize){
+                return false;
+        }
+
+        if(mFirst == NULL && queue.mFirst == NULL){
+                return true;
+        }
+
+        while(rover != NULL){
+                if(rover->mData == lover->mData){
+                        rover = rover->mNext;
+                        lover = lover->mNext;
+                        continue;
+                }
+                return false;
+        }
+        return true;
 }
 
 #endif
