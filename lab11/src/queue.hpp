@@ -43,6 +43,8 @@ class Queue {
          * same order.
          */
         bool operator==(const Queue<T> &queue) const;
+
+	int getShortestPathWithWarps(int **map, int width int length, int sx, int sy, int ex, int ey);
 };
 
 #include "queue.cpp"

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include "queue.hpp"
+#include <queue>
 using namespace std;
 
 template <class T>
@@ -151,4 +152,40 @@ bool Queue<T>::operator==(const Queue<T> &queue) const{
         return true;
 }
 
+int Queue<T>::getShortestPathWithWarps(int map[10][10], int width int length, int sx, int sy, int ex, int ey){
+	std::queue<Point> toVisit;
+
+	toVisit.push(Point(sx, sy, 0));
+
+	while(!toVisit.empty()) {
+		Point point = toVisit.front();
+		toVisit.pop();
+
+
+		if (point.x < 0 || point.y < 0 || point.x > 9 || point.y > 9) {
+			continue;
+		}	
+
+		if(point.x == ex && point.y == ey) {
+			return point.numMoves;
+		}
+
+		if (map[point.x][point.y] == W || map[point.x][point.y] == V){
+			continue;
+		}
+
+		map[point.x][point.y] = V;
+
+		toVisit.push(Point(point.x, point.y + 1, point.numMoves + 1));
+
+		toVisit.push(Point(point.x, point.y - 1, point.numMoves + 1));
+
+		toVisit.push(Point(point.x - 1, point.y, point.numMoves + 1));
+
+		toVisit.push(Point(point.x + 1, point.y, point.numMoves + 1));
+
+	}
+
+	return -1;
+}
 #endif
