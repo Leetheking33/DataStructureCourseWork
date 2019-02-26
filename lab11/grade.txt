@@ -15,3 +15,4 @@ g++ -g -I src/ obj/queue.o src/main.cpp -o stack-test
 makefile:11: recipe for target 'stack-test' failed
 *************COMPILATION ERROR*******************
 Compilation errors, please fix...
+Auto-grader grade: *****************Finished lab11****************
