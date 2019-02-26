@@ -166,5 +166,5 @@ void Array<T>::sort(){
                 }
         }
 }
-}
+
 #endif
