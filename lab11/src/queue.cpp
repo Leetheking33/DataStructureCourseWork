@@ -194,6 +194,7 @@ int Queue<T>::getShortestPathWithWarps(int **map, int width, int length, int sx,
 	return -1;
 }
 
+template <class T>
 void Queue<T>::addWithPriority(const T &val){
 
 }
