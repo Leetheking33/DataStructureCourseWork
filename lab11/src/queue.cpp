@@ -3,6 +3,9 @@
 #include <iostream>
 #include "queue.hpp"
 #include <queue>
+#include <utility>
+#include <list>
+
 using namespace std;
 
 template <class T>
@@ -152,7 +155,9 @@ bool Queue<T>::operator==(const Queue<T> &queue) const{
         return true;
 }
 
-int Queue<T>::getShortestPathWithWarps(int map[10][10], int width int length, int sx, int sy, int ex, int ey){
+template<class T>
+int Queue<T>::getShortestPathWithWarps(int **map, int width, int length, int sx, int sy, int ex, int ey){
+
 	std::queue<Point> toVisit;
 
 	toVisit.push(Point(sx, sy, 0));
@@ -162,7 +167,7 @@ int Queue<T>::getShortestPathWithWarps(int map[10][10], int width int length, in
 		toVisit.pop();
 
 
-		if (point.x < 0 || point.y < 0 || point.x > 9 || point.y > 9) {
+		if (point.x < 0 || point.y < 0 || point.x > width || point.y > length) {
 			continue;
 		}	
 
@@ -170,11 +175,11 @@ int Queue<T>::getShortestPathWithWarps(int map[10][10], int width int length, in
 			return point.numMoves;
 		}
 
-		if (map[point.x][point.y] == W || map[point.x][point.y] == V){
+		if (map[point.x][point.y] == -1 || map[point.x][point.y] == -2){
 			continue;
 		}
 
-		map[point.x][point.y] = V;
+		map[point.x][point.y] = -2;
 
 		toVisit.push(Point(point.x, point.y + 1, point.numMoves + 1));
 

@@ -1,6 +1,18 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
+class Point{
+	public:
+		Point(int a, int b, int moves){
+			x=a;
+			y=b;
+			numMoves = moves;
+		}
+	int x;
+	int y;
+	int numMoves;
+};
+
 template<class T>
 class qNode {
         public:
@@ -44,7 +56,7 @@ class Queue {
          */
         bool operator==(const Queue<T> &queue) const;
 
-	int getShortestPathWithWarps(int **map, int width int length, int sx, int sy, int ex, int ey);
+	int getShortestPathWithWarps(int **map, int width, int length, int sx, int sy, int ex, int ey);
 };
 
 #include "queue.cpp"
