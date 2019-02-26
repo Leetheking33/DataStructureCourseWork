@@ -5,7 +5,8 @@ template <class T>
 class Array {
     private:
     /* You fill out the private contents. */
-
+	T *mArr = NULL;
+	int mSize = 0;
     public:
     /* Do a deep copy of the array into the list.
      * Note: This one uses a pointer!
@@ -17,7 +18,7 @@ class Array {
     Array(const Array<T> &list);
 
     /* Return the current length of the array */
-    int getLength() const;
+   int getLength() const;
 
     /* Returns the index in the array where value is found.  
      * Return -1 if value is not present in the array.
@@ -36,23 +37,17 @@ class Array {
      * same order.
      */
     bool operator==(Array<T> &list) const;
-
-    /* Runs a bubble sort algorithm on the array.
-     * The array shall be ordered from least to greatest
-     */
+	
     void bubbleSort();
+	
+    int minLocation(int first, int last);
 
-    /* Runs a selection sort algorithm on the array.
-     * The array shall be ordered from least to greatest
-     */
+    void swap(int first, int second);
+
     void selectionSort();
 
-    /* Runs a insertion sort algorithm on the array.
-     * The array shall be ordered from least to greatest
-     */
     void insertionSort();
 
-    /* Runs the sort routing you believe is the best. */
     void sort();
 
     /* Free any memory used! */
