@@ -25,3 +25,5 @@ MAKE_ERROR = /srv/auto-grader/csci-315-spring-2019/run/001467/lab12/tests/sll-so
 /srv/auto-grader/csci-315-spring-2019/run/001467/lab12/tests/sll-sort-test.cpp:51:16: error: 'class SLList<int>' has no member named 'sort'; did you mean 'insert'?
 + 0 pts of 30.000
 Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab12****************
