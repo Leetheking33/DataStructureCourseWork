@@ -113,7 +113,39 @@ int Array<T>::minLocation(int first, int last){
 }
 
 template<class T>
-void Array<T>::selectionSort(){
+void Array<T>::swap(int first, int second){
+	T temp;
 
+	temp = mArr[first];
+	mArr[first] = mArr[second];
+	mArr[second] = temp;
+}
+
+template<class T>
+void Array<T>::selectionSort(){
+	int minIndex;
+
+	for(int i=0; i < mSize; i++){
+		minIndex = minLocation(i, mSize - 1);
+		swap(i, minIndex);
+	}
+}
+
+template<class T>
+void Array<T>::insertionSort(){
+	for(int i = 1; i < mSize; i++){
+		if(mArr[i] < mArr[i -1]){
+			T temp = mArr[i];
+			int index = i;
+
+			do{
+				mArr[index] = mArr[index - 1];
+				index--;
+			}
+			while(index > 0 && mArr[index - 1] > temp);
+
+			mArr[index] = temp;
+		}
+	}
 }
 #endif
