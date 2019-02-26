@@ -148,4 +148,23 @@ void Array<T>::insertionSort(){
 		}
 	}
 }
+
+template<class T>
+void Array<T>::sort(){
+		for(int i = 1; i < mSize; i++){
+                if(mArr[i] < mArr[i -1]){
+                        T temp = mArr[i];
+                        int index = i;
+
+                        do{
+                                mArr[index] = mArr[index - 1];
+                                index--;
+                        }
+                        while(index > 0 && mArr[index - 1] > temp);
+
+                        mArr[index] = temp;
+                }
+        }
+}
+}
 #endif
