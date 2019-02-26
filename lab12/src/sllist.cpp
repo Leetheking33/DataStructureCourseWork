@@ -239,6 +239,7 @@ void SLList<T>::sort(){
 					T tmp = rover->mData;
 					rover->mData = rover->mNext->mData;
 					rover->mNext->mData = tmp;
+					rover = rover->mNext;
 				}
 			}
 	 }
