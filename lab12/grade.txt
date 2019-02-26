@@ -1,7 +1,7 @@
 ******************* Selection Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
+Failures = 4
+MAKE_ERROR = 
 + 0 pts of 30.000
 Total grade so far: 0
 ******************* Insertion Sort PART *********************
@@ -18,9 +18,3 @@ MAKE_ERROR = collect2: error: ld returned 1 exit status
 Total grade so far: 0
 ******************* SLList Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
-+ 0 pts of 30.000
-Total grade so far: 0
-Auto-grader grade: 0
-*****************Finished lab12****************
