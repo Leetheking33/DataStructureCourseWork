@@ -18,3 +18,5 @@ MAKE_ERROR =
 Total grade so far: 70.000
 ******************* SLList Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
+Auto-grader grade: 70.000
+*****************Finished lab12****************
