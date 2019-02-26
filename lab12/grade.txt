@@ -18,3 +18,10 @@ MAKE_ERROR = collect2: error: ld returned 1 exit status
 Total grade so far: 0
 ******************* SLList Sort PART *********************
 g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = /srv/auto-grader/csci-315-spring-2019/run/001467/lab12/tests/sll-sort-test.cpp:14:16: error: 'class SLList<int>' has no member named 'sort'; did you mean 'insert'?
+/srv/auto-grader/csci-315-spring-2019/run/001467/lab12/tests/sll-sort-test.cpp:25:16: error: 'class SLList<int>' has no member named 'sort'; did you mean 'insert'?
+/srv/auto-grader/csci-315-spring-2019/run/001467/lab12/tests/sll-sort-test.cpp:36:16: error: 'class SLList<int>' has no member named 'sort'; did you mean 'insert'?
+/srv/auto-grader/csci-315-spring-2019/run/001467/lab12/tests/sll-sort-test.cpp:51:16: error: 'class SLList<int>' has no member named 'sort'; did you mean 'insert'?
++ 0 pts of 30.000
+Total grade so far: 0
