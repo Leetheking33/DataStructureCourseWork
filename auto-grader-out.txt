@@ -1,27 +1,2 @@
-I am run number 001503.
+I am run number 001504.
 Pulling source code...
-------------------------------------------------
-Changes found in lab12
-------------------------------------------------
-*****************Examining lab12****************
-******************* Selection Sort PART *********************
-g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-makefile:7: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
-******************* Insertion Sort PART *********************
-g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-makefile:7: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
-******************* Sort PART *********************
-g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-makefile:7: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
-******************* SLList Sort PART *********************
-g++ -o sll-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
-makefile:7: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
-Auto-grader grade: *****************Finished lab12****************
