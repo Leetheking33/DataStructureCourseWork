@@ -55,6 +55,8 @@ class Queue {
          * same order.
          */
         bool operator==(const Queue<T> &queue) const;
+	
+	void addWithPriority(const T &val);
 
 	int getShortestPathWithWarps(int **map, int width, int length, int sx, int sy, int ex, int ey);
 };
