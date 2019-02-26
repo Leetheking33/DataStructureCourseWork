@@ -1,28 +1,2 @@
-I am run number 001604.
+I am run number 001605.
 Pulling source code...
-------------------------------------------------
-Changes found in lab11
-------------------------------------------------
-*****************Examining lab11****************
-******************* Queue test PART *********************
-mkdir -p obj
-g++ -c -g -I src/ src/queue.cpp -o obj/queue.o
-g++ -g -I src/ obj/queue.o src/main.cpp -o stack-test
-Failures = 
-MAKE_ERROR = 
-+ 33.333 pts of 33.333
-Total grade so far: 33.333
-******************* Priority PART *********************
-make: Nothing to be done for 'all'.
-Failures = 
-MAKE_ERROR = 
-+ 33.333 pts of 33.333
-Total grade so far: 66.666
-******************* depth first search PART *********************
-make: Nothing to be done for 'all'.
-Failures = 
-MAKE_ERROR = 
-+ 33.334 pts of 33.334
-Total grade so far: 100.000
-Auto-grader grade: 100.000
-*****************Finished lab11****************
