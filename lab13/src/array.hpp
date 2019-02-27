@@ -48,7 +48,7 @@ class Array {
 
     int partition(int first, int last);
 
-    void qSort();
+    void qsort();
 
     void insertionSort();
 
