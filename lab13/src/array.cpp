@@ -158,7 +158,7 @@ void Array<T>::merge(int start, int mid, int end){
 			Arr[k++] = mArr[q++];
 
 		else if(mArr[p] < mArr[q])
-			Arr[K++] = mArr[p++];
+			Arr[k++] = mArr[p++];
 
 		else
 			Arr[k++] = mArr[q++];
