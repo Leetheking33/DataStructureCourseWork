@@ -141,7 +141,7 @@ void Array<T>::recQuickSort(int first, int last){
 }
 
 template<class T>
-void Array<T>::qSort(){
+void Array<T>::qsort(){
 	recQuickSort(0, mSize - 1);
 }
 
