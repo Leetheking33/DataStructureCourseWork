@@ -49,8 +49,12 @@ class Array {
     int partition(int first, int last);
 
     void qsort();
+	
+    void merge(int start, int mid, int end);
 
-    void insertionSort();
+    void recMeargeSort(int start, int end);
+
+    void msort();
 
     void sort();
 
