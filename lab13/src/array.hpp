@@ -43,8 +43,12 @@ class Array {
     int minLocation(int first, int last);
 
     void swap(int first, int second);
+	
+    void recQuickSort(int first, int last);
 
-    void selectionSort();
+    int partition(int first, int last);
+
+    void qSort();
 
     void insertionSort();
 
