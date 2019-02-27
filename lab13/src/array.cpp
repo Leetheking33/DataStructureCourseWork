@@ -99,17 +99,25 @@ void Array<T>::bubbleSort(){
 }
 
 template<class T>
-int Array<T>::minLocation(int first, int last){
-	int minIndex;
+int Array<T>::partition(int first, int last){
+	T pivot;
 
-	minIndex = first;
+	int index, smallIndex;
 
-	for(int i = first + 1; i <= last; i++){
-		if(mArr[i] < mArr[minIndex])
-			minIndex = i;
-	}
+	swap(first, (first + last) / 2);
 
-	return minIndex;
+	pivot = mArr[first];
+	smallIndex = first;
+
+	for(index = first + 1; index <= last; index++)
+		if(mArr[index] < pivot){
+			smallIndex++;
+			swap(smallIndex, index);
+		}
+	
+	swap(first, smallIndex);
+
+	return smallIndex;
 }
 
 template<class T>
@@ -122,13 +130,19 @@ void Array<T>::swap(int first, int second){
 }
 
 template<class T>
-void Array<T>::selectionSort(){
-	int minIndex;
+void Array<T>::recQuickSort(int first, int last){
+	int pivotLocation;
 
-	for(int i=0; i < mSize; i++){
-		minIndex = minLocation(i, mSize - 1);
-		swap(i, minIndex);
+	if( first < last){
+		pivotLocation = partition(first, last);
+		recQuickSort(first, pivotLocation - 1);
+		recQuickSort(pivotLocation + 1, last);
 	}
+}
+
+template<class T>
+void Array<T>::qSort(){
+	recQuickSort(0, mSize - 1);
 }
 
 template<class T>
