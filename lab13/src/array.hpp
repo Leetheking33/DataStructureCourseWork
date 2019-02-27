@@ -52,7 +52,7 @@ class Array {
 	
     void merge(int start, int mid, int end);
 
-    void recMeargeSort(int start, int end);
+    void recMergeSort(int start, int end);
 
     void msort();
 
