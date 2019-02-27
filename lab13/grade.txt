@@ -1,28 +1,28 @@
 ******************* Merge Sort PART *********************
-g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
-Failures = 3
-MAKE_ERROR = 
+g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = /srv/auto-grader/csci-315-spring-2019/run/001632/lab13/tests/merge-test.cpp:11:20: error: 'class Array<int>' has no member named 'msort'; did you mean 'sort'?
+/srv/auto-grader/csci-315-spring-2019/run/001632/lab13/tests/merge-test.cpp:22:20: error: 'class Array<int>' has no member named 'msort'; did you mean 'sort'?
+/srv/auto-grader/csci-315-spring-2019/run/001632/lab13/tests/merge-test.cpp:37:19: error: 'class Array<int>' has no member named 'msort'; did you mean 'sort'?
 + 0 pts of 30.000
 Total grade so far: 0
 ******************* Quick Sort PART *********************
-g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
+g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = /srv/auto-grader/csci-315-spring-2019/run/001401/lab13/tests/quick-test.cpp:12:20: error: 'class Array<int>' has no member named 'qsort'; did you mean 'msort'?
-/srv/auto-grader/csci-315-spring-2019/run/001401/lab13/tests/quick-test.cpp:24:20: error: 'class Array<int>' has no member named 'qsort'; did you mean 'msort'?
-/srv/auto-grader/csci-315-spring-2019/run/001401/lab13/tests/quick-test.cpp:39:19: error: 'class Array<int>' has no member named 'qsort'; did you mean 'msort'?
+MAKE_ERROR = /srv/auto-grader/csci-315-spring-2019/run/001632/lab13/tests/quick-test.cpp:12:20: error: 'class Array<int>' has no member named 'qsort'; did you mean 'sort'?
+/srv/auto-grader/csci-315-spring-2019/run/001632/lab13/tests/quick-test.cpp:24:20: error: 'class Array<int>' has no member named 'qsort'; did you mean 'sort'?
+/srv/auto-grader/csci-315-spring-2019/run/001632/lab13/tests/quick-test.cpp:39:19: error: 'class Array<int>' has no member named 'qsort'; did you mean 'sort'?
 + 0 pts of 30.000
 Total grade so far: 0
 ******************* Sort PART *********************
-g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
+g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
 + 10.000 pts of 10.000
 Total grade so far: 10.000
 ******************* SLList Sort PART *********************
-g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/main.cpp
+g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = /srv/auto-grader/csci-315-spring-2019/run/001401/lab13/tests/sll-test.cpp:4:22: fatal error: sllist.hpp: No such file or directory
-+ 0 pts of 30.000
-Total grade so far: 10.000
-Auto-grader grade: 10.000
-*****************Finished lab13****************
+MAKE_ERROR = 
++ 30.000 pts of 30.000
+Total grade so far: 40.000
