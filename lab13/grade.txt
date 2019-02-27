@@ -1,26 +1,24 @@
 ******************* Merge Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/array.cpp:161:8: error: 'K' was not declared in this scope
-+ 0 pts of 30.000
-Total grade so far: 0
+MAKE_ERROR = 
++ 30.000 pts of 30.000
+Total grade so far: 30.000
 ******************* Quick Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/array.cpp:161:8: error: 'K' was not declared in this scope
-+ 0 pts of 30.000
-Total grade so far: 0
+MAKE_ERROR = 
++ 30.000 pts of 30.000
+Total grade so far: 60.000
 ******************* Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
 + 10.000 pts of 10.000
-Total grade so far: 10.000
+Total grade so far: 70.000
 ******************* SLList Sort PART *********************
 g++ -o sort-test -g -I src/ --std=c++14 src/array.cpp src/sllist.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
 + 30.000 pts of 30.000
-Total grade so far: 40.000
-Auto-grader grade: 40.000
-*****************Finished lab13****************
+Total grade so far: 100.000
