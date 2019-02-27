@@ -146,23 +146,46 @@ void Array<T>::qsort(){
 }
 
 template<class T>
-void Array<T>::insertionSort(){
-	for(int i = 1; i < mSize; i++){
-		if(mArr[i] < mArr[i -1]){
-			T temp = mArr[i];
-			int index = i;
+void Array<T>::merge(int start, int mid, int end){
+	int p = start;
+	int q = mid + 1;
 
-			do{
-				mArr[index] = mArr[index - 1];
-				index--;
-			}
-			while(index > 0 && mArr[index - 1] > temp);
+	int Arr[end - start + 1];
+	int k = 0;
 
-			mArr[index] = temp;
-		}
+	for(int i = start; i <= end; i++){
+		if(p > mid)
+			Arr[k++] = mArr[q++];
+
+		else if(mArr[p] < mArr[q])
+			Arr[K++] = mArr[p++];
+
+		else
+			Arr[k++] = mArr[q++];
+
+	}
+	for(int p = 0; p < k; p ++){
+		mArr[start++] = Arr[p];
 	}
 }
 
+template<class T>
+void Array<T>::recMergeSort(int start, int end){
+	if(start < end){
+		int mid = (start + end) / 2;
+
+		recMergeSort(start, mid);
+
+		recMergeSort(mid + 1, end);
+
+		merge(start, mid, end);
+	}
+}
+
+template<class T>
+void Array<T>::msort(){
+	recMergeSort(0, mSize - 1);
+}
 template<class T>
 void Array<T>::sort(){
 		for(int i = 1; i < mSize; i++){
