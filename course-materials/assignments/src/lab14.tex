@@ -1,0 +1,147 @@
+\documentclass[12pt]{article}
+\usepackage{listings}
+\usepackage{color}
+\textwidth=7in
+\textheight=9.5in
+\topmargin=-1in
+\headheight=0in
+\headsep=.5in
+\hoffset  -.85in
+
+\definecolor{mygray}{rgb}{0.4,0.4,0.4}
+\definecolor{mygreen}{rgb}{0,0.8,0.6}
+\definecolor{myorange}{rgb}{1.0,0.4,0}
+
+\lstset{
+basicstyle = \ttfamily,columns=fullflexible,
+commentstyle=\color{mygray},
+frame=single,
+numbers=left,
+numbersep=5pt,
+numberstyle=\tiny\color{mygray},
+keywordstyle=\color{mygreen},
+showspaces=false,
+showstringspaces=false,
+stringstyle=\color{myorange},
+tabsize=2
+}
+
+\pagestyle{empty}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{document}
+
+\begin{center}
+{\bf lab 14 Binary Trees part 1}
+
+\end{center}
+
+\setlength{\unitlength}{1in}
+
+\begin{picture}(6,.1) 
+\put(0,0) {\line(1,0){6.25}}         
+\end{picture}
+
+\renewcommand{\arraystretch}{2}
+\setlength{\tabcolsep}{6pt} % General space between cols (6pt standard)
+\renewcommand{\arraystretch}{.5} % General space between rows (1 standard)
+
+\vskip.15in
+\noindent\textbf{Instructions:} This lab begins our construction of Binary Trees.  It is very important to get these basics down before proceeding to further functionality of Trees.  Please implement empty constructor, copy constructor, put, inorderString, lowest common ancestor (LCA), and a deconstructor.
+
+\begin{lstlisting}[language=C++]{Name=test2}
+
+#ifndef BINARY_TREE_H
+#define BINARY_TREE_H
+
+#include <string>
+
+template<class T>
+class BinaryTreeNode {
+    public:
+        BinaryTreeNode<T> () {
+        }
+};
+
+template<class T>
+class BinaryTree {
+    private:
+        /* You fill in private member data. */
+
+        /* Recommended, but not necessary helper function. */
+        void put(BinaryTreeNode<T> *rover, BinaryTreeNode<T> *newNode);
+        /* Recommended, but not necessary helper function. */
+        std::string inorderString(BinaryTreeNode<T> *node, std::string &ret);
+    public:
+
+        /* Creates an empty binary tree. */
+        BinaryTree();
+
+        /* Does a deep copy of the tree. */
+        BinaryTree(const BinaryTree<T> &tree);
+
+        /* Add a given value to the Binary Tree. 
+         * Must maintain ordering!
+         * Do NOT do ANY balancing!
+         */
+        void put(const T &val);
+
+        /* Returns the height for the binary tree. */
+        int getHeight();
+
+        /* Returns a string representation of the binary Tree in order. */
+        std::string inorderString();
+
+        /* Return the lowest common ancestor (LCA) of two values.
+         * The LCA is the most immediate parent of both values.  For example:
+         *      4
+         *    /   \
+         *   2     8
+         *  / \   / \
+         * 1   3 6   10
+         * LCA(1, 3) = 2
+         * LCA(1, 2) = 2
+         * LCA(1, 6) = 4
+         */
+        T& lca(T& a, T& b);
+
+        /* Always free memory. */
+        ~BinaryTree();
+};
+
+/* Since BinaryTree is templated, we include the .cpp.
+ * Templated classes are not implemented until utilized (or explicitly 
+ * declared.)
+ */
+#include "binarytree.cpp"
+
+#endif
+\end{lstlisting}
+
+\vskip.15in
+\noindent\textbf{Write some test cases:} \\
+Create some test cases, using cxxtestgen, that you believe would cover all aspects of your code.
+
+\vskip.15in
+\noindent\textbf{Memory Management:} \\
+Now that are using new, we must ensure that there is a corresponding delete to free the memory.  Ensure there are no memory leaks in your code!  Please run Valgrind on your tests to ensure no memory leaks!
+\vskip.15in
+
+\vskip.15in
+\noindent\textbf{How to turn in:} \\
+Turn in via GitHub.  Ensure the file(s) are in your directory and then:
+\begin{itemize}
+\item \$ git add $<$files$>$
+\item \$ git commit 
+\item \$ git push
+\end{itemize}
+
+\vskip.15in
+\noindent\textbf{Due Date:}
+March 13, 2019 2359
+
+\vskip.15in
+\noindent\textbf{Teamwork:} No teamwork, your work must be your own.
+
+\end{document}
