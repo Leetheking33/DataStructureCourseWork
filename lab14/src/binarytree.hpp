@@ -5,15 +5,29 @@
 
 template<class T>
 class BinaryTreeNode {
+    private:
+	T mData;
+	BinaryTreeNode<T> *mLeft, *mRight;	
     public:
-        BinaryTreeNode<T> () {
+        BinaryTreeNode<T> (T data, BinaryTreeNode *left, BinaryTreeNode<T> *right) {
+		mData = data;
+		mLeft = left;
+		mRight = right;
         }
+	BinaryTreeNode* getLeft() { return mLeft; }
+	BinaryTreeNode* getRight() { return mRight; }
+	void setLeft(BinaryTreeNode *node) { mLeft = node; }
+	void setRight(BinaryTreeNode *node) {mRight = node; }
+	int getData() { return mData; }
+	
 };
 
 template<class T>
 class BinaryTree {
     private:
+	BinaryTreeNode<T> *mRoot;
         /* You fill in private member data. */
+	void copy(BinaryTreeNode<T> *toCopy);
 
         /* Recommended, but not necessary helper function. */
         void put(BinaryTreeNode<T> *rover, BinaryTreeNode<T> *newNode);
