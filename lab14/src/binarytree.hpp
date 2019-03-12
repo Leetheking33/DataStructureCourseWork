@@ -18,7 +18,7 @@ class BinaryTreeNode {
 	BinaryTreeNode* getRight() { return mRight; }
 	void setLeft(BinaryTreeNode *node) { mLeft = node; }
 	void setRight(BinaryTreeNode *node) {mRight = node; }
-	int getData() { return mData; }
+	T getData() { return mData; }
 	
 };
 
