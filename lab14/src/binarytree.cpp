@@ -1,5 +1,7 @@
 #ifdef BINARY_TREE_H
 #define BINARY_TREE_H
+#include <iostream>
+using namespace std;
 
 template<class T>
 BinaryTree<T>::BinaryTree() {
@@ -49,6 +51,23 @@ void BinaryTree<T>::copy(BinaryTreeNode<T> *toCopy){
 		copy(toCopy->getLeft());
 		copy(toCopy->getRight());
         }
+}
+
+template<class T>
+void BinaryTree<T>::printInOrder(BinaryTreeNode<T> *rover){
+	if(rover == NULL){
+		return;
+	}
+
+	printInOrder(rover->getLeft());
+	cout << rover->getData() << ", ";
+	printInOrder(rover->getRight());
+}
+
+template<class T>
+void BinaryTree<T>::printInOrder(){
+	printInOrder(mRoot);
+	cout << endl;
 }
 
 template<class T>
