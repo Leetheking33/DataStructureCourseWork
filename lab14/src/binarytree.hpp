@@ -33,6 +33,8 @@ class BinaryTree {
         void put(BinaryTreeNode<T> *rover, BinaryTreeNode<T> *newNode);
         /* Recommended, but not necessary helper function. */
         std::string inorderString(BinaryTreeNode<T> *node, std::string &ret);
+	void printInOrder(BinaryTreeNode<T> *rover);
+
     public:
 
         /* Creates an empty binary tree. */
@@ -65,6 +67,8 @@ class BinaryTree {
          * LCA(1, 6) = 4
          */
         T& lca(T& a, T& b);
+	
+	void printInOrder();
 
         /* Always free memory. */
         ~BinaryTree();
