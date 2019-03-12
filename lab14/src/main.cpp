@@ -12,6 +12,10 @@ int main(int argc, char *argv[]) {
 	bt.put(2);
 	bt.put(100);
 	bt.printInOrder();
+	
+	//test copy constructor
+	BinaryTree<int> copy(bt);
+	copy.printInOrder();
 		
     	return 0;
 }
