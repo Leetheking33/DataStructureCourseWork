@@ -5,36 +5,20 @@
 
 template<class T>
 class BinaryTreeNode {
-    private:
-	T mData;
-	BinaryTreeNode<T> *mLeft, *mRight;	
     public:
-        BinaryTreeNode<T> (T data, BinaryTreeNode *left, BinaryTreeNode<T> *right) {
-		mData = data;
-		mLeft = left;
-		mRight = right;
+        BinaryTreeNode<T> () {
         }
-	BinaryTreeNode* getLeft() { return mLeft; }
-	BinaryTreeNode* getRight() { return mRight; }
-	void setLeft(BinaryTreeNode *node) { mLeft = node; }
-	void setRight(BinaryTreeNode *node) {mRight = node; }
-	T getData() { return mData; }
-	
 };
 
 template<class T>
 class BinaryTree {
     private:
-	BinaryTreeNode<T> *mRoot;
         /* You fill in private member data. */
-	void copy(BinaryTreeNode<T> *toCopy);
 
         /* Recommended, but not necessary helper function. */
         void put(BinaryTreeNode<T> *rover, BinaryTreeNode<T> *newNode);
         /* Recommended, but not necessary helper function. */
         std::string inorderString(BinaryTreeNode<T> *node, std::string &ret);
-	void printInOrder(BinaryTreeNode<T> *rover);		
-		
     public:
 
         /* Creates an empty binary tree. */
@@ -45,30 +29,43 @@ class BinaryTree {
 
         /* Add a given value to the Binary Tree. 
          * Must maintain ordering!
-         * Do NOT do ANY balancing!
          */
         void put(const T &val);
 
-        /* Returns the height for the binary tree. */
+        /* Returns the height of the binary tree. */
         int getHeight();
+
+        /* Returns true if an item exists in the Binary Tree */
+        bool contains(const T &val) const;
+
+        /* Removes a specific val from the Binary Tree.
+         * Returns true if the value exists (and was removed.)
+         * Otherwise, returns false.
+         */
+        bool remove(const T &val);
+
+        /* This method returns true iff there is a value in the tree 
+         * >= min and <= max.  In other words, it returns true if there
+         * is an item in the tree in the range [min, max]
+         */
+        bool existsInRange(T min, T max) const;
+
+        /* This is similar but it returns the number of items in the range. */
+        int countInRange(T min, T max) const;
 
         /* Returns a string representation of the binary Tree in order. */
         std::string inorderString();
 
-        /* Return the lowest common ancestor (LCA) of two values.
-         * The LCA is the most immediate parent of both values.  For example:
-         *      4
-         *    /   \
-         *   2     8
-         *  / \   / \
-         * 1   3 6   10
-         * LCA(1, 3) = 2
-         * LCA(1, 2) = 2
-         * LCA(1, 6) = 4
+        /* Returns a string representation of the binary Tree pre order. */
+        std::string preorderString();
+
+        /* Returns a string representation of the binary Tree pre order. */
+        std::string postorderString();
+
+        /* Does an inorder traversal of the Binary Search Tree calling
+         * visit on each node.
          */
-        T& lca(T& a, T& b);
-	
-	void printInOrder();
+        void inorderTraversal(void (*visit) (T &item)) const;
 
         /* Always free memory. */
         ~BinaryTree();
