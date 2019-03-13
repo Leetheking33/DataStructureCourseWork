@@ -2,6 +2,8 @@
 #include <list>
 #include <queue>
 #include <utility>
+#include <string>
+using namespace std;
 
 class BinaryTreeNode {
     private:
@@ -25,6 +27,7 @@ class BinarySearchTree {
         BinaryTreeNode *mRoot;
         void add(BinaryTreeNode *toAdd, BinaryTreeNode *rover);
         void printInOrder(BinaryTreeNode *rover);
+	std::string inorderString(BinaryTreeNode *rover, std::string &ret);
     public:
         BinarySearchTree() { mRoot = NULL; }
         void add(int data);
@@ -34,6 +37,7 @@ class BinarySearchTree {
         int getHeight();
         int getSize();
         void printInOrder();
+	std::string inorderString();
 };
 
 // Precondition: rover is NOT NULL & toAdd is NOT NULL
@@ -84,6 +88,22 @@ void BinarySearchTree::printInOrder() {
     std::cout << "\n";
 }
 
+std::string BinarySearchTree::inorderString(BinaryTreeNode *rover, std::string &ret){
+        if(rover == NULL){
+                return NULL;
+        }
+
+        printInOrder(rover->getLeft());
+        ret.append(to_string(rover->getData()) + " ");
+        printInOrder(rover->getRight());
+	return ret;
+}
+
+std::string BinarySearchTree::inorderString(){
+        string str;
+        inorderString(mRoot, str);
+        return str;
+}
 
 int main(int argc, char *argv[]) {
     BinarySearchTree bst;
