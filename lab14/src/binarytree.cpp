@@ -88,6 +88,18 @@ int BinaryTree<T>::getHeight(){
 }
 
 template<class T>
+std::string BinaryTree<T>::inorderString(){
+
+	return NULL;
+}
+
+template<class T>
+T& BinaryTree<T>::lca(T& a, T& b){
+
+	return NULL;
+}
+
+template<class T>
 BinaryTree<T>::~BinaryTree() {
 
 }
