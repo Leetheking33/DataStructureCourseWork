@@ -1,5 +1,9 @@
 #include <stdio.h>
+#include <string>
+#include <iostream>
 #include "binarytree.hpp"
+
+using namespace std;
 
 int main(int argc, char *argv[]) {
     	BinaryTree<int> bt;
@@ -17,10 +21,30 @@ int main(int argc, char *argv[]) {
 	bt.printInOrder();
 	bt.put(0);
 	bt.printInOrder();
-
+	
+	string bop = "hello there";
+	int x = 55;
+	string z = to_string(x);
+	bop.append(z + " ");
+	cout << bop << "should be a space b4 this " << endl;
 	//test copy constructor
 	BinaryTree<int> copy(bt);
 	copy.printInOrder();
 		
+	BinaryTree<double> dt;
+	dt.put(15);
+	dt.printInOrder();
+	BinaryTree<string> st;
+	st.put("Leroy");
+	st.printInOrder();	
+	st.put("Henry");
+	st.printInOrder();
+	st.put("Kyle");
+	st.printInOrder();
+	st.put("mincraft");
+	st.printInOrder();
+	st.put("Dr. West");
+	st.put("Miss Betty");
+	st.printInOrder();	
     	return 0;
 }

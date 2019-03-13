@@ -1,6 +1,7 @@
 #ifdef BINARY_TREE_H
 #define BINARY_TREE_H
 #include <iostream>
+#include <string>
 using namespace std;
 
 template<class T>
@@ -89,7 +90,13 @@ int BinaryTree<T>::getHeight(){
 
 template<class T>
 std::string BinaryTree<T>::inorderString(){
-
+	if(rover == NULL){
+                return;
+        }
+	string str;	
+        printInOrder(rover->getLeft());
+        cout <<  rover->getData() << ", ";
+        printInOrder(rover->getRight());	
 	return NULL;
 }
 
