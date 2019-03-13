@@ -1,2 +1,22 @@
 I am run number 001922.
 Pulling source code...
+------------------------------------------------
+Changes found in lab14
+------------------------------------------------
+*****************Examining lab14****************
+******************* Put Test PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* get Height PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* lca test PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+Auto-grader grade: *****************Finished lab14****************
