@@ -84,9 +84,11 @@ int BinaryTree<T>::getHeight(){
 		} else {
 			return(rightHright+1);
 		}*/
+	return 0;
 }
 
 template<class T>
 BinaryTree<T>::~BinaryTree() {
+
 }
 #endif
