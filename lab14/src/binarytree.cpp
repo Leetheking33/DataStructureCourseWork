@@ -15,20 +15,20 @@ BinaryTree<T>::BinaryTree(const BinaryTree<T> &tree){
 }
 
 template<class T>
-void BinaryTree<T>::put(BinaryTreeNode<T> *toAdd, BinaryTreeNode<T> *rover){
+void BinaryTree<T>::mPut(BinaryTreeNode<T> *toAdd, BinaryTreeNode<T> *rover){
 	if(rover->getData() > toAdd->getData()){
 		if(rover->getLeft() == NULL){
 			rover->setLeft(toAdd);
 			return;
 		}
-		put(toAdd, rover->getLeft());
+		mPut(toAdd, rover->getLeft());
 	} else {
 		
  	  if(rover->getRight() == NULL){
 		rover->setRight(toAdd);
 		return;
 	  }
-	  put(toAdd, rover->getRight());
+	  mPut(toAdd, rover->getRight());
 	}
 }
 
@@ -41,7 +41,7 @@ void BinaryTree<T>::put(const T &val){
 		return;
 	}
 
-	put(node, mRoot); 
+	mPut(node, mRoot); 
 }
 
 template<class T>
