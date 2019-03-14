@@ -2,22 +2,22 @@
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
-Memory errors found: ==1095==    definitely lost: 120 bytes in 4 blocks
+Memory errors found: ==1370==    definitely lost: 120 bytes in 4 blocks
 + 31.500 pts of 35.000
 Total grade so far: 31.500
 ******************* get Height PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
-Failures = 3
-MAKE_ERROR = 
-Memory errors found: ==1152==    definitely lost: 96 bytes in 3 blocks
+Failures = 
+MAKE_ERROR = src/binarytree.cpp:106:29: error: no matching function for call to 'BinaryTree<int>::getHeight(BinaryTreeNode<int>*)'
+src/binarytree.cpp:107:30: error: no matching function for call to 'BinaryTree<int>::getHeight(BinaryTreeNode<int>*)'
+src/binarytree.cpp:106:29: error: no matching function for call to 'BinaryTree<std::__cxx11::basic_string<char> >::getHeight(BinaryTreeNode<std::__cxx11::basic_string<char> >*)'
+src/binarytree.cpp:107:30: error: no matching function for call to 'BinaryTree<std::__cxx11::basic_string<char> >::getHeight(BinaryTreeNode<std::__cxx11::basic_string<char> >*)'
 + 0 pts of 30.000
 Total grade so far: 31.500
 ******************* lca test PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 3
 MAKE_ERROR = 
-Memory errors found: ==1209==    definitely lost: 72 bytes in 3 blocks
+Memory errors found: ==1478==    definitely lost: 72 bytes in 3 blocks
 + 0 pts of 35.000
 Total grade so far: 31.500
-Auto-grader grade: 31.500
-*****************Finished lab14****************
