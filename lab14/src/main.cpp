@@ -7,8 +7,10 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
     	BinaryTree<int> bt;
+	cout << "The hight of a bt of ints is: " << bt.getHeight() << endl;
 	//testing put and printInOrder
 	bt.put(10);
+	cout << "The hight of a bt of ints is: " << bt.getHeight() << endl;
 	bt.printInOrder();
 	bt.put(15);
 	bt.put(4);
@@ -21,7 +23,8 @@ int main(int argc, char *argv[]) {
 	bt.printInOrder();
 	bt.put(0);
 	bt.printInOrder();
-	cout << "String: ";
+	cout << "The hight of a bt of ints is: " << bt.getHeight() << endl;
+	cout << "print an bt of int in one String: ";
 	cout << bt.inorderString() << endl;	
 	/*
 	string bop = "hello there";

@@ -98,21 +98,24 @@ void BinaryTree<T>::printInOrder(){
 }
 
 template<class T>
-int BinaryTree<T>::getHeight(){
-	BinaryTreeNode<T> *rover = mRoot;
-	if(rover == NULL){
-		return 0;
-	} else {
-		int leftHeight = getHeight(rover->getLeft());
-		int rightHeight = getHeight(rover->getRight());
+int BinaryTree<T>::getHeight(BinaryTreeNode<T> *rover){
+        if(rover == NULL){
+                return 0;
+        } else {
+                int leftHeight = getHeight(rover->getLeft());
+                int rightHeight = getHeight(rover->getRight());
 
-		if(leftHeight > rightHeight){
-			return(leftHeight+1);
-		} else {
-			return(rightHeight+1);
-		}
-	return 0;
-	}
+                if(leftHeight > rightHeight){
+                        return(leftHeight+1);
+                } else {
+                        return(rightHeight+1);
+                }
+        return 0;
+        }
+}
+template<class T>
+int BinaryTree<T>::getHeight(){
+	return getHeight(mRoot);
 }
 
 template<class T>
