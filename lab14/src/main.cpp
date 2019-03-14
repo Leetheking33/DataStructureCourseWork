@@ -21,16 +21,17 @@ int main(int argc, char *argv[]) {
 	bt.printInOrder();
 	bt.put(0);
 	bt.printInOrder();
-	cout << "String ";
+	cout << "String: ";
 	cout << bt.inorderString() << endl;	
 	string bop = "hello there";
 	int x = 55;
-	//string z = to_string(x);
+	string z = to_string(x);
 	bop.append(to_string(x) + " ");
 	cout << bop << "should be a space b4 this " << endl;
 	//test copy constructor
+	cout << "This is printinOrder: ";
 	BinaryTree<int> copy(bt);
-	copy.printInOrder();
+	//copy.printInOrder();
 		
 	BinaryTree<double> dt;
 	dt.put(15);
@@ -46,6 +47,7 @@ int main(int argc, char *argv[]) {
 	st.printInOrder();
 	st.put("Dr. West");
 	st.put("Miss Betty");
-	st.printInOrder();	
+	cout << "String bt in string: ";
+	//st.inorderString();	
     	return 0;
 }
