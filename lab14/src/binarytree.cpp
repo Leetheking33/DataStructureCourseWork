@@ -144,7 +144,19 @@ T& BinaryTree<T>::lca(T& a, T& b){
 }
 
 template<class T>
-BinaryTree<T>::~BinaryTree() {
+void BinaryTree<T>::destroyBt(BinaryTreeNode<T> *rover){
+	if(rover == NULL){
+                return;
+        }
+        //recursion to cout in order
+        destroyBt(rover->getLeft());
+	delete rover;
+        destroyBt(rover->getRight());
+	
+}
 
+template<class T>
+BinaryTree<T>::~BinaryTree() {
+	destroyBt(mRoot);
 }
 #endif
