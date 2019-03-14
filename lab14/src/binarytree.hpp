@@ -33,8 +33,8 @@ class BinaryTree {
         void mPut(BinaryTreeNode<T> *rover, BinaryTreeNode<T> *newNode);
         /* Recommended, but not necessary helper function. */
         std::string inorderString(BinaryTreeNode<T> *node);
-	void printInOrder(BinaryTreeNode<T> *rover);	
-	std::string toString(string data);	
+	void printInOrder(BinaryTreeNode<T> *rover);
+	std::string toString(T val);	
 		
     public:
 

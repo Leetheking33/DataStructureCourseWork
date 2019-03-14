@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
 	bt.put(0);
 	bt.printInOrder();
 	cout << "String: ";
-	//cout << bt.inorderString() << endl;	
+	cout << bt.inorderString() << endl;	
 	/*
 	string bop = "hello there";
 	int x = 55;
@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
 	st.inorderString();	
 
 	cout << "String bt in string: ";
-	st.inorderString();	
+       	//st.inorderString();	
     	return 0;
 	
 }

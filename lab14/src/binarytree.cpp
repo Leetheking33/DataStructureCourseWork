@@ -56,6 +56,15 @@ void BinaryTree<T>::copy(BinaryTreeNode<T> *toCopy){
 }
 
 template<class T>
+std::string BinaryTree<T>::toString(T val){
+	std::ostringstream tempString;
+
+	tempString << val;
+
+	return tempString.str();
+}
+
+template<class T>
 void BinaryTree<T>::printInOrder(BinaryTreeNode<T> *rover){
 	if(rover == NULL){
 		return;
@@ -66,16 +75,12 @@ void BinaryTree<T>::printInOrder(BinaryTreeNode<T> *rover){
 	printInOrder(rover->getRight());
 }
 
-template<class T>
-std::string BinaryTree<T>::toString(string data){
-	return data;
-}
 
 template<class T>
 std::string BinaryTree<T>::inorderString(BinaryTreeNode<T> *rover/*, std::string &ret*/){
 	std::string ret = " ";
 	if(rover == NULL){
-                return ret;
+                return " ";
 	}	
 		ret.append(inorderString(rover->getLeft()));
        		ret.append(toString(rover->getData()) + " ");
