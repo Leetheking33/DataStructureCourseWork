@@ -5,9 +5,10 @@
 using namespace std;
 template<class T>
 class BinaryTreeNode {	
+    private:
+	BinaryTreeNode<T> *mLeft, *mRight;
     public:
 	T mData;
-        BinaryTreeNode<T> *mLeft, *mRight;
         BinaryTreeNode<T> (T data, BinaryTreeNode *left, BinaryTreeNode<T> *right) {
 		mData = data;
 		mLeft = left;
@@ -17,7 +18,7 @@ class BinaryTreeNode {
 	BinaryTreeNode* getRight() { return mRight; }
 	void setLeft(BinaryTreeNode *node) { mLeft = node; }
 	void setRight(BinaryTreeNode *node) {mRight = node; }
-	T getData() { return mData; }
+	//T getData() { return mData; }
 	
 };
 
