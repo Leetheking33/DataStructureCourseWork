@@ -17,3 +17,5 @@ Failures =
 MAKE_ERROR = src/binarytree.cpp:117:9: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
 + 0 pts of 35.000
 Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab14****************
