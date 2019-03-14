@@ -59,11 +59,13 @@ void BinaryTree<T>::copy(BinaryTreeNode<T> *toCopy){
 
 template<class T>
 std::string BinaryTree<T>::toString(T val){
-	std::ostringstream tempString;
-
-	tempString << val;
-
-	return tempString.str();
+	std::ostringstream putInString;
+	
+	//put val into string 
+	putInString << val;
+	
+	// return putInString as a string
+	return putInString.str();
 }
 
 template<class T>
@@ -71,7 +73,7 @@ void BinaryTree<T>::printInOrder(BinaryTreeNode<T> *rover){
 	if(rover == NULL){
 		return;
 	}
-
+	//recursion to cout in order
 	printInOrder(rover->getLeft());
 	cout << rover->mData << ", ";
 	printInOrder(rover->getRight());
@@ -83,12 +85,12 @@ std::string BinaryTree<T>::inorderString(BinaryTreeNode<T> *rover/*, std::string
 	std::string ret = "";
 	if(rover == NULL){
                 return "";
-	}	
+	}	//recursion to append to a string
 		ret.append(inorderString(rover->getLeft()));
        		ret.append(toString(rover->mData) + " ");
         	ret.append(inorderString(rover->getRight()));
 		return ret;
-		}	
+}	
 
 
 template<class T>
@@ -127,8 +129,18 @@ std::string BinaryTree<T>::inorderString(){
 
 template<class T>
 T& BinaryTree<T>::lca(T& a, T& b){
-
-	return a;
+	BinaryTreeNode<T> *rover = mRoot;
+	
+	while(rover != NULL){
+		if(rover->mData > a && rover->mData > b){
+			rover = rover->getLeft();
+		} else if(rover->mData < a && rover->mData < b){
+			rover = rover->getRight();
+		} else{
+			break;
+		}
+	}
+	return rover->mData;
 }
 
 template<class T>
