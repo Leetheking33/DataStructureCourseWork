@@ -78,9 +78,9 @@ void BinaryTree<T>::printInOrder(BinaryTreeNode<T> *rover){
 
 template<class T>
 std::string BinaryTree<T>::inorderString(BinaryTreeNode<T> *rover/*, std::string &ret*/){
-	std::string ret = "";
+	std::string ret = " ";
 	if(rover == NULL){
-                return "";
+                return " ";
 	}	
 		ret.append(inorderString(rover->getLeft()));
        		ret.append(toString(rover->mData) + " ");
@@ -114,7 +114,7 @@ int BinaryTree<T>::getHeight(){
 
 template<class T>
 std::string BinaryTree<T>::inorderString(){
-	string str = "";
+	string str = " ";
 	str = inorderString(mRoot);
 	return str;
 }
