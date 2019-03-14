@@ -122,7 +122,7 @@ std::string BinaryTree<T>::inorderString(){
 template<class T>
 T& BinaryTree<T>::lca(T& a, T& b){
 
-	return NULL;
+	return a;
 }
 
 template<class T>
