@@ -19,18 +19,18 @@ BinaryTree<T>::BinaryTree(const BinaryTree<T> &tree){
 template<class T>
 void BinaryTree<T>::mPut(BinaryTreeNode<T> *toAdd, BinaryTreeNode<T> *rover){
 	if(rover->mData > toAdd->mData){
-		if(rover->mLeft == NULL){
+		if(rover->getLeft() == NULL){
 			rover->setLeft(toAdd);
 			return;
 		}
-		mPut(toAdd, rover->mLeft);
+		mPut(toAdd, rover->getLeft());
 	} else {
 		
- 	  if(rover->mRight == NULL){
+ 	  if(rover->getRight() == NULL){
 		rover->setRight(toAdd);
 		return;
 	  }
-	  mPut(toAdd, rover->mRight);
+	  mPut(toAdd, rover->getRight());
 	}
 }
 
@@ -50,8 +50,8 @@ template<class T>
 void BinaryTree<T>::copy(BinaryTreeNode<T> *toCopy){
         if(toCopy){
 		put(toCopy->mData);
-		copy(toCopy->mLeft);
-		copy(toCopy->mRight);
+		copy(toCopy->getLeft());
+		copy(toCopy->getRight());
         }
 }
 
@@ -70,21 +70,21 @@ void BinaryTree<T>::printInOrder(BinaryTreeNode<T> *rover){
 		return;
 	}
 
-	printInOrder(rover->mLeft);
+	printInOrder(rover->getLeft());
 	cout << rover->mData << ", ";
-	printInOrder(rover->mRight);
+	printInOrder(rover->getRight());
 }
 
 
 template<class T>
 std::string BinaryTree<T>::inorderString(BinaryTreeNode<T> *rover/*, std::string &ret*/){
-	std::string ret = " ";
+	std::string ret = "";
 	if(rover == NULL){
-                return " ";
+                return "";
 	}	
-		ret.append(inorderString(rover->mLeft));
+		ret.append(inorderString(rover->getLeft()));
        		ret.append(toString(rover->mData) + " ");
-        	ret.append(inorderString(rover->mRight));
+        	ret.append(inorderString(rover->getRight()));
 		return ret;
 		}	
 
@@ -114,7 +114,7 @@ int BinaryTree<T>::getHeight(){
 
 template<class T>
 std::string BinaryTree<T>::inorderString(){
-	string str = " ";
+	string str = "";
 	str = inorderString(mRoot);
 	return str;
 }
