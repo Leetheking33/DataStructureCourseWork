@@ -2,6 +2,7 @@
 #define BINARY_TREE_H
 #include <iostream>
 #include <string>
+#include <sstream>
 using namespace std;
 
 template<class T>
@@ -66,20 +67,22 @@ void BinaryTree<T>::printInOrder(BinaryTreeNode<T> *rover){
 }
 
 template<class T>
-std::string BinaryTree<T>::inorderString(BinaryTreeNode<T> *rover, std::string &ret){
+std::string BinaryTree<T>::toString(string data){
+	return data;
+}
+
+template<class T>
+std::string BinaryTree<T>::inorderString(BinaryTreeNode<T> *rover/*, std::string &ret*/){
+	std::string ret = " ";
 	if(rover == NULL){
                 return ret;
-        }
-	
-	/*if(typeid(ret) == typeid(rover->getData()){
-		
-	}*/
-	
-        inorderString(rover->getLeft(), ret);
-       	ret.append(to_string(rover->getData()) + " ");
-        inorderString(rover->getRight(), ret);
-	return ret;	
-}
+	}	
+		ret.append(inorderString(rover->getLeft()));
+       		ret.append(toString(rover->getData()) + " ");
+        	ret.append(inorderString(rover->getRight()));
+		return ret;
+		}	
+
 
 template<class T>
 void BinaryTree<T>::printInOrder(){
@@ -106,8 +109,8 @@ int BinaryTree<T>::getHeight(){
 
 template<class T>
 std::string BinaryTree<T>::inorderString(){
-	string str;
-	inorderString(mRoot, str);
+	string str = " ";
+	str = inorderString(mRoot);
 	return str;
 }
 
