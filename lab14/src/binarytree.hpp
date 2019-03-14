@@ -35,7 +35,8 @@ class BinaryTree {
         std::string inorderString(BinaryTreeNode<T> *node);
 	void printInOrder(BinaryTreeNode<T> *rover);
 	std::string toString(T val);
-	int getHeight(BinaryTreeNode<T> *rover);	
+	int getHeight(BinaryTreeNode<T> *rover);
+	void destroyBt(BinaryTreeNode<T> *rover);	
 		
     public:
 
