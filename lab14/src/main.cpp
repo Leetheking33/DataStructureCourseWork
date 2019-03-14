@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
 	st.inorderString();	
 
 	cout << "String bt in string: ";
-       	//st.inorderString();	
+       	cout << st.inorderString();	
     	return 0;
 	
 }

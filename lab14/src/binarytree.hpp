@@ -4,11 +4,10 @@
 #include <string>
 using namespace std;
 template<class T>
-class BinaryTreeNode {
-    private:
-	T mData;
-	BinaryTreeNode<T> *mLeft, *mRight;	
+class BinaryTreeNode {	
     public:
+	T mData;
+        BinaryTreeNode<T> *mLeft, *mRight;
         BinaryTreeNode<T> (T data, BinaryTreeNode *left, BinaryTreeNode<T> *right) {
 		mData = data;
 		mLeft = left;
