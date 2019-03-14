@@ -21,3 +21,5 @@ MAKE_ERROR =
 Memory errors found: ==1478==    definitely lost: 72 bytes in 3 blocks
 + 0 pts of 35.000
 Total grade so far: 31.500
+Auto-grader grade: 31.500
+*****************Finished lab14****************
