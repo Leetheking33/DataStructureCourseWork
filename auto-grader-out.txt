@@ -1,28 +1,2 @@
-I am run number 002040.
+I am run number 002041.
 Pulling source code...
-------------------------------------------------
-Changes found in lab14
-------------------------------------------------
-*****************Examining lab14****************
-******************* Put Test PART *********************
-g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
-Failures = 4
-MAKE_ERROR = 
-Memory errors found: ==27117==    definitely lost: 120 bytes in 4 blocks
-+ 0 pts of 35.000
-Total grade so far: 0
-******************* get Height PART *********************
-g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
-Failures = 3
-MAKE_ERROR = 
-Memory errors found: ==27174==    definitely lost: 96 bytes in 3 blocks
-+ 0 pts of 30.000
-Total grade so far: 0
-******************* lca test PART *********************
-g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/binarytree.cpp:125:9: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-+ 0 pts of 35.000
-Total grade so far: 0
-Auto-grader grade: 0
-*****************Finished lab14****************
