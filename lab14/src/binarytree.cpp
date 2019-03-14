@@ -32,6 +32,7 @@ void BinaryTree<T>::mPut(BinaryTreeNode<T> *toAdd, BinaryTreeNode<T> *rover){
 	  }
 	  mPut(toAdd, rover->getRight());
 	}
+	return;
 }
 
 template<class T>
