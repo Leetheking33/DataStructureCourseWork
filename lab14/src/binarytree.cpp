@@ -44,7 +44,8 @@ void BinaryTree<T>::put(const T &val){
 		return;
 	}
 
-	mPut(node, mRoot); 
+	mPut(node, mRoot);
+        return;	
 }
 
 template<class T>
