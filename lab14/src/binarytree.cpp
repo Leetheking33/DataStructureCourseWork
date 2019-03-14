@@ -99,7 +99,7 @@ void BinaryTree<T>::printInOrder(){
 
 template<class T>
 int BinaryTree<T>::getHeight(){
-	/*BinaryTreeNode<T> *rover = mRoot;
+	BinaryTreeNode<T> *rover = mRoot;
 	if(rover == NULL){
 		return 0;
 	} else {
@@ -109,9 +109,10 @@ int BinaryTree<T>::getHeight(){
 		if(leftHeight > rightHeight){
 			return(leftHeight+1);
 		} else {
-			return(rightHright+1);
-		}*/
+			return(rightHeight+1);
+		}
 	return 0;
+	}
 }
 
 template<class T>
