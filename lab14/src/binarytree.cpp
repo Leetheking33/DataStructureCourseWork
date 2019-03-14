@@ -68,12 +68,16 @@ void BinaryTree<T>::printInOrder(BinaryTreeNode<T> *rover){
 template<class T>
 std::string BinaryTree<T>::inorderString(BinaryTreeNode<T> *rover, std::string &ret){
 	if(rover == NULL){
-                return NULL;
+                return ret;
         }
-
-        printInOrder(rover->getLeft());
+	
+	/*if(typeid(ret) == typeid(rover->getData()){
+		
+	}*/
+	
+        inorderString(rover->getLeft(), ret);
        	ret.append(to_string(rover->getData()) + " ");
-        printInOrder(rover->getRight());
+        inorderString(rover->getRight(), ret);
 	return ret;	
 }
 
