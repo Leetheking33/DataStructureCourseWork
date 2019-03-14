@@ -1,21 +1,19 @@
 ******************* Put Test PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/binarytree.cpp:79:29: error: no matching function for call to 'to_string(std::__cxx11::basic_string<char>)'
+MAKE_ERROR = src/binarytree.cpp:81:29: error: no matching function for call to 'BinaryTree<int>::toString(int)'
 + 0 pts of 35.000
 Total grade so far: 0
 ******************* get Height PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 3
 MAKE_ERROR = 
-Memory errors found: ==13734==    definitely lost: 96 bytes in 3 blocks
+Memory errors found: ==23448==    definitely lost: 96 bytes in 3 blocks
 + 0 pts of 30.000
 Total grade so far: 0
 ******************* lca test PART *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/binarytree.cpp:117:9: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+MAKE_ERROR = src/binarytree.cpp:120:9: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
 + 0 pts of 35.000
 Total grade so far: 0
-Auto-grader grade: 0
-*****************Finished lab14****************
