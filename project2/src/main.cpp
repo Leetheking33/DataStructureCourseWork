@@ -9,12 +9,12 @@ using namespace std;
 main(){
 
 	string s;
-	ifstream in;
-	in.open("//notbalance.txt");
+	ifstream cin;
+	cin.open("notbalance.txt");
 
-	getline(in, s);
+	getline(cin, s);
 
 	cout << "This is string " << s << endl;
-	in.close();
+	cin.close();
 	return 0;
 }
