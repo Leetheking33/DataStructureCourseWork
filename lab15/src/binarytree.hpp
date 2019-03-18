@@ -14,11 +14,16 @@ template<class T>
 class BinaryTree {
     private:
         /* You fill in private member data. */
-
+	BinaryTreeNode<T> *mRoot;
+	
+	void copy(BinaryTreeNode<T> *toCopy);
         /* Recommended, but not necessary helper function. */
         void put(BinaryTreeNode<T> *rover, BinaryTreeNode<T> *newNode);
         /* Recommended, but not necessary helper function. */
         std::string inorderString(BinaryTreeNode<T> *node, std::string &ret);
+	std::string toString(T val);
+        int getHeight(BinaryTreeNode<T> *rover);
+        void destroyBt(BinaryTreeNode<T> *rover);
     public:
 
         /* Creates an empty binary tree. */
