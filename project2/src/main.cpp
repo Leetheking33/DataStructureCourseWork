@@ -18,7 +18,14 @@ std::string trim(std::string const& str) {
 }
 
 main(int argc, char *argv[]){
-
+		
+	ifstream file;
+	file.open("/home/leetheking33/csci-315-spring-2019/project2/pages/index.html");
+	if(file.is_open()){
+		cout << "file is open" << endl;
+	} else 
+		cout << "file not open" << endl;
+	
 	std::string programName = trim(argv[0]);
     	HTMLParser htmlParser;
 
@@ -44,17 +51,18 @@ main(int argc, char *argv[]){
         	// If the argument is not the program
         	size_t pos = htmlpage.find(programName);
         	if (pos == std::string::npos) {
-            		/* then print out if it is balanced and number of web pages
-             		* that can be visited from the page
-             		*/
+            		// then print out if it is balanced and number of web pages
+             		// that can be visited from the page
+             		//
             		std::cout << htmlpage << " is " << (htmlParser.isBalanced(htmlpage) ? "" : "not ") << "balanced." << "\n";
             		std::cout << htmlpage << " can visit " << htmlParser.pageVisitAmount(htmlpage) << " pages.\n";
 		}
 	}
 	return 0;
-}
+}	
+	
 
-	/*
+	/*	
 	std::string s;
 	stack<string> tags;
 	char ch;
@@ -77,7 +85,7 @@ main(int argc, char *argv[]){
 					break;
 				}
 				else if(temp[i + 1] == '/'){
-					for(unsigned int j = i + 1; temp[j] != char(32) && j < temp.length(); j++){
+					for(unsigned int j = i + 1; temp[j] != '>' && j < temp.length(); j++){
 						ch = temp[j + 1];
 						newStr += ch;
 					}
@@ -88,7 +96,7 @@ main(int argc, char *argv[]){
 				}
 						
 				else{
-					for(unsigned int j = i; temp[j] != char(32) && j < temp.length(); j++){
+					for(unsigned int j = i; temp[j] != '>' && j < temp.length(); j++){
 						ch = temp[j + 1];
 						str += ch;
 					}
@@ -113,15 +121,17 @@ main(int argc, char *argv[]){
 		cout << "found beginning of a tag." << endl;
 	} else 
 		cout << "no tag found." << endl;
-	*/
+
 	//temp = cin.get(hold);
 	//s.append(temp);
-	/*
+	
 	while(!cin.eof()){
 		cin.get(temp);
 		s.append(temp);	
 	}
-	*/
+	
 	//cout << "This is string " << s << endl;
 	//cin.close();
 	
+}	
+*/
