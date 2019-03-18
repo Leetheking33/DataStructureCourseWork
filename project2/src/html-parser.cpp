@@ -94,10 +94,11 @@ int HTMLParser::pageVisitAmount(std::string filename) {
 						file.open(newStr);
 						if(file.is_open()){
 							count += 1;
-							file.close();
-						} else
+						} else{
 							return count;
+						}
 						pageVisitAmount(newStr);
+						file.close();
                                 	}
 				}
 			}
