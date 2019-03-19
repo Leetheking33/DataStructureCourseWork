@@ -49,8 +49,6 @@ class BinaryTree {
 	std::string toString(T val);
         int getHeight(BinaryTreeNode<T> *rover);
         void destroyBt(BinaryTreeNode<T> *rover);
-	int existsInRange(BinaryTreeNode<T> *rover, T min, T max, int &ret);
-	int countInRange(BinaryTreeNode<T> *rover, T min, T max) const;
     public:
 
         /* Creates an empty binary tree. */
