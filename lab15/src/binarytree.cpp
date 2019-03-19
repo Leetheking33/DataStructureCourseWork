@@ -244,7 +244,8 @@ void BinaryTree<T>::printInOrder(BinaryTreeNode<T> *rover){
         }
         //recursion to cout in order
         printInOrder(rover->getLeft());
-        cout << rover->mData << ", ";
+	if(rover->mData >= 0 && rover->mData <= 7)
+        	cout << rover->mData << " is in range, ";
         printInOrder(rover->getRight());
 }
 
@@ -255,33 +256,31 @@ void BinaryTree<T>::printInOrder(){
 }
 
 template<class T>
-bool BinaryTree<T>::existsInRange(BinaryTreeNode<T> *rover, T min, T max) {
-	/*
-	bool found = true;
+int BinaryTree<T>::existsInRange(BinaryTreeNode<T> *rover, T min, T max, int &ret) {	
 	if(rover == NULL){
-		found = false;
+		return ret;
 	}
 	
-	if(rover->mData >= min && rover->mData <= max){
-                found = true;
+	existsInRange(rover->getLeft(), min, max, ret);
+        if(rover->mData >= min && rover->mData <= max){
+                ret++;
         }
-	existsInRange(rover->getLeft(), min, max);
-	existsInRange(rover->getRight(), min, max);
-	return found;
-	*/
-	return true;
+	existsInRange(rover->getRight(), min, max, ret);
+	return ret;
+
 }
 
 template<class T>
 bool BinaryTree<T>::existsInRange(T min, T max) {
-	if(existsInRange(mRoot, min, max)){
+	if(mRoot->howMany(max, min) == 0)
+		return false;
+	else
 		return true;
-	}
-	return false;
 }
 
 template<class T>
 int BinaryTree<T>::countInRange(T min, T max) const{
-	
+	int count = mRoot->howMany(max, min);
+	return count;
 }
 #endif

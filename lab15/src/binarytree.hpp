@@ -18,6 +18,19 @@ class BinaryTreeNode {
         BinaryTreeNode* getRight() { return mRight; }
         void setLeft(BinaryTreeNode *node) { mLeft = node; }
         void setRight(BinaryTreeNode *node) {mRight = node; }
+	int howMany(T max, T min){
+		int count = 0;
+		if(getLeft() != NULL){
+			count += getLeft()->howMany(max, min);
+		}
+		if(min <= mData && mData <= max){
+			count++;
+		}
+		if(getRight() != NULL){
+			count += getRight()->howMany(max, min);
+		}
+		return count;
+	}
 };
 
 template<class T>
@@ -36,7 +49,7 @@ class BinaryTree {
 	std::string toString(T val);
         int getHeight(BinaryTreeNode<T> *rover);
         void destroyBt(BinaryTreeNode<T> *rover);
-	bool existsInRange(BinaryTreeNode<T> *rover, T min, T max);
+	int existsInRange(BinaryTreeNode<T> *rover, T min, T max, int &ret);
 	int countInRange(BinaryTreeNode<T> *rover, T min, T max) const;
     public:
 
