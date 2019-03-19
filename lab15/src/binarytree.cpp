@@ -142,7 +142,7 @@ bool BinaryTree<T>::contains(const T &val) const{
 			else if(rover->mData > val)
 				rover = rover->getLeft();
 			else
-				rover = rover->Right();
+				rover = rover->getRight();
 		}
 	}
 	return found;
@@ -255,20 +255,6 @@ void BinaryTree<T>::printInOrder(){
         cout << endl;
 }
 
-template<class T>
-int BinaryTree<T>::existsInRange(BinaryTreeNode<T> *rover, T min, T max, int &ret) {	
-	if(rover == NULL){
-		return ret;
-	}
-	
-	existsInRange(rover->getLeft(), min, max, ret);
-        if(rover->mData >= min && rover->mData <= max){
-                ret++;
-        }
-	existsInRange(rover->getRight(), min, max, ret);
-	return ret;
-
-}
 
 template<class T>
 bool BinaryTree<T>::existsInRange(T min, T max) {
