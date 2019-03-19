@@ -1,19 +1,20 @@
 ******************* inRange Test *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
+Failures = 4
+MAKE_ERROR = 
 + 0 pts of 25.000
 Total grade so far: 0
 ******************* contains test *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
+MAKE_ERROR = src/binarytree.cpp:145:20: error: 'class BinaryTreeNode<int>' has no member named 'Right'; did you mean 'mRight'?
+src/binarytree.cpp:145:20: error: 'class BinaryTreeNode<std::__cxx11::basic_string<char> >' has no member named 'Right'; did you mean 'mRight'?
 + 0 pts of 25.000
 Total grade so far: 0
 ******************* count in range test *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
+Failures = 4
+MAKE_ERROR = 
 + 0 pts of 25.000
 Total grade so far: 0
 ******************* traversal test *********************
@@ -22,5 +23,3 @@ Failures =
 MAKE_ERROR = collect2: error: ld returned 1 exit status
 + 0 pts of 25.000
 Total grade so far: 0
-Auto-grader grade: 0
-*****************Finished lab15****************
