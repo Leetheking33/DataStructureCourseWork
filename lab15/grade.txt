@@ -7,22 +7,19 @@ Total grade so far: 25.000
 ******************* contains test *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/binarytree.cpp:145:20: error: 'class BinaryTreeNode<int>' has no member named 'Right'; did you mean 'mRight'?
-src/binarytree.cpp:145:20: error: 'class BinaryTreeNode<std::__cxx11::basic_string<char> >' has no member named 'Right'; did you mean 'mRight'?
-+ 0 pts of 25.000
-Total grade so far: 25.000
+MAKE_ERROR = 
++ 25.000 pts of 25.000
+Total grade so far: 50.000
 ******************* count in range test *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
-Memory errors found: ==28558==    definitely lost: 0 bytes in 0 blocks
+Memory errors found: ==29686==    definitely lost: 0 bytes in 0 blocks
 + 22.500 pts of 25.000
-Total grade so far: 47.500
+Total grade so far: 72.500
 ******************* traversal test *********************
 g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = collect2: error: ld returned 1 exit status
 + 0 pts of 25.000
-Total grade so far: 47.500
-Auto-grader grade: 47.500
-*****************Finished lab15****************
+Total grade so far: 72.500
