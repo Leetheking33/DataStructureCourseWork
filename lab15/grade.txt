@@ -24,3 +24,5 @@ MAKE_ERROR = src/binarytree.cpp:286:9: error: 'class BinaryTreeNode<int>' has no
 src/binarytree.cpp:286:9: error: 'class BinaryTreeNode<std::__cxx11::basic_string<char> >' has no member named 'taverse'; did you mean 'traverse'?
 + 0 pts of 25.000
 Total grade so far: 72.500
+Auto-grader grade: 72.500
+*****************Finished lab15****************
