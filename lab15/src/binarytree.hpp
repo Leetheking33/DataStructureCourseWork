@@ -5,9 +5,19 @@
 
 template<class T>
 class BinaryTreeNode {
+    private:
+        BinaryTreeNode<T> *mLeft, *mRight;
     public:
-        BinaryTreeNode<T> () {
+        T mData;
+        BinaryTreeNode<T> (T data, BinaryTreeNode *left, BinaryTreeNode<T> *right) {
+                mData = data;
+                mLeft = left;
+                mRight = right;
         }
+        BinaryTreeNode* getLeft() { return mLeft; }
+        BinaryTreeNode* getRight() { return mRight; }
+        void setLeft(BinaryTreeNode *node) { mLeft = node; }
+        void setRight(BinaryTreeNode *node) {mRight = node; }
 };
 
 template<class T>
@@ -15,15 +25,19 @@ class BinaryTree {
     private:
         /* You fill in private member data. */
 	BinaryTreeNode<T> *mRoot;
-	
+		
+	void printInOrder(BinaryTreeNode<T> *rover);	
+	void remove(BinaryTreeNode<T>* &p);	
 	void copy(BinaryTreeNode<T> *toCopy);
         /* Recommended, but not necessary helper function. */
-        void put(BinaryTreeNode<T> *rover, BinaryTreeNode<T> *newNode);
+        void mPut(BinaryTreeNode<T> *rover, BinaryTreeNode<T> *newNode);
         /* Recommended, but not necessary helper function. */
-        std::string inorderString(BinaryTreeNode<T> *node, std::string &ret);
+        std::string inorderString(BinaryTreeNode<T> *node);
 	std::string toString(T val);
         int getHeight(BinaryTreeNode<T> *rover);
         void destroyBt(BinaryTreeNode<T> *rover);
+	bool existsInRange(BinaryTreeNode<T> *rover, T min, T max);
+	int countInRange(BinaryTreeNode<T> *rover, T min, T max) const;
     public:
 
         /* Creates an empty binary tree. */
@@ -53,10 +67,12 @@ class BinaryTree {
          * >= min and <= max.  In other words, it returns true if there
          * is an item in the tree in the range [min, max]
          */
-        bool existsInRange(T min, T max) const;
+        bool existsInRange(T min, T max);
 
         /* This is similar but it returns the number of items in the range. */
         int countInRange(T min, T max) const;
+	
+	void printInOrder();
 
         /* Returns a string representation of the binary Tree in order. */
         std::string inorderString();
