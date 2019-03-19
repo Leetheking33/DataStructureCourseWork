@@ -1,2 +1,33 @@
 I am run number 002405.
 Pulling source code...
+------------------------------------------------
+Changes found in lab15
+------------------------------------------------
+*****************Examining lab15****************
+******************* inRange Test *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 25.000 pts of 25.000
+Total grade so far: 25.000
+******************* contains test *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 25.000 pts of 25.000
+Total grade so far: 50.000
+******************* count in range test *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
+Memory errors found: ==30703==    definitely lost: 0 bytes in 0 blocks
++ 22.500 pts of 25.000
+Total grade so far: 72.500
+******************* traversal test *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 25.000 pts of 25.000
+Total grade so far: 97.500
+Auto-grader grade: 97.500
+*****************Finished lab15****************
