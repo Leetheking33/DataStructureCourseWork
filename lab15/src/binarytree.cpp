@@ -283,6 +283,6 @@ void BinaryTreeNode<T>::traverse(void (*visit) (T &item)){
 
 template<class T>
 void BinaryTree<T>::inorderTraversal(void (*visit) (T &item)) const{
-	mRoot->taverse(visit);
+	mRoot->traverse(visit);
 }
 #endif
