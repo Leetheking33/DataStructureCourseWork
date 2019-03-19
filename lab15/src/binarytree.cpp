@@ -269,4 +269,20 @@ int BinaryTree<T>::countInRange(T min, T max) const{
 	int count = mRoot->howMany(max, min);
 	return count;
 }
+template<class T>
+void BinaryTreeNode<T>::traverse(void (*visit) (T &item)){
+	
+	if (getLeft() != NULL){
+		getLeft()->traverse(visit);
+	}
+	visit(mData);
+	if(getRight() != NULL){
+		getRight()->traverse(visit);
+	}
+}
+
+template<class T>
+void BinaryTree<T>::inorderTraversal(void (*visit) (T &item)) const{
+	mRoot->taverse(visit);
+}
 #endif
