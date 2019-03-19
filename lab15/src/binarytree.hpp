@@ -18,6 +18,7 @@ class BinaryTreeNode {
         BinaryTreeNode* getRight() { return mRight; }
         void setLeft(BinaryTreeNode *node) { mLeft = node; }
         void setRight(BinaryTreeNode *node) {mRight = node; }
+	void traverse(void (*visit) (T &item));
 	int howMany(T max, T min){
 		int count = 0;
 		if(getLeft() != NULL){
