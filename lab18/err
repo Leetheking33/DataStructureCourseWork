@@ -1,0 +1,20 @@
+In file included from src/hashtable.hpp:53:0,
+                 from /home/student/csci-315-spring-2019/lab18/test/insert-test.cpp:4,
+                 from test/test-runner.cpp:23:
+src/hashtable.cpp: In member function ‘bool HashTable<K, V>::insert(const K&, const V&)’:
+src/hashtable.cpp:21:10: error: need ‘typename’ before ‘std::__cxx11::list<hashNode<K, V> >::iterator’ because ‘std::__cxx11::list<hashNode<K, V> >’ is a dependent scope
+     for (std::list<hashNode<K, V>>::iterator i = mTable[index].begin();
+          ^~~
+src/hashtable.cpp:21:46: error: expected ‘;’ before ‘i’
+     for (std::list<hashNode<K, V>>::iterator i = mTable[index].begin();
+                                              ^
+src/hashtable.cpp:22:13: error: ‘i’ was not declared in this scope
+             i != mTable[index].end(); i++) {
+             ^
+src/hashtable.cpp: In instantiation of ‘bool HashTable<K, V>::insert(const K&, const V&) [with K = int; V = int]’:
+/home/student/csci-315-spring-2019/lab18/test/insert-test.cpp:10:31:   required from here
+src/hashtable.cpp:21:71: error: dependent-name ‘std::__cxx11::list<hashNode<K, V> >::iterator’ is parsed as a non-type, but instantiation yields a type
+     for (std::list<hashNode<K, V>>::iterator i = mTable[index].begin();
+                                                                       ^
+src/hashtable.cpp:21:71: note: say ‘typename std::__cxx11::list<hashNode<K, V> >::iterator’ if a type is meant
+make: *** [insert-test] Error 1

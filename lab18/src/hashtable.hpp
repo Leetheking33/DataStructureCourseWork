@@ -4,11 +4,22 @@
 #include <string>
 #include <vector>
 #include <list>
+template<class K, class V>
+class hashNode {
+    private:
+        K mKey;
+        V mVal;
+    public:
+        hashNode(K key, V val) { mKey = key; mVal = val; }
+        K& getKey() { return mKey; }
+        V& getVal() { return mVal; }
+};
 
 /* HashTable via chaining */
 template<class K, class V>
 class HashTable {
     private:
+        std::vector<std::list<hashNode<K, V> > > mTable;
     public:
         /* Initialize the Hash Table with size size. */
         HashTable(const int size);
