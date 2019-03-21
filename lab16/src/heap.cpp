@@ -88,5 +88,6 @@ T* Heap<T>::heapSort() {
 
 template<class T>
 Heap<T>::~Heap() {
+	delete mArray;
 }
 #endif
