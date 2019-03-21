@@ -1,22 +1,15 @@
 ******************* insert Test *********************
 g++ -o h-test -g -I src/ --std=c++14 src/heap.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = 
-Memory errors found: ==3976==    definitely lost: 44,048 bytes in 4 blocks
-+ 27.000 pts of 30.000
-Total grade so far: 27.000
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
 ******************* remove test *********************
 g++ -o h-test -g -I src/ --std=c++14 src/heap.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
-+ 0 pts of 30.000
-Total grade so far: 27.000
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
 ******************* heap sort test *********************
 g++ -o h-test -g -I src/ --std=c++14 src/heap.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = 
-Memory errors found: ==4086==    definitely lost: 40 bytes in 1 blocks
-+ 36.000 pts of 40.000
-Total grade so far: 63.000
-Auto-grader grade: 63.000
-*****************Finished lab16****************
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
