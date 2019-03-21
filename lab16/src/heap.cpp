@@ -35,6 +35,7 @@ void Heap<T>::insert(const T& element) {
             T temp = mArray[parent];
             mArray[parent] = mArray[current];
             mArray[current] = temp;
+	    delete mArray[temp];
         } else {
             break;
         }
