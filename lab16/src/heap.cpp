@@ -46,34 +46,35 @@ void Heap<T>::insert(const T& element) {
 }
 
 template<class T>
-T& removeFirst(){
-	
-	int leftChildIndex = 1;
+T& Heap<T>::removeFirst(){
+    T firstIndex = mArray[0];
+    int leftChildIndex = 1;
     int rightChildIndex = 2;
     int current = 0;
 
     // swap
-    int temp = ary[0];
-    ary[0] = ary[size - 1];
-    ary[size - 1] = temp;
-    size--;
+    int temp = mArray[0];
+    mArray[0] = mArray[mLength - 1];
+    mArray[mLength - 1] = temp;
+    mLength--;
 
     // Come up with a way to check if leftChildIndex or rightChildIndex is out of bounds.
-    while(ary[leftChildIndex] > ary[current] || ary[rightChildIndex] > ary[current]) {
-        temp = ary[current];
-        if(ary[leftChildIndex] > ary[current]) {
-            ary[current] = ary[leftChildIndex];
-            ary[leftChildIndex] = temp;
+    while(mArray[leftChildIndex] > mArray[current] || mArray[rightChildIndex] > mArray[current]) {
+        temp = mArray[current];
+        if(mArray[leftChildIndex] > mArray[current]) {
+            mArray[current] = mArray[leftChildIndex];
+            mArray[leftChildIndex] = temp;
             current = leftChildIndex;
         }
         else {
-            ary[current] = ary[rightChildIndex];
-            ary[rightChildIndex] = temp;
+            mArray[current] = mArray[rightChildIndex];
+            mArray[rightChildIndex] = temp;
             current = rightChildIndex;
         }
 
         leftChildIndex = (2*current) + 1;
     }
+    return mArray[0];
 }
 
 template<class T>
