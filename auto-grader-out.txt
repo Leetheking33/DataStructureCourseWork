@@ -1,2 +1,27 @@
 I am run number 002583.
 Pulling source code...
+------------------------------------------------
+Changes found in create
+Changes found in lab16
+------------------------------------------------
+*****************Examining create****************
+Auto-grader grade: *****************Finished create****************
+*****************Examining lab16****************
+******************* insert Test *********************
+g++ -o h-test -g -I src/ --std=c++14 src/heap.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
+Memory errors found: ==28891==    definitely lost: 44,048 bytes in 4 blocks
++ 27.000 pts of 30.000
+Total grade so far: 27.000
+******************* remove test *********************
+g++ -o h-test -g -I src/ --std=c++14 src/heap.cpp src/main.cpp
+******************* heap sort test *********************
+g++ -o h-test -g -I src/ --std=c++14 src/heap.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
+Memory errors found: ==28973==    definitely lost: 40 bytes in 1 blocks
++ 36.000 pts of 40.000
+Total grade so far: 63.000
+Auto-grader grade: 63.000
+*****************Finished lab16****************
