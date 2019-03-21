@@ -9,6 +9,8 @@ Heap<T>::Heap(const int len) {
 
 template<class T>
 void Heap<T>::insert(const T& element) {
+    T *toDelete; 
+    
     // Make sure we have the space.
     if (mLength == mCapacity) {
         
@@ -35,7 +37,7 @@ void Heap<T>::insert(const T& element) {
             T temp = mArray[parent];
             mArray[parent] = mArray[current];
             mArray[current] = temp;
-	    delete mArray[temp];
+
         } else {
             break;
         }
