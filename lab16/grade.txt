@@ -18,3 +18,5 @@ Failures =
 MAKE_ERROR = src/heap.cpp:38:6: error: type 'int' argument given to 'delete', expected pointer
 + 0 pts of 40.000
 Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab16****************

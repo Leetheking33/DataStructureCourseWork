@@ -1,28 +1,2 @@
-I am run number 002605.
+I am run number 002606.
 Pulling source code...
-------------------------------------------------
-Changes found in lab16
-------------------------------------------------
-*****************Examining lab16****************
-******************* insert Test *********************
-g++ -o h-test -g -I src/ --std=c++14 src/heap.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/heap.cpp:38:6: error: type 'int' argument given to 'delete', expected pointer
-src/heap.cpp:38:19: error: array subscript is not an integer
-src/heap.cpp:38:19: error: no match for 'operator[]' (operand types are 'std::__cxx11::basic_string<char>*' and 'std::__cxx11::basic_string<char>')
-+ 0 pts of 30.000
-Total grade so far: 0
-******************* remove test *********************
-g++ -o h-test -g -I src/ --std=c++14 src/heap.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/heap.cpp:38:6: error: type 'int' argument given to 'delete', expected pointer
-+ 0 pts of 30.000
-Total grade so far: 0
-******************* heap sort test *********************
-g++ -o h-test -g -I src/ --std=c++14 src/heap.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = src/heap.cpp:38:6: error: type 'int' argument given to 'delete', expected pointer
-+ 0 pts of 40.000
-Total grade so far: 0
-Auto-grader grade: 0
-*****************Finished lab16****************
