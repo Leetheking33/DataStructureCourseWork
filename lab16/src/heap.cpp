@@ -11,7 +11,7 @@ template<class T>
 void Heap<T>::insert(const T& element) {
     // Make sure we have the space.
     if (mLength == mCapacity) {
-        // expand capcity
+        
     }
 
     // Add to the end of the heap
@@ -42,6 +42,37 @@ void Heap<T>::insert(const T& element) {
         //Update current and parent
         current = parent;
         parent = (current - 1) / 2;
+    }
+}
+
+template<class T>
+T& removeFirst(){
+	
+	int leftChildIndex = 1;
+    int rightChildIndex = 2;
+    int current = 0;
+
+    // swap
+    int temp = ary[0];
+    ary[0] = ary[size - 1];
+    ary[size - 1] = temp;
+    size--;
+
+    // Come up with a way to check if leftChildIndex or rightChildIndex is out of bounds.
+    while(ary[leftChildIndex] > ary[current] || ary[rightChildIndex] > ary[current]) {
+        temp = ary[current];
+        if(ary[leftChildIndex] > ary[current]) {
+            ary[current] = ary[leftChildIndex];
+            ary[leftChildIndex] = temp;
+            current = leftChildIndex;
+        }
+        else {
+            ary[current] = ary[rightChildIndex];
+            ary[rightChildIndex] = temp;
+            current = rightChildIndex;
+        }
+
+        leftChildIndex = (2*current) + 1;
     }
 }
 
