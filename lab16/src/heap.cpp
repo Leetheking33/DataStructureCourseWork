@@ -74,7 +74,7 @@ T& Heap<T>::removeFirst(){
 
         leftChildIndex = (2*current) + 1;
     }
-    return mArray[0];
+    return firstIndex;
 }
 
 template<class T>
