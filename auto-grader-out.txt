@@ -1,2 +1,42 @@
 I am run number 002680.
 Pulling source code...
+------------------------------------------------
+Changes found in create
+Changes found in lab14
+Changes found in lab18
+------------------------------------------------
+*****************Examining create****************
+Auto-grader grade: *****************Finished create****************
+*****************Examining lab14****************
+******************* Put Test PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 35.000 pts of 35.000
+Total grade so far: 35.000
+******************* get Height PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 30.000 pts of 30.000
+Total grade so far: 65.000
+******************* lca test PART *********************
+g++ -o bt-test -g -I src/ --std=c++14 src/binarytree.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = 
++ 35.000 pts of 35.000
+Total grade so far: 100.000
+Auto-grader grade: 100.000
+*****************Finished lab14****************
+*****************Examining lab18****************
+******************* insert Test *********************
+g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* remove test *********************
+g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+Auto-grader grade: *****************Finished lab18****************
