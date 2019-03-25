@@ -25,6 +25,7 @@ class BinaryTreeNode {
 template<class T>
 class BinaryTree {
     private:
+		
 	BinaryTreeNode<T> *mRoot;
         /* You fill in private member data. */
 	void copy(BinaryTreeNode<T> *toCopy);
