@@ -2,7 +2,10 @@
 #include <algorithm>
 #include <vector>
 #include <string>
+#include <algorithm>
 using namespace std;
+
+
 
 class Student {
     private:
@@ -16,8 +19,32 @@ class Student {
         void setName(const string &n) {mName=n;} /* your code must never call 
                                                   * this method
                                                   */
-        string getName() const { return mName; }
-};  
+
+	string getName() const { return mName; }
+	
+	//overload == operator
+	Student operator =(const Student *a){
+		mSid = a->mSid;
+		mName = a->mName;
+		//mData = a.mData;
+
+	}
+
+}; 
+
+struct lessThan {
+     public:
+	inline bool operator() (const Student& a, const Student& b){
+		return (a.id() < b.id());
+	}
+};
+	
+struct pLessThan {
+     public:
+        inline bool operator() (const Student* a, const Student* b){
+                return (a->id() < b->id());
+        }
+};
 
 int main (int argc, char *argv[]) {
     const int backup[10] =
@@ -31,6 +58,8 @@ int main (int argc, char *argv[]) {
      * backup copied into vec should be done in 1 specific insert call, but 
      * make a loop if you have to.
      */
+	
+    vec.insert(vec.end(), &backup[0], &backup[n]);    
 
     cout << "\tunsorted vec print: ";
     for (int i = 0; i < 10; i++) {
@@ -38,6 +67,8 @@ int main (int argc, char *argv[]) {
     }
  
     /* TODO: sort the vector using STL's sort */
+    
+    sort(vec.begin(), vec.end());
 
     cout << "\n\tsorted vec print: ";
     for (int i = 0; i < 10; i++) {
@@ -56,8 +87,9 @@ int main (int argc, char *argv[]) {
         sarray[i].print();
     }
 
-    /* TODO: sort sarray using STL's sort, hint: you will need a predicate function */
-
+    /* TODO: sort sarray using STL's sort, hint: you will need a predicate function */	
+    sort(sarray, sarray + 10, lessThan());	
+	
     cout << "\nSort Studs ";
     for (int i = 0; i < 10; i++) {
         sarray[i].print();
@@ -77,27 +109,49 @@ int main (int argc, char *argv[]) {
     /* TODO: Declare an array of pointers to Students, name it psarray.
      * initialize the elements so that they point to the contents of sarray
      */
-
-
+     Student* psarray[10];
+	for(int i = 0; i < 10; i++){
+		psarray[i] = &sarray[i];
+	}
+	
+	cout << "Array of pointer: ";
+	for(int i = 0; i < 10; i++){
+		psarray[i]->print();
+	}
+	cout << endl;
     /* TODO: use STL to sort the students pointed at by psarray, hint: you need
      * a new predicate
      */
-
-    /*//This will print the students from psarray after you have correctly set it up.
+	
+	sort(psarray, psarray + 10, pLessThan());
+    /*This will print the students from psarray after you have correctly set it up.*/
         cout <<"sort pointer: ";
         for (int i = 0; i < 10; i++) {
             psarray[i]->print();
         }
         cout << "\n\n";
-     */
+     
 
     /* TODO: Now figure out how to sort sarray based on the results of sorting
      * psarray notice this is printing sarray, so after sorting psarray, you 
      * need to use that info to sort sarray in O(N) time
      */
+    cout << "3rd element in psarray: ";    
+    psarray[3]->print();
+    cout << endl;
+
+    cout << "3rd element in sarray after setting = 3rd of psarray: ";
+    sarray[3] = *psarray[3];
+    sarray[3].print();
+    cout << endl;
 
     cout << "sort Studs: ";
     for (int i = 0; i < 10; i++) {
+	//Student rover = sarray[i];
+	cout << "Before: ";
+	sarray[i].print();
+	cout << "After: ";
+	sarray[i] = *psarray[i];   
         sarray[i].print();
     }
     cout << "\n\n";
