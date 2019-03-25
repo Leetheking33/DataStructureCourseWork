@@ -8,6 +8,6 @@ class MyTestSuite1 : public CxxTest::TestSuite {
         void test1(void) {
             HashTable<int, int> ht(100);
             ht.insert(99, 9001);
-            //TS_ASSERT_EQUALS(ht[99], 9001);
+            TS_ASSERT_EQUALS(ht[99], 9001);
         }
 };
