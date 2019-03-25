@@ -21,15 +21,6 @@ class Student {
                                                   */
 
 	string getName() const { return mName; }
-	
-	//overload == operator
-	Student operator =(const Student *a){
-		mSid = a->mSid;
-		mName = a->mName;
-		//mData = a.mData;
-
-	}
-
 }; 
 
 struct lessThan {
@@ -38,7 +29,14 @@ struct lessThan {
 		return (a.id() < b.id());
 	}
 };
-	
+
+struct charLessThan {
+     public:
+	inline bool operator() (const Student* a, const Student* b){
+		return (a->getName() > b->getName());
+	}		
+};
+
 struct pLessThan {
      public:
         inline bool operator() (const Student* a, const Student* b){
@@ -59,7 +57,7 @@ int main (int argc, char *argv[]) {
      * make a loop if you have to.
      */
 	
-    vec.insert(vec.end(), &backup[0], &backup[n]);    
+    vec.insert(vec.begin(), &backup[0], &backup[n]);    
 
     cout << "\tunsorted vec print: ";
     for (int i = 0; i < 10; i++) {
@@ -136,6 +134,7 @@ int main (int argc, char *argv[]) {
      * psarray notice this is printing sarray, so after sorting psarray, you 
      * need to use that info to sort sarray in O(N) time
      */
+    /*
     cout << "3rd element in psarray: ";    
     psarray[3]->print();
     cout << endl;
@@ -144,14 +143,16 @@ int main (int argc, char *argv[]) {
     sarray[3] = *psarray[3];
     sarray[3].print();
     cout << endl;
+    */
+    // Temp arr to hold the pointers to the student obj in sarray
+    Student temp[10];
+    for (int i = 0; i < 10; i++){
+	temp[i] = *psarray[i];
+    }
 
     cout << "sort Studs: ";
     for (int i = 0; i < 10; i++) {
-	//Student rover = sarray[i];
-	cout << "Before: ";
-	sarray[i].print();
-	cout << "After: ";
-	sarray[i] = *psarray[i];   
+	sarray[i] = temp[i];   
         sarray[i].print();
     }
     cout << "\n\n";
@@ -161,12 +162,17 @@ int main (int argc, char *argv[]) {
      * pointers in DESCENDING (z to a) alphabetical order of Student's names.
      */
 
-    /*  //This will print the students from psarrayN after you have correctly set it up.
+    Student* psarrayN[10];
+    for (int i = 0; i < 10; i++){
+    	psarrayN[i] = &sarray[i];		
+    }
+    sort(psarrayN, psarrayN + 10, charLessThan()); 
+      //This will print the students from psarrayN after you have correctly set it up.
     cout <<"sort pointer: ";
     for (int i = 0; i < 10; i++) {
         psarrayN[i]->print();
     }
     cout << "\n\n";
-    */
+    
     return 0;
 }
