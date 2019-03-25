@@ -3,14 +3,15 @@
 #include <queue>
 #include <utility>
 #include <string>
+#include <sstream>
 using namespace std;
 
 class BinaryTreeNode {
     private:
-        int mData;
+	std::string mData;
         BinaryTreeNode *mLeft, *mRight;
     public:
-        BinaryTreeNode(int data, BinaryTreeNode *left, BinaryTreeNode *right) {
+        BinaryTreeNode(std::string data, BinaryTreeNode *left, BinaryTreeNode *right) {
             mData = data;
             mLeft = left;
             mRight = right;
@@ -19,7 +20,7 @@ class BinaryTreeNode {
         BinaryTreeNode* getRight() { return mRight; }
         void setLeft(BinaryTreeNode *node) { mLeft = node; }
         void setRight(BinaryTreeNode *node) { mRight = node; }
-        int getData() { return mData; }
+	std::string getData() { return mData; }
 };
 
 class BinarySearchTree {
@@ -27,12 +28,13 @@ class BinarySearchTree {
         BinaryTreeNode *mRoot;
         void add(BinaryTreeNode *toAdd, BinaryTreeNode *rover);
         void printInOrder(BinaryTreeNode *rover);
-	std::string inorderString(BinaryTreeNode *rover, std::string &ret);
+	std::string toString(std::string val);
+	std::string inorderString(BinaryTreeNode *rover);
     public:
         BinarySearchTree() { mRoot = NULL; }
-        void add(int data);
-        bool search(int data);
-        void remove(int data);
+        void add(std::string data);
+        bool search(std::string data);
+        void remove(std::string data);
         //void operator==(BinaryTreeNode &ref);
         int getHeight();
         int getSize();
@@ -58,7 +60,7 @@ void BinarySearchTree::add(BinaryTreeNode *toAdd, BinaryTreeNode *rover) {
     }
 }
 
-void BinarySearchTree::add(int data) {
+void BinarySearchTree::add(std::string data) {
     BinaryTreeNode *node = new BinaryTreeNode(data, NULL, NULL);
 
     // Take care of the case of an empty Binary Search Tree.
@@ -88,33 +90,41 @@ void BinarySearchTree::printInOrder() {
     std::cout << "\n";
 }
 
-std::string BinarySearchTree::inorderString(BinaryTreeNode *rover, std::string &ret){
+
+std::string BinarySearchTree::toString(std::string val){
+	std::ostringstream string;
+
+	string << val;
+
+	return string.str();
+}
+
+std::string BinarySearchTree::inorderString(BinaryTreeNode *rover){
+	std::string ret = "";
         if(rover == NULL){
-                return NULL;
+                return "";
         }
 
-        printInOrder(rover->getLeft());
-        ret.append(to_string(rover->getData()) + " ");
-        printInOrder(rover->getRight());
+        ret.append(inorderString(rover->getLeft()));
+        ret.append(toString(rover->getData()) + " ");
+        ret.append(inorderString(rover->getRight()));
 	return ret;
 }
 
 std::string BinarySearchTree::inorderString(){
-        string str;
-        inorderString(mRoot, str);
-        return str;
+        return inorderString(mRoot);
 }
 
 int main(int argc, char *argv[]) {
     BinarySearchTree bst;
 
-    bst.add(10);
-    bst.add(0);
-    bst.add(-3);
-    bst.add(1);
-    bst.add(64);
-    bst.add(20);
-    bst.add(95);
+    bst.add("right");
+    bst.add("doRight");
+    bst.add("not");
+    bst.add("help");
+    bst.add("45");
+    bst.add("too hot");
+    bst.add("real life");
 
-    bst.printInOrder();
+    cout << bst.inorderString();
 }
