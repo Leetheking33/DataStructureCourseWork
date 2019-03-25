@@ -1,9 +1,12 @@
 #ifdef HASH_TABLE_H
 #include <iostream>
-
+#include <list>
+#include <vector>
+#include <iterator>
+using namespace std;
 template<class K, class V>
 HashTable<K, V>::HashTable(const int size) {
-        //std::vector<std::list<hashNode<K, V> > > mTable;
+   // std::vector<std::list<hashNode<K, V> > > mTable;
     mTable.resize(size);
 }
 
@@ -44,6 +47,25 @@ V& HashTable<K, V>::operator[](const K &key) {
 
 template<class K, class V>
 void HashTable<K, V>::print() const {
+	//might //cause error if mTable is pointer
+	//std::list<hashNode<K, V> >::iterator it;	 
+	cout << "(" << mTable[0].getKey() << "," << mTable[0].getVal() << ")";
+	if(mTable.empty()){
+		return;
+	}
+	for(unsigned int i = 0; i < mTable.capacity(); i++){
+		if(mTable[i].empty()){
+			break;
+		} else {
+			for(auto it = mTable[i].begin(); it != mTable[i].end(); it++) {
+				cout << "(" <<  it->getKey() << "," << it->getVal() << ") "; 
+			}
+
+		}
+	 
+	}
+	cout << endl;
+	return;
 }
 
 int hashcode(int key) {
