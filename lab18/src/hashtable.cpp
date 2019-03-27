@@ -3,6 +3,7 @@
 #include <list>
 #include <vector>
 #include <iterator>
+#include <algorithm>
 using namespace std;
 template<class K, class V>
 HashTable<K, V>::HashTable(const int size) {
@@ -12,6 +13,19 @@ HashTable<K, V>::HashTable(const int size) {
 
 template<class K, class V>
 HashTable<K, V>::~HashTable() {
+}
+
+template<class K, class V>
+bool HashTable<K, V>::remove(const K &key){
+	int index = hashcode(key);
+	for (auto i = mTable[index].begin(); i != mTable[index].end(); i++) {
+        if (i->getKey() == key) {
+            mTable[index].erase(i);
+	    return true;
+        } else {
+		return false;
+	}
+    }
 }
 
 template<class K, class V>

@@ -11,6 +11,10 @@ int main(int argc, char *argv[]) {
    // table.insert(134, 431);
     table.insert(34, 44);
     	    
-  table.print();
+    table.print();
+    
+    table.remove(58);
+
+    table.print();
     return 0;
 }
