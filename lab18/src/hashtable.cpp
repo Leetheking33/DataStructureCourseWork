@@ -49,13 +49,13 @@ template<class K, class V>
 void HashTable<K, V>::print() const {
 	//might //cause error if mTable is pointer
 	//std::list<hashNode<K, V> >::iterator it;	 
-	cout << "(" << mTable[0].getKey() << "," << mTable[0].getVal() << ")";
+	
 	if(mTable.empty()){
 		return;
 	}
 	for(unsigned int i = 0; i < mTable.capacity(); i++){
 		if(mTable[i].empty()){
-			break;
+			continue;
 		} else {
 			for(auto it = mTable[i].begin(); it != mTable[i].end(); it++) {
 				cout << "(" <<  it->getKey() << "," << it->getVal() << ") "; 
