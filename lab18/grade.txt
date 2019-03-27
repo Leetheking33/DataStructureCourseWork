@@ -12,3 +12,5 @@ MAKE_ERROR = src/hashtable.cpp:42:30: error: invalid initialization of non-const
 src/hashtable.cpp:42:30: error: invalid initialization of non-const reference of type 'std::__cxx11::basic_string<char>&' from an rvalue of type 'std::__cxx11::basic_string<char>'
 + 0 pts of 50.000
 Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab18****************
