@@ -34,7 +34,7 @@ class HashTable {
         bool insert(const K &key, const V &val);
 
         /* Print out the HashTable */
-        void print() const;
+        void print();
 
         /* Remove the val associated with key.
          * Return true if found and removed.
