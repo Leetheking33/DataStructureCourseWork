@@ -46,10 +46,10 @@ V& HashTable<K, V>::operator[](const K &key) {
 }
 
 template<class K, class V>
-void HashTable<K, V>::print() const {
+void HashTable<K, V>::print()  {
 	//might //cause error if mTable is pointer
 	//std::list<hashNode<K, V> >::iterator it;	 
-	/*	
+		
 	if(mTable.empty()){
 		return;
 	}
@@ -65,7 +65,7 @@ void HashTable<K, V>::print() const {
 	 
 	}
 	cout << endl;
-	return;*/
+	return;
 }
 
 int hashcode(int key) {
