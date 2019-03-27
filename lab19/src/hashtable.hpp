@@ -4,11 +4,32 @@
 #include <string>
 #include <vector>
 
+template<class K, class V>
+class Node {
+    public:
+        Node (K key, V value) {
+            mKey = key;
+            mValue = value;
+            mDeleted = false;
+            mIsEmpty = false;
+        }
+        Node () {
+            mDeleted = false;
+            mIsEmpty = false;
+        }
+        K mKey;
+        V mValue;
+        bool mDeleted, mIsEmpty;
+};
+
 /* HashTable via open addressing */
 template<class K, class V>
 class HashTable {
     private:
         /* Class to begin filling out...*/
+        std::vector<Node<K, V> > mTable;
+        float mLoadFactor;
+        int mNumElements;
     public:
         /* Initialize the Hash Table with size size. */
         HashTable(const int size, const float loadFactor);
