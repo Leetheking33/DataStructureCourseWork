@@ -11,8 +11,8 @@ class hashNode {
         V mVal;
     public:
         hashNode(K key, V val) { mKey = key; mVal = val; }
-        K getKey () const { return mKey; }
-        V getVal() const { return mVal; }
+        K& getKey () { return mKey; }
+        V& getVal() { return mVal; }
 };
 
 /* HashTable via chaining */
