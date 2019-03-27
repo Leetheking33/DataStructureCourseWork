@@ -1,16 +1,13 @@
 ******************* insert Test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/hashtable.cpp:42:30: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-src/hashtable.cpp:42:30: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-+ 0 pts of 50.000
-Total grade so far: 0
+MAKE_ERROR = 
+Memory errors found: ==2043==    definitely lost: 0 bytes in 0 blocks
++ 45.000 pts of 50.000
+Total grade so far: 45.000
 ******************* remove test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/hashtable.cpp:42:30: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
-src/hashtable.cpp:42:30: error: invalid initialization of non-const reference of type 'std::__cxx11::basic_string<char>&' from an rvalue of type 'std::__cxx11::basic_string<char>'
+MAKE_ERROR = collect2: error: ld returned 1 exit status
 + 0 pts of 50.000
-Total grade so far: 0
-Auto-grader grade: 0
-*****************Finished lab18****************
+Total grade so far: 45.000
