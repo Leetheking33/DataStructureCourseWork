@@ -1,11 +1,14 @@
 ******************* insert Test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
-makefile:7: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
+Failures = 
+MAKE_ERROR = src/hashtable.cpp:42:30: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+src/hashtable.cpp:42:30: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
++ 0 pts of 50.000
+Total grade so far: 0
 ******************* remove test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
-makefile:7: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
-Auto-grader grade: *****************Finished lab18****************
+Failures = 
+MAKE_ERROR = src/hashtable.cpp:42:30: error: invalid initialization of non-const reference of type 'int&' from an rvalue of type 'int'
+src/hashtable.cpp:42:30: error: invalid initialization of non-const reference of type 'std::__cxx11::basic_string<char>&' from an rvalue of type 'std::__cxx11::basic_string<char>'
++ 0 pts of 50.000
+Total grade so far: 0
