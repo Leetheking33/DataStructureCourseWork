@@ -49,7 +49,7 @@ template<class K, class V>
 void HashTable<K, V>::print() const {
 	//might //cause error if mTable is pointer
 	//std::list<hashNode<K, V> >::iterator it;	 
-	
+	/*	
 	if(mTable.empty()){
 		return;
 	}
@@ -65,7 +65,7 @@ void HashTable<K, V>::print() const {
 	 
 	}
 	cout << endl;
-	return;
+	return;*/
 }
 
 int hashcode(int key) {
