@@ -1,22 +1,2 @@
-I am run number 002722.
+I am run number 002723.
 Pulling source code...
-------------------------------------------------
-Changes found in lab18
-------------------------------------------------
-*****************Examining lab18****************
-******************* insert Test *********************
-g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = 
-Memory errors found: ==2784==    definitely lost: 0 bytes in 0 blocks
-+ 45.000 pts of 50.000
-Total grade so far: 45.000
-******************* remove test *********************
-g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = 
-Memory errors found: ==2841==    definitely lost: 0 bytes in 0 blocks
-+ 45.000 pts of 50.000
-Total grade so far: 90.000
-Auto-grader grade: 90.000
-*****************Finished lab18****************
