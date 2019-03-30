@@ -1,2 +1,48 @@
 I am run number 002860.
 Pulling source code...
+------------------------------------------------
+Changes found in course-materials
+Changes found in create
+Changes found in lab19
+Changes found in lab20
+------------------------------------------------
+*****************Examining course-materials****************
+Auto-grader grade: *****************Finished course-materials****************
+*****************Examining create****************
+Auto-grader grade: *****************Finished create****************
+*****************Examining lab19****************
+******************* lf Test *********************
+g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
+Failures = 2
+MAKE_ERROR = 
++ 8.325 pts of 25.000
+Total grade so far: 8.325
+******************* insert Test *********************
+g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 35.000
+Total grade so far: 8.325
+******************* remove test *********************
+g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 40.000
+Total grade so far: 8.325
+Auto-grader grade: 8.325
+*****************Finished lab19****************
+*****************Examining lab20****************
+******************* push-pop Test *********************
+g++ -o ht-test -g -I src/ --std=c++14 src/priorityqueue.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 50.000
+Total grade so far: 0
+******************* time test *********************
+g++ -o ht-test -g -I src/ --std=c++14 src/priorityqueue.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 50.000
+Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab20****************
