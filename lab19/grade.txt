@@ -1,20 +1,18 @@
 ******************* lf Test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
-Failures = 1
+Failures = 
 MAKE_ERROR = 
-+ 16.650 pts of 25.000
-Total grade so far: 16.650
++ 25.000 pts of 25.000
+Total grade so far: 25.000
 ******************* insert Test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = collect2: error: ld returned 1 exit status
 + 0 pts of 35.000
-Total grade so far: 16.650
+Total grade so far: 25.000
 ******************* remove test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = collect2: error: ld returned 1 exit status
 + 0 pts of 40.000
-Total grade so far: 16.650
-Auto-grader grade: 16.650
-*****************Finished lab19****************
+Total grade so far: 25.000
