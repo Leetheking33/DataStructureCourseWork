@@ -1,26 +1,2 @@
-I am run number 002892.
+I am run number 002893.
 Pulling source code...
-------------------------------------------------
-Changes found in lab19
-------------------------------------------------
-*****************Examining lab19****************
-******************* lf Test *********************
-g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = 
-+ 25.000 pts of 25.000
-Total grade so far: 25.000
-******************* insert Test *********************
-g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
-+ 0 pts of 35.000
-Total grade so far: 25.000
-******************* remove test *********************
-g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
-Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
-+ 0 pts of 40.000
-Total grade so far: 25.000
-Auto-grader grade: 25.000
-*****************Finished lab19****************
