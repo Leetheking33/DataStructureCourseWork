@@ -1,6 +1,7 @@
 #ifdef HASH_TABLE_H
 
 #include <cstdlib>
+#include <vector>
 
 template<class K, class V>
 HashTable<K, V>::HashTable(const int size, const float loadFactor) {
@@ -20,6 +21,7 @@ bool HashTable<K, V>::insert(const K &key, const V &val) {
         mTable[index].mDeleted = false;
         mTable[index].mIsEmpty = false;
         mNumElements++;
+	loadFactor();
         return true;
 
     }
@@ -34,6 +36,8 @@ bool HashTable<K, V>::insert(const K &key, const V &val) {
         mTable[index].mDeleted = false;
         mTable[index].mIsEmpty = false;
         mNumElements++;
+	loadFactor();
+	return true;
 	}
 
         index = (index + 1) % mTable.capacity();
@@ -45,6 +49,13 @@ bool HashTable<K, V>::insert(const K &key, const V &val) {
 template<class K, class V>
 float HashTable<K, V>::percentFull() {
     return (float)mNumElements/(float)mTable.capacity();
+}
+
+template<class K, class V>
+float HashTable<K, V>::loadFactor(){
+	if(mLoadFactor == percentFull()){
+		mTable.resize(mTable.capacity() * 2 );
+	}
 }
 
 template<class K, class V>

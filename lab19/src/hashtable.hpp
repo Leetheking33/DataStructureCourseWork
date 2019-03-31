@@ -56,6 +56,8 @@ class HashTable {
         /* Retrieves the V val that key maps to. */
         V& operator[](const K &key);
 
+	float loadFactor();
+	
         float percentFull();
 };
 
