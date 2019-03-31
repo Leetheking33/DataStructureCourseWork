@@ -2,6 +2,7 @@
 
 #include <cstdlib>
 #include <vector>
+#include <string>
 
 template<class K, class V>
 HashTable<K, V>::HashTable(const int size, const float loadFactor) {
@@ -68,8 +69,8 @@ int hashcode(int key) {
 }
 
 int hashcode(const std::string &key) {
-    // You need to do something else.
-    return 0;
+    // You need to do something else.    
+    return key.size();
 }
 
 #endif
