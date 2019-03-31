@@ -1,6 +1,7 @@
 #ifndef HASH_TABLE_H
 #define HASH_TABLE_H
 
+#include <cstdlib>
 #include <string>
 #include <vector>
 
@@ -15,7 +16,7 @@ class Node {
         }
         Node () {
             mDeleted = false;
-            mIsEmpty = false;
+            mIsEmpty = true;
         }
         K mKey;
         V mValue;
