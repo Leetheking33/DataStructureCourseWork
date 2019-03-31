@@ -78,13 +78,13 @@ V& HashTable<K, V>::operator[](const K &key){
 	int index = hashcode(key) % mTable.capacity();
 	int startIndex = index;
 
-	if(mTable[index].mkey == key){
-		return mTable[index].mVal;
+	if(mTable[index].mKey == key){
+		return mTable[index].mValue;
 	}
 	startIndex++;
 	while(index != startIndex){
-		if(mTable[index].mkey == key){
-                	return mTable[index].mVal;
+		if(mTable[index].mKey == key){
+                	return mTable[index].mValue;
         	}
 
 		index = (index + 1) % mTable.capacity();
