@@ -91,4 +91,22 @@ V& HashTable<K, V>::operator[](const K &key){
 	}
 }
 
+template<class K, class V>
+bool HashTable<K, V>::remove(const K &key){
+	int index = hashcode(key) % mTable.capacity();
+        int startIndex = index;
+
+	if(mTable[index].mKey == key){
+               mTable[index].mIsEmpty = true;
+        }
+	startIndex++;
+        while(index != startIndex){
+                if(mTable[index].mKey == key){
+                        mTable[index].mIsEmpty = true;
+                }
+
+                index = (index + 1) % mTable.capacity();
+	}	
+}
+
 #endif
