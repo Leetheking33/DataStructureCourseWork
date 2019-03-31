@@ -26,3 +26,5 @@ src/hashtable.cpp:86:20: error: '__gnu_cxx::__alloc_traits<std::allocator<Node<i
 src/hashtable.cpp:87:39: error: '__gnu_cxx::__alloc_traits<std::allocator<Node<int, int> > >::value_type {aka class Node<int, int>}' has no member named 'mVal'; did you mean 'mValue'?
 + 0 pts of 40.000
 Total grade so far: 25.000
+Auto-grader grade: 25.000
+*****************Finished lab19****************
