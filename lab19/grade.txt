@@ -7,24 +7,13 @@ Total grade so far: 25.000
 ******************* insert Test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/hashtable.cpp:81:19: error: '__gnu_cxx::__alloc_traits<std::allocator<Node<int, int> > >::value_type {aka class Node<int, int>}' has no member named 'mkey'; did you mean 'mKey'?
-src/hashtable.cpp:82:24: error: '__gnu_cxx::__alloc_traits<std::allocator<Node<int, int> > >::value_type {aka class Node<int, int>}' has no member named 'mVal'; did you mean 'mValue'?
-src/hashtable.cpp:86:20: error: '__gnu_cxx::__alloc_traits<std::allocator<Node<int, int> > >::value_type {aka class Node<int, int>}' has no member named 'mkey'; did you mean 'mKey'?
-src/hashtable.cpp:87:39: error: '__gnu_cxx::__alloc_traits<std::allocator<Node<int, int> > >::value_type {aka class Node<int, int>}' has no member named 'mVal'; did you mean 'mValue'?
-src/hashtable.cpp:81:19: error: '__gnu_cxx::__alloc_traits<std::allocator<Node<std::__cxx11::basic_string<char>, int> > >::value_type {aka class Node<std::__cxx11::basic_string<char>, int>}' has no member named 'mkey'; did you mean 'mKey'?
-src/hashtable.cpp:82:24: error: '__gnu_cxx::__alloc_traits<std::allocator<Node<std::__cxx11::basic_string<char>, int> > >::value_type {aka class Node<std::__cxx11::basic_string<char>, int>}' has no member named 'mVal'; did you mean 'mValue'?
-src/hashtable.cpp:86:20: error: '__gnu_cxx::__alloc_traits<std::allocator<Node<std::__cxx11::basic_string<char>, int> > >::value_type {aka class Node<std::__cxx11::basic_string<char>, int>}' has no member named 'mkey'; did you mean 'mKey'?
-src/hashtable.cpp:87:39: error: '__gnu_cxx::__alloc_traits<std::allocator<Node<std::__cxx11::basic_string<char>, int> > >::value_type {aka class Node<std::__cxx11::basic_string<char>, int>}' has no member named 'mVal'; did you mean 'mValue'?
-+ 0 pts of 35.000
-Total grade so far: 25.000
+MAKE_ERROR = 
+Memory errors found: ==5835==    definitely lost: 0 bytes in 0 blocks
++ 31.500 pts of 35.000
+Total grade so far: 56.500
 ******************* remove test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = src/hashtable.cpp:81:19: error: '__gnu_cxx::__alloc_traits<std::allocator<Node<int, int> > >::value_type {aka class Node<int, int>}' has no member named 'mkey'; did you mean 'mKey'?
-src/hashtable.cpp:82:24: error: '__gnu_cxx::__alloc_traits<std::allocator<Node<int, int> > >::value_type {aka class Node<int, int>}' has no member named 'mVal'; did you mean 'mValue'?
-src/hashtable.cpp:86:20: error: '__gnu_cxx::__alloc_traits<std::allocator<Node<int, int> > >::value_type {aka class Node<int, int>}' has no member named 'mkey'; did you mean 'mKey'?
-src/hashtable.cpp:87:39: error: '__gnu_cxx::__alloc_traits<std::allocator<Node<int, int> > >::value_type {aka class Node<int, int>}' has no member named 'mVal'; did you mean 'mValue'?
+MAKE_ERROR = collect2: error: ld returned 1 exit status
 + 0 pts of 40.000
-Total grade so far: 25.000
-Auto-grader grade: 25.000
-*****************Finished lab19****************
+Total grade so far: 56.500
