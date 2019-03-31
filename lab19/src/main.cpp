@@ -2,8 +2,11 @@
 #include <iostream>
 #include "hashtable.hpp"
 
+using namespace std;
+
 int main(int argc, char *argv[]) {
     HashTable<int, int> table(100, .75);
+    
 
     // Happy path
     table.insert(75, 75);
