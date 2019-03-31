@@ -73,4 +73,22 @@ int hashcode(const std::string &key) {
     return key.size();
 }
 
+template<class K, class V>
+V& HashTable<K, V>::operator[](const K &key){
+	int index = hashcode(key) % mTable.capacity();
+	int startIndex = index;
+
+	if(mTable[index].mkey == key){
+		return mTable[index].mVal;
+	}
+	startIndex++;
+	while(index != startIndex){
+		if(mTable[index].mkey == key){
+                	return mTable[index].mVal;
+        	}
+
+		index = (index + 1) % mTable.capacity();
+	}
+}
+
 #endif
