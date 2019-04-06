@@ -8,15 +8,13 @@ Total grade so far: 25.000
 g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
-Memory errors found: ==7533==    definitely lost: 0 bytes in 0 blocks
+Memory errors found: ==11769==    definitely lost: 0 bytes in 0 blocks
 + 31.500 pts of 35.000
 Total grade so far: 56.500
 ******************* remove test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/hashtable.cpp src/main.cpp
 Failures = 
 MAKE_ERROR = 
-Memory errors found: ==7591==    definitely lost: 0 bytes in 0 blocks
+Memory errors found: ==11826==    definitely lost: 0 bytes in 0 blocks
 + 36.000 pts of 40.000
 Total grade so far: 92.500
-Auto-grader grade: 92.500
-*****************Finished lab19****************
