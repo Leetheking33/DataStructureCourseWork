@@ -1,14 +1,14 @@
 ******************* push-pop Test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/priorityqueue.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
+MAKE_ERROR = src/priorityqueue.cpp:35:6: error: no match for 'operator=' (operand types are 'std::vector<int, std::allocator<int> >' and 'std::vector<int, std::allocator<int> >::iterator {aka __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >}')
+src/priorityqueue.cpp:36:2: error: no matching function for call to 'std::vector<int, std::allocator<int> >::erase(std::vector<int, std::allocator<int> >&)'
 + 0 pts of 50.000
 Total grade so far: 0
 ******************* time test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/priorityqueue.cpp src/main.cpp
 Failures = 
-MAKE_ERROR = collect2: error: ld returned 1 exit status
+MAKE_ERROR = src/priorityqueue.cpp:35:6: error: no match for 'operator=' (operand types are 'std::vector<int, std::allocator<int> >' and 'std::vector<int, std::allocator<int> >::iterator {aka __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >}')
+src/priorityqueue.cpp:36:2: error: no matching function for call to 'std::vector<int, std::allocator<int> >::erase(std::vector<int, std::allocator<int> >&)'
 + 0 pts of 50.000
 Total grade so far: 0
-Auto-grader grade: 0
-*****************Finished lab20****************
