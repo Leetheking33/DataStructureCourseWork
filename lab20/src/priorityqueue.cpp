@@ -7,6 +7,7 @@ using namespace std;
 
 template<class T>
 PriorityQueue<T>::PriorityQueue() {
+	make_heap(mArr.begin(), mArr.end());
 }
 
 template<class T>
@@ -21,7 +22,7 @@ PriorityQueue<T>::PriorityQueue(const PriorityQueue<T> &pq) {
 template<class T>
 bool PriorityQueue<T>::push(const T &val){
 	mArr.push_back(val);
-	make_heap(mArr.begin(), mArr.end());
+	push_heap(mArr.begin(), mArr.end());
 }
 
 template<class T>
@@ -32,7 +33,8 @@ bool PriorityQueue<T>::isEmpty() const{
 template<class T>
 T PriorityQueue<T>::pop(){
 	T temp = mArr[0];
-	mArr.erase(mArr.begin());
+	pop_heap(mArr.begin(), mArr.end());
+	mArr.pop_back();
 	return temp;
 }
 
@@ -52,7 +54,10 @@ bool PriorityQueue<T>::operator==(const PriorityQueue<T> &pq) const{
 
 template<class T>
 void PriorityQueue<T>::print() const{
-	
+        for(int i = 0; i < mArr.size(); i++){
+		cout << mArr[i] << ", ";
+	}	
+	cout << endl;
 }
 
 template<class T>
