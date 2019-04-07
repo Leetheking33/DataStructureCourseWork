@@ -3,13 +3,15 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <iterator>
 using namespace std;
 
 template<class T>
 class PriorityQueue {
     private:
         /* Class to implement.*/
-        vector<T> mArr;	
+        vector<T> mArr;
+	vector<T> mIt;	
     public:
         /* Empty constructor shall create an empty PriorityQueue! */
         PriorityQueue();
