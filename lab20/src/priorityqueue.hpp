@@ -10,8 +10,7 @@ template<class T>
 class PriorityQueue {
     private:
         /* Class to implement.*/
-        vector<T> mArr;
-	vector<T> mIt;	
+        vector<T> mArr;	
     public:
         /* Empty constructor shall create an empty PriorityQueue! */
         PriorityQueue();

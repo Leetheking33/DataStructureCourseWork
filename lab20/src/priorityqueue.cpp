@@ -32,8 +32,7 @@ bool PriorityQueue<T>::isEmpty() const{
 template<class T>
 T PriorityQueue<T>::pop(){
 	T temp = mArr[0];
-	mIt = mArr.begin();
-	mArr.erase(mIt);
+	mArr.erase(mArr.begin());
 	return temp;
 }
 
@@ -49,6 +48,11 @@ bool PriorityQueue<T>::operator==(const PriorityQueue<T> &pq) const{
 		}
 	}
 	return true;
+}
+
+template<class T>
+void PriorityQueue<T>::print() const{
+	
 }
 
 template<class T>
