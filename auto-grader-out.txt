@@ -1,2 +1,23 @@
 I am run number 003288.
 Pulling source code...
+------------------------------------------------
+Changes found in create
+Changes found in lab20
+------------------------------------------------
+*****************Examining create****************
+Auto-grader grade: *****************Finished create****************
+*****************Examining lab20****************
+******************* push-pop Test *********************
+g++ -o ht-test -g -I src/ --std=c++14 src/priorityqueue.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 50.000
+Total grade so far: 0
+******************* time test *********************
+g++ -o ht-test -g -I src/ --std=c++14 src/priorityqueue.cpp src/main.cpp
+Failures = 
+MAKE_ERROR = collect2: error: ld returned 1 exit status
++ 0 pts of 50.000
+Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab20****************
