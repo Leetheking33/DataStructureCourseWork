@@ -12,3 +12,5 @@ MAKE_ERROR = src/priorityqueue.cpp:35:6: error: no match for 'operator=' (operan
 src/priorityqueue.cpp:36:2: error: no matching function for call to 'std::vector<int, std::allocator<int> >::erase(std::vector<int, std::allocator<int> >&)'
 + 0 pts of 50.000
 Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab20****************
