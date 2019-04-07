@@ -1,10 +1,15 @@
 #ifndef PRIORITY_QUEUE_H
 #define PRIORITY_QUEUE_H
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
 
 template<class T>
 class PriorityQueue {
     private:
         /* Class to implement.*/
+        vector<T> mArr;	
     public:
         /* Empty constructor shall create an empty PriorityQueue! */
         PriorityQueue();
