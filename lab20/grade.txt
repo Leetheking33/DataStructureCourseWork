@@ -6,3 +6,5 @@ MAKE_ERROR =
 Total grade so far: 0
 ******************* time test *********************
 g++ -o ht-test -g -I src/ --std=c++14 src/priorityqueue.cpp src/main.cpp
+Auto-grader grade: 0
+*****************Finished lab20****************
