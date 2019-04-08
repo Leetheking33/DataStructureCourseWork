@@ -1,0 +1,209 @@
+src/main.cpp: In function ‘void listFun()’:
+src/main.cpp:102:24: error: no match for ‘operator+’ (operand types are ‘std::__cxx11::list<int>::iterator {aka std::_List_iterator<int>}’ and ‘int’)
+     std::cout << *(pos + 1) << "\n";
+                    ~~~~^~~
+In file included from /usr/include/c++/6/vector:65:0,
+                 from src/main.cpp:2:
+/usr/include/c++/6/bits/stl_bvector.h:387:3: note: candidate: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+   operator+(ptrdiff_t __n, const _Bit_const_iterator& __x)
+   ^~~~~~~~
+/usr/include/c++/6/bits/stl_bvector.h:387:3: note:   no known conversion for argument 1 from ‘std::__cxx11::list<int>::iterator {aka std::_List_iterator<int>}’ to ‘std::ptrdiff_t {aka long int}’
+/usr/include/c++/6/bits/stl_bvector.h:297:3: note: candidate: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+   operator+(ptrdiff_t __n, const _Bit_iterator& __x)
+   ^~~~~~~~
+/usr/include/c++/6/bits/stl_bvector.h:297:3: note:   no known conversion for argument 1 from ‘std::__cxx11::list<int>::iterator {aka std::_List_iterator<int>}’ to ‘std::ptrdiff_t {aka long int}’
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from src/main.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:5051:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&, _CharT)
+     operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5051:5: note:   template argument deduction/substitution failed:
+src/main.cpp:102:26: note:   ‘std::__cxx11::list<int>::iterator {aka std::_List_iterator<int>}’ is not derived from ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+     std::cout << *(pos + 1) << "\n";
+                          ^
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from src/main.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:5045:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&, const _CharT*)
+     operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5045:5: note:   template argument deduction/substitution failed:
+src/main.cpp:102:26: note:   ‘std::__cxx11::list<int>::iterator {aka std::_List_iterator<int>}’ is not derived from ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+     std::cout << *(pos + 1) << "\n";
+                          ^
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from src/main.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:5039:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&)
+     operator+(_CharT __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5039:5: note:   template argument deduction/substitution failed:
+src/main.cpp:102:26: note:   mismatched types ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘int’
+     std::cout << *(pos + 1) << "\n";
+                          ^
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from src/main.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:5033:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&)
+     operator+(const _CharT* __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5033:5: note:   template argument deduction/substitution failed:
+src/main.cpp:102:26: note:   mismatched types ‘const _CharT*’ and ‘std::_List_iterator<int>’
+     std::cout << *(pos + 1) << "\n";
+                          ^
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from src/main.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:5021:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&)
+     operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5021:5: note:   template argument deduction/substitution failed:
+src/main.cpp:102:26: note:   ‘std::__cxx11::list<int>::iterator {aka std::_List_iterator<int>}’ is not derived from ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+     std::cout << *(pos + 1) << "\n";
+                          ^
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from src/main.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:5015:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5015:5: note:   template argument deduction/substitution failed:
+src/main.cpp:102:26: note:   ‘std::__cxx11::list<int>::iterator {aka std::_List_iterator<int>}’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+     std::cout << *(pos + 1) << "\n";
+                          ^
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from src/main.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:5009:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:5009:5: note:   template argument deduction/substitution failed:
+src/main.cpp:102:26: note:   ‘std::__cxx11::list<int>::iterator {aka std::_List_iterator<int>}’ is not derived from ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+     std::cout << *(pos + 1) << "\n";
+                          ^
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from src/main.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:4997:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:4997:5: note:   template argument deduction/substitution failed:
+src/main.cpp:102:26: note:   ‘std::__cxx11::list<int>::iterator {aka std::_List_iterator<int>}’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+     std::cout << *(pos + 1) << "\n";
+                          ^
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from src/main.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:4981:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:4981:5: note:   template argument deduction/substitution failed:
+src/main.cpp:102:26: note:   ‘std::__cxx11::list<int>::iterator {aka std::_List_iterator<int>}’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+     std::cout << *(pos + 1) << "\n";
+                          ^
+In file included from /usr/include/c++/6/string:53:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from src/main.cpp:1:
+/usr/include/c++/6/bits/basic_string.tcc:1163:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.tcc:1163:5: note:   template argument deduction/substitution failed:
+src/main.cpp:102:26: note:   mismatched types ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘int’
+     std::cout << *(pos + 1) << "\n";
+                          ^
+In file included from /usr/include/c++/6/string:53:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from src/main.cpp:1:
+/usr/include/c++/6/bits/basic_string.tcc:1147:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(const _CharT* __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.tcc:1147:5: note:   template argument deduction/substitution failed:
+src/main.cpp:102:26: note:   mismatched types ‘const _CharT*’ and ‘std::_List_iterator<int>’
+     std::cout << *(pos + 1) << "\n";
+                          ^
+In file included from /usr/include/c++/6/string:52:0,
+                 from /usr/include/c++/6/bits/locale_classes.h:40,
+                 from /usr/include/c++/6/bits/ios_base.h:41,
+                 from /usr/include/c++/6/ios:42,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from src/main.cpp:1:
+/usr/include/c++/6/bits/basic_string.h:4944:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/6/bits/basic_string.h:4944:5: note:   template argument deduction/substitution failed:
+src/main.cpp:102:26: note:   ‘std::__cxx11::list<int>::iterator {aka std::_List_iterator<int>}’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+     std::cout << *(pos + 1) << "\n";
+                          ^
+In file included from /usr/include/c++/6/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/6/bits/char_traits.h:39,
+                 from /usr/include/c++/6/ios:40,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from src/main.cpp:1:
+/usr/include/c++/6/bits/stl_iterator.h:1200:5: note: candidate: template<class _Iterator> std::move_iterator<_IteratorL> std::operator+(typename std::move_iterator<_IteratorL>::difference_type, const std::move_iterator<_IteratorL>&)
+     operator+(typename move_iterator<_Iterator>::difference_type __n,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_iterator.h:1200:5: note:   template argument deduction/substitution failed:
+src/main.cpp:102:26: note:   mismatched types ‘const std::move_iterator<_IteratorL>’ and ‘int’
+     std::cout << *(pos + 1) << "\n";
+                          ^
+In file included from /usr/include/c++/6/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/6/bits/char_traits.h:39,
+                 from /usr/include/c++/6/ios:40,
+                 from /usr/include/c++/6/ostream:38,
+                 from /usr/include/c++/6/iostream:39,
+                 from src/main.cpp:1:
+/usr/include/c++/6/bits/stl_iterator.h:341:5: note: candidate: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+     operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+     ^~~~~~~~
+/usr/include/c++/6/bits/stl_iterator.h:341:5: note:   template argument deduction/substitution failed:
+src/main.cpp:102:26: note:   mismatched types ‘const std::reverse_iterator<_Iterator>’ and ‘int’
+     std::cout << *(pos + 1) << "\n";
+                          ^
+make: *** [compile] Error 1
