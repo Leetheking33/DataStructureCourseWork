@@ -1,28 +1,3 @@
-I am run number 003316.
-Pulling source code...
-------------------------------------------------
-Changes found in course-materials
-Changes found in create
-Changes found in lab21
-Changes found in lab22
-------------------------------------------------
-*****************Examining course-materials****************
-Auto-grader grade: *****************Finished course-materials****************
-*****************Examining create****************
-Auto-grader grade: *****************Finished create****************
-*****************Examining lab21****************
-******************* add-remove Test *********************
-g++ -o gam-test -g -I src/ --std=c++14  src/main.cpp
-makefile:7: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
-******************* shortest path Test *********************
-g++ -o gam-test -g -I src/ --std=c++14  src/main.cpp
-makefile:7: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
-Auto-grader grade: *****************Finished lab21****************
-*****************Examining lab22****************
 ******************* add-edge Test *********************
 g++ -o gam-test -g -I src/ --std=c++14 src/grapham.cpp src/main.cpp
 Failures = 
@@ -71,5 +46,3 @@ Failures =
 MAKE_ERROR = /srv/auto-grader/csci-315-spring-2019/run/003316/lab22/tests/prim-test.cpp:6:23: fatal error: graphal.hpp: No such file or directory
 + 0 pts of 20.000
 Total grade so far: 0
-Auto-grader grade: 0
-*****************Finished lab22****************
