@@ -8,3 +8,4 @@ g++ -o gam-test -g -I src/ --std=c++14  src/main.cpp
 makefile:7: recipe for target 'all' failed
 *************COMPILATION ERROR*******************
 Compilation errors, please fix...
+Auto-grader grade: *****************Finished lab21****************

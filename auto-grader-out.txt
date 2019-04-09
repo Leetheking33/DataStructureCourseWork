@@ -1,20 +1,2 @@
-I am run number 003320.
+I am run number 003321.
 Pulling source code...
-------------------------------------------------
-Changes found in create
-Changes found in lab21
-------------------------------------------------
-*****************Examining create****************
-Auto-grader grade: *****************Finished create****************
-*****************Examining lab21****************
-******************* add-remove Test *********************
-g++ -o gam-test -g -I src/ --std=c++14  src/main.cpp
-makefile:7: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
-******************* shortest path Test *********************
-g++ -o gam-test -g -I src/ --std=c++14  src/main.cpp
-makefile:7: recipe for target 'all' failed
-*************COMPILATION ERROR*******************
-Compilation errors, please fix...
-Auto-grader grade: *****************Finished lab21****************
