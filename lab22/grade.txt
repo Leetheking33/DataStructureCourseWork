@@ -46,3 +46,5 @@ Failures =
 MAKE_ERROR = /srv/auto-grader/csci-315-spring-2019/run/003316/lab22/tests/prim-test.cpp:6:23: fatal error: graphal.hpp: No such file or directory
 + 0 pts of 20.000
 Total grade so far: 0
+Auto-grader grade: 0
+*****************Finished lab22****************
