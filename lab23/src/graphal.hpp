@@ -9,12 +9,34 @@
 
 #include <vector>
 #include <list>
+#include <set>
+#include <queue>
+
+template<class W>
+class Edge {
+    private:
+        int mDestination;
+        W mWeight;
+    public:
+        Edge(int destination, W weight) {
+            mDestination = destination;
+            mWeight = weight;
+        }
+        int getDestination() {
+            return mDestination;
+        }
+        W getWeight() {
+            return mWeight;
+        }
+};
 
 template<class W>
 class GraphAL {
     private:
         /* Class to begin filling out...*/
+        std::vector<std::list<Edge<W> > > mGraph;
         void depthFirstTraversal(void (*visit)(const int node), int node, bool *visited);
+        void breadthFirstTraversal(void (*visit)(const int node), int node, std::set<int> &visited);
     public:
         /* Initialize an empty graph. */
         GraphAL();

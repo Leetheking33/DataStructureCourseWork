@@ -22,5 +22,5 @@ int main(int argc, char *argv[]) {
 
     gal.print();
 
-    gal.depthFirstTraversal(print);
+    gal.breadthFirstTraversal(print);
 }
