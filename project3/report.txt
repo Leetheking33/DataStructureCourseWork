@@ -1,0 +1,17 @@
+	When looking at insertion for an AVL tree if the function is implemented correctly the big O should be O(log N) this makes an AVL tree good for quickly inserting information. This can be important when if there are many customers that must be added to a database quickly. Since AVL checks for balence after every insertion and balances if ubalenced the insertion function can maintain O(log N).
+
+	Insertion in Scape Goat can take O(log n) time as well but because of the logic of the rebalancing algorithm used in this Tree O(log n) is best case instead of average making insertion on average slower in Scape Goat than AVL.
+
+	Best case for both AVL and Insertion delete is O(log n) but since a ScapeGoat tree does not have the same constraints as AVL when it comes to height on average it runs faster.
+
+SOURCES:
+	AVL implementation: https://rosettacode.org/wiki/AVL_tree
+	
+	Scape Goat implementation: https://www.geeksforgeeks.org/scapegoat-tree-set-1-introduction/
+	
+	other sorces:
+		https://intelligentjava.wordpress.com/2015/04/09/self-balancing-binary-search-trees-comparison/
+		
+		www.mathcs.emory.edu/~cheung/Courses/323/Syllabus/Trees/AVL-delete.html
+		
+		https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/ 
