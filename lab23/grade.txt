@@ -1,15 +1,3 @@
-I am run number 003539.
-Pulling source code...
-------------------------------------------------
-Changes found in course-materials
-Changes found in create
-Changes found in lab23
-------------------------------------------------
-*****************Examining course-materials****************
-Auto-grader grade: *****************Finished course-materials****************
-*****************Examining create****************
-Auto-grader grade: *****************Finished create****************
-*****************Examining lab23****************
 ******************* add-edge Test *********************
 g++ -o gam-test -g -I src/ --std=c++14 src/graphal.cpp src/main.cpp
 Failures = 
@@ -58,5 +46,3 @@ Failures =
 MAKE_ERROR = collect2: error: ld returned 1 exit status
 + 0 pts of 20.000
 Total grade so far: 40.000
-Auto-grader grade: 40.000
-*****************Finished lab23****************
