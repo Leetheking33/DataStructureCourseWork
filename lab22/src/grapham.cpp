@@ -15,11 +15,8 @@ GraphAM<W>::GraphAM(const int vertices) {
 	mVerts = vertices;
     	for (int i = 0; i < vertices; i++) {
         	mGraph[i].resize(vertices);
-		/*
-        	for (int j = 0; j < vertices; j++) {
-            		mGraph[i][j] = -1;
-        	}
-        	mGraph[i][i] = 0;*/
+		
+        	mGraph[i][i].setSameVert(0);
     	}
 }
 
@@ -30,12 +27,8 @@ int GraphAM<W>::addVertices(const int amt) {
 	 mVerts += amt;
 	for (int i = 0; i < mVerts; i++) {
         	mGraph[i].resize(amt);
-		/*
-		for (int j = mVerts; j < mVerts + amt; j++) {
-			if(i == j){
-			graph[i][j].setSameVert(0);	
-			}
-		}*/	
+		
+		mGraph[i][i].setSameVert(0);			
 	}
 }
 
@@ -49,7 +42,7 @@ bool GraphAM<W>::addEdge(const int start, const int end, const W &weight) {
 		return false;
 	}
 
-	mGraph[start][end] = weight;
+	mGraph[start][end].setWeight(weight);
 	return true;
 }
 

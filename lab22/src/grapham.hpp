@@ -1,32 +1,34 @@
 #ifndef GRAPHAM_H
 #define GRAPHAM_H
 #include <vector>
+using namespace std;
 /* This class represents a weighted directed graph via an adjacency matrix.
  * Vertices are given an index, starting from 0 and ascending
  * Class W : W represent the weight that can be associated with an edge.
  * We will not weight the vertices.
  */
-/*
+
 template<class W>
 class gNode {
     private:
-	    w mWeight;
+	    W mWeight;
 	    int sameVert = -1; 	
     public:
-	   void setWeight(w weight){ mWeight = weight; } 
+	   void setWeight(W weight){ mWeight = weight; } 
 	   void setSameVert(int vertNum){ sameVert = vertNum;}
    	   bool isConfigured(){ 
 	   	if(sameVert == -1){ 
 			return false;
 		} 
-		return true; 	   
-	   };
-*/
+		return true;
+     		}		
+};
+
 
 template<class W>
 class GraphAM {
     private:
-	    std::vector<std::vector<W> > mGraph;
+	    std::vector<std::vector<gNode<W> > > mGraph;
 	    int mVerts;
 
     public:
