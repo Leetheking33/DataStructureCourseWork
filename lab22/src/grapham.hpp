@@ -12,16 +12,26 @@ template<class W>
 class gNode {
     private:
 	    W mWeight;
-	    int sameVert = -1; 	
+	    int filled = -1;	    
     public:
+	   W weight() { return mWeight; }
 	   void setWeight(W weight){ mWeight = weight; } 
-	   void setSameVert(int vertNum){ sameVert = vertNum;}
-   	   bool isConfigured(){ 
-	   	if(sameVert == -1){ 
+	   void makeFull(int vertNum){ filled = vertNum;}
+	   bool Source = false;
+	   bool sameVert(){
+		if(filled == 0){
+			return true;
+		}
+		return false;
+	   }
+
+   	   bool hasPath(){ 
+	   	if(filled == -1){ 
 			return false;
 		} 
 		return true;
-     		}		
+     		}	
+   		   
 };
 
 
@@ -30,7 +40,7 @@ class GraphAM {
     private:
 	    std::vector<std::vector<gNode<W> > > mGraph;
 	    int mVerts;
-
+	    int minWeight(vector<gNode<W> > shortestPath, W firstPath, int minIndex); 
     public:
         /* Initialize an empty graph. */
         GraphAM();
