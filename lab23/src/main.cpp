@@ -20,9 +20,9 @@ int main(int argc, char *argv[]) {
     
     gal.print();
     cout << "gal after remove (2, 4): " << endl;
-    gal.removeVertex(0);
+    gal.removeVertex(9);
 
     gal.print();
 
-    gal.breadthFirstTraversal(print);
+    //gal.breadthFirstTraversal(print);
 }
