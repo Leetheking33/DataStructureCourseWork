@@ -40,7 +40,8 @@ class GraphAM {
     private:
 	    std::vector<std::vector<gNode<W> > > mGraph;
 	    int mVerts;
-	    int minWeight(vector<gNode<W> > shortestPath, W firstPath, int &minIndex); 
+	    int minWeight(vector<gNode<W> > shortestPath, W &firstPath, int &minIndex);
+	    void dijkstraShortestPath(vector<gNode<W> > &shortestPath, vector<bool> &visited, int &minIndex, W &minPath); 
     public:
         /* Initialize an empty graph. */
         GraphAM();
