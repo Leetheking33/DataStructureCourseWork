@@ -72,17 +72,17 @@ void GraphAM<W>::print() const {
 }
 
 template<class W>
-int GraphAM<W>::minWeight(vector<gNode<W> > shortestPath, W firstPath, int minIndex){
-	W min = firstPath;
+int GraphAM<W>::minWeight(vector<gNode<W> > shortestPath, W lastPath, int &minIndex){
+	W min = lastPath;
 
 	for(int i = 0; i < shortestPath.size(); i++){
-		if(shortestPath[i].source){
+		if(shortestPath[i].Source){
 			continue;
 		}
-		if(!shortestPath[i].hasPath){
+		if(shortestPath[i].isEmpty() ){
 			continue;
 		}
-		if(shortestPath[i].getWeight() < min){
+		if(shortestPath[i].weight() < min){
 			min = shortestPath[i].weight();
 			minIndex = i;
 		}	
@@ -95,22 +95,25 @@ W GraphAM<W>::dijkstraShortestPath(const int start, const int end){
 	vector<gNode<W> > shortestPath(mVerts);
 	vector<bool> visited(mVerts, false);
 	int current;
-        W firstPath;	
-		shortestPath[0].Source = true;
-		visited[0] = true;
+	int minIndex;
+        W lastPath;	
+		shortestPath[start].Source = true;
+		visited[start] = true;
 	//for(int i = 0; i < mVerts; i++){
+	//initilize shortestPath vector
 		for(int i = 0; i < mVerts; i++){
 
-			if(i == 0){
+			if(mGraph[start][i].sameVert() ){
 				continue;
 			}
-		       	else if(!mGraph[0][i].hasPath() ){	
+		       	else if(mGraph[start][i].isEmpty() ){	
 				continue;
 			}
-			current = i;
-			firstPath = mGraph[0][i].weight();
-			shortestPath[i].setWeight(mGraph[0][i].weight()); 
-		} 
+			minIndex = i;
+			lastPath = mGraph[start][i].weight();
+			shortestPath[i].setWeight(mGraph[start][i].weight()); 
+		}
+	       	cout << minWeight(shortestPath, lastPath, minIndex);	
 		
 }
 

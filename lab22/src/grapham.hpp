@@ -25,9 +25,9 @@ class gNode {
 		return false;
 	   }
 
-   	   bool hasPath(){ 
+   	   bool isEmpty(){ 
 	   	if(filled == -1){ 
-			return false;
+			return true;
 		} 
 		return true;
      		}	
@@ -40,7 +40,7 @@ class GraphAM {
     private:
 	    std::vector<std::vector<gNode<W> > > mGraph;
 	    int mVerts;
-	    int minWeight(vector<gNode<W> > shortestPath, W firstPath, int minIndex); 
+	    int minWeight(vector<gNode<W> > shortestPath, W firstPath, int &minIndex); 
     public:
         /* Initialize an empty graph. */
         GraphAM();
