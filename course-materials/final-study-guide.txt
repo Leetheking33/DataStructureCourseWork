@@ -1,6 +1,6 @@
-﻿Your final exam is schedule for April 29 0800-1000.  Since this class has an online section, I will open up the exam on November 24 and you have until noon April 29 to complete it.  I shall not open it up afterwards.
+﻿Your final exam is schedule for April 29 0800-1000.  Since this class has an online section, I will open up the exam on April 24 and you have until noon April 29 to complete it.  I shall not open it up afterwards.
 
-This exam will have 2 sections: a Hackerrank and Blackboard section.  The Hackerrank section will be timed, but allows you log in if you lose you connection. Blackboard will be timed but does not allow you to log back in if lose your connection.  Therefore:
+This exam shall have 2 sections: a Hackerrank and Blackboard section.  The Hackerrank section will be timed, but allows you log in if you lose you connection. Blackboard will be timed but does not allow you to log back in if lose your connection.  Therefore:
 
 *********************** WHEN YOU TAKE THE EXAM ONLINE, MAKE SURE YOU SAVE YOUR WORK TO A SEPARATE DOCUMENT.  IF/WHEN BLACKBOARD CRASHES, EMAIL ME YOUR DOCUMENT ASAP.  I SHALL NOT REOPEN THE EXAM. ***********
 
@@ -29,9 +29,9 @@ What to know:
 compare/contrast, with space complexity and runtime complexity in Big-O notation.
 Know what each data structure does and how it does it.
 Recursive and iterative solutions to above algorithms
-Graphs: Directed, Undirected, Simple, Connected, Strongly Connected, Minimal Spanning Tree
+Graphs: Directed, Undirected, and Minimal Spanning Tree
 Function pointers
-Dynamic vs Stack vs Static memory
+Dynamic/Heap vs Stack vs Static memory
 Templates
 operator overloads
 
