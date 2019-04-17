@@ -1,6 +1,6 @@
 #ifdef GRAPHAL_H
 #include <iostream>
-
+#include <vector>
 template<class W>
 GraphAL<W>::GraphAL() {
 }
@@ -48,6 +48,19 @@ bool GraphAL<W>::removeVertex(int idx) {
     // First iterate through entire graph removing ALL edges that end with idx.
     // Next, update all edges that end with somehting grater than idx by subtracting one from end.
     //  in other words, subtract 1 from all edges that end with a vertex > idx.
+    for(int i = 0; i < mGraph.size(); i++){
+	if(i == idx){
+		mGraph.erase(mGraph.begin() + idx);	
+		for(int j = idx; j < mGraph.size(); j++){
+			for(auto it = mGraph[j].begin(); it != mGraph[j].end(); j++){
+				if(it->getDestination() > idx){
+					it->getDestination() -= 1;
+				}	
+			}	
+		}
+
+    	}
+    }
 }
 
 template <class W>
