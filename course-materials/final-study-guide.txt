@@ -1,0 +1,68 @@
+﻿Your final exam is schedule for April 29 0800-1000.  Since this class has an online section, I will open up the exam on November 24 and you have until noon April 29 to complete it.  I shall not open it up afterwards.
+
+This exam will have 2 sections: a Hackerrank and Blackboard section.  The Hackerrank section will be timed, but allows you log in if you lose you connection. Blackboard will be timed but does not allow you to log back in if lose your connection.  Therefore:
+
+*********************** WHEN YOU TAKE THE EXAM ONLINE, MAKE SURE YOU SAVE YOUR WORK TO A SEPARATE DOCUMENT.  IF/WHEN BLACKBOARD CRASHES, EMAIL ME YOUR DOCUMENT ASAP.  I SHALL NOT REOPEN THE EXAM. ***********
+
+The final will consist of programming problems that you must solve and stepping through the iterations of algorithms (showing the state at each step).  Big-O will also be a significant topic during your final.  Since hackerrank has an auto-compilation and testing section, please utilize these features to ensure your code is correct.  If you code does not compile, I will look at it, but your grade will severely suffer.
+
+Topics include:
+
+Data Structures:
+Arrays, Linked List (single, double)
+Vector, Stack, Queue, Sets, Maps
+Trees: binary search tree, heaps, priority queue, B-Trees
+hash table (chaining and Linear probing)
+Heaps
+Graphs (Adjacency List, Adjacency Matrix, Dijkstra's/Prim's Algorithms)
+Quad-Trees
+
+Algorithms:
+Sorts: bubble, insertion, selection, quick, merge, heap
+Searching: Linear, Binary, Depth-first search (DFS), Breadth-first search(BFS)
+Traversing: Preorder, Inorder, Postorder
+Graphs: isSimple (no loops/cycles/circuits), isStronglyConnected (all vertices are connected), DFS, BFS, shortest-path
+Deleting and Inserting of each data structure
+Copy constructor for each data structure
+
+What to know:
+compare/contrast, with space complexity and runtime complexity in Big-O notation.
+Know what each data structure does and how it does it.
+Recursive and iterative solutions to above algorithms
+Graphs: Directed, Undirected, Simple, Connected, Strongly Connected, Minimal Spanning Tree
+Function pointers
+Dynamic vs Stack vs Static memory
+Templates
+operator overloads
+
+
+The question format will be very similar to your midterm.  Here is an example problem that could have been on your midterm:
+1) DoubleList is a doubly linked list which has both head and tail pointers (to the beginning and end of the list respectively):
+class DoubleList {
+public:
+  DoubleList() : head(0), tail(0) {}
+  void printReverse() const;
+  bool insertEnd(int val);
+  bool insertSorted(int val);
+private:
+  struct Node {
+    Node (int d=0, Node *n=0, Node *p=0) : data(d), next(n), prev(p) {}  //optional to use this
+    int data;
+    Node *next, *prev;
+  };
+  Node *head, *tail;
+};
+
+a) (7 points) Implement the printReverse member function that prints all of the items in the list in reverse. It should print each data value separated by commas and then print a newline at the end.  The comma after the last value in the list is optional.
+void DoubleList::printReverse() const {
+
+b)  (7 points) Implement insertEnd which inserts val at the end of the list regardless of its value or if it is a duplicate.  It returns true iff val could be added.
+bool DoubleList::insertEnd(int val) {
+
+c) (16 points) Implement insertSorted which inserts val into its sorted (increasing) position in the list.  It returns true iff val could be successfully inserted AND was NOT already present in the list (so no duplicates allowed).
+bool DoubleList::insertSorted(int val) {
+
+
+Note: Obviously we have covered Doubly linked lists, on the exam I may add a twist to the data structure.
+
+
