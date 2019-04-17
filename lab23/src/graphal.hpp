@@ -22,6 +22,11 @@ class Edge {
             mDestination = destination;
             mWeight = weight;
         }
+	
+	void updateEdge(){
+		mDestination -= 1;
+	}	
+	
         int getDestination() {
             return mDestination;
         }
