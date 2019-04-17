@@ -49,7 +49,12 @@ bool GraphAL<W>::removeVertex(int idx) {
     // Next, update all edges that end with somehting grater than idx by subtracting one from end.
     //  in other words, subtract 1 from all edges that end with a vertex > idx.
     if(mGraph.size() > idx){
-		mGraph.erase(mGraph.begin() + idx);	
+	    	/*if(idx == mGraph.size() - 1){
+			mGraph.erase(mGraph.begin() + idx);
+			return true;
+		}*/
+
+		mGraph.erase(mGraph.begin() + idx);
 		for(int j = idx; j < mGraph.size(); j++){
 		 	if(mGraph[j].empty()){
 				continue;
