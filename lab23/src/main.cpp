@@ -1,4 +1,5 @@
 #include "graphal.hpp"
+using namespace std;
 
 void print(const int node) {
     std::cout << node << "->";
@@ -15,10 +16,11 @@ int main(int argc, char *argv[]) {
     gal.addEdge(3, 6, 1098);
     gal.addEdge(7, 6, 67);
     gal.addEdge(8, 2, 88);
-
+    
+    
     gal.print();
-
-    gal.removeEdge(2, 4);
+    cout << "gal after remove (2, 4): " << endl;
+    gal.removeVertex(0);
 
     gal.print();
 
