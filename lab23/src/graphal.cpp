@@ -47,21 +47,24 @@ template<class W>
 bool GraphAL<W>::removeVertex(int idx) {
     // First iterate through entire graph removing ALL edges that end with idx.
     // Next, update all edges that end with somehting grater than idx by subtracting one from end.
-    //  in other words, subtract 1 from all edges that end with a vertex > idx.
+    //  in other words, subtract 1 from all edges that end with a vertex > idx. 	
     if(mGraph.size() > idx){
 	    	/*if(idx == mGraph.size() - 1){
 			mGraph.erase(mGraph.begin() + idx);
 			return true;
 		}*/
+		
+		mGraph.erase(mGraph.begin() + idx);			
 
-		mGraph.erase(mGraph.begin() + idx);
-		for(int j = idx; j < mGraph.size(); j++){
+		for(int j = 0; j < mGraph.size(); j++){
 		 	if(mGraph[j].empty()){
 				continue;
 			}
 			for(auto it = mGraph[j].begin(); it != mGraph[j].end(); it++){
-				//std::cout << "error" << std::endl;
-				if(it->getDestination() > idx){
+				if(it->getDestination() == idx){
+					it = mGraph[j].erase(it);	
+				}
+			       	if(it->getDestination() > idx){
 					it->updateEdge();
 					//std::cout << "error" << std::endl;
 				}	
