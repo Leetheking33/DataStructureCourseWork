@@ -33,6 +33,12 @@ class Edge {
         W getWeight() {
             return mWeight;
         }
+	
+	void setDestination(int destination)
+    	{
+        mDestination = destination;
+    	}
+
 };
 
 template<class W>
