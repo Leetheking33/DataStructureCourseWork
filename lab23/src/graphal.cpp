@@ -48,7 +48,9 @@ bool GraphAL<W>::removeVertex(int idx) {
     // First iterate through entire graph removing ALL edges that end with idx.
     // Next, update all edges that end with somehting grater than idx by subtracting one from end.
     //  in other words, subtract 1 from all edges that end with a vertex > idx. 	
-    if(mGraph.size() > idx){
+    if(idx >= mGraph.size() ){
+	    return false;
+    }
 	        
 		mGraph.erase(mGraph.begin() + idx);			
 
@@ -66,8 +68,6 @@ bool GraphAL<W>::removeVertex(int idx) {
 			}	
 		}
 		return true;
-    }
-    return false;
 }
 
 template <class W>
