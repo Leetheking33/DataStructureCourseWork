@@ -124,6 +124,11 @@ void GraphAL<W>::print() {
 }
 
 template<class W>
+W GraphAL<W>::prims(const int start){
+	return 6;
+}
+
+template<class W>
 GraphAL<W>::~GraphAL() {
 }
 
