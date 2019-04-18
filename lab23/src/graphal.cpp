@@ -53,9 +53,9 @@ bool GraphAL<W>::removeVertex(int idx) {
 		mGraph.erase(mGraph.begin() + idx);			
 
 		for(int j = 0; j < mGraph.size(); j++){
-		 	if(mGraph[j].empty()){
+		 	/*if(mGraph[j].empty()){
 				continue;
-			}
+			}*/
 			for(auto it = mGraph[j].begin(); it != mGraph[j].end(); it++){
 				if(it->getDestination() == idx){
 					it = mGraph[j].erase(it);	
