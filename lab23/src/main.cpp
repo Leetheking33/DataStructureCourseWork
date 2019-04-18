@@ -15,12 +15,14 @@ int main(int argc, char *argv[]) {
     gal.addEdge(2, 4, 9001);
     gal.addEdge(3, 6, 1098);
     gal.addEdge(7, 6, 67);
+    gal.addEdge(6, 3, 88);
     gal.addEdge(8, 2, 88);
+    
     
     
     gal.print();
     cout << "gal after remove (2, 4): " << endl;
-    gal.removeVertex(9);
+    gal.removeVertex(6);
 
     gal.print();
 

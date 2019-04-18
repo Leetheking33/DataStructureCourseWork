@@ -11,7 +11,7 @@
 #include <list>
 #include <set>
 #include <queue>
-
+#include <iterator>
 template<class W>
 class Edge {
     private:
