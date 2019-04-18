@@ -46,5 +46,3 @@ Failures =
 MAKE_ERROR = collect2: error: ld returned 1 exit status
 + 0 pts of 20.000
 Total grade so far: 40.000
-Auto-grader grade: 40.000
-*****************Finished lab23****************
