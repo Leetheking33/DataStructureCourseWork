@@ -1,2 +1,53 @@
 I am run number 003950.
 Pulling source code...
+------------------------------------------------
+Changes found in Removing
+Changes found in delete
+Changes found in lab23
+------------------------------------------------
+*****************Examining Removing****************
+Auto-grader grade: *****************Finished Removing****************
+*****************Examining delete****************
+Auto-grader grade: *****************Finished delete****************
+*****************Examining lab23****************
+******************* add-edge Test *********************
+g++ -o gam-test -g -I src/ --std=c++14  src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* adjacent Test *********************
+g++ -o gam-test -g -I src/ --std=c++14  src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* add vertices Test *********************
+g++ -o gam-test -g -I src/ --std=c++14  src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* remove edge Test *********************
+g++ -o gam-test -g -I src/ --std=c++14  src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* remove vertices Test *********************
+g++ -o gam-test -g -I src/ --std=c++14  src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* depth first Test *********************
+g++ -o gam-test -g -I src/ --std=c++14  src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* breadth first Test *********************
+g++ -o gam-test -g -I src/ --std=c++14  src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* Prim Test *********************
+g++ -o gam-test -g -I src/ --std=c++14  src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+Auto-grader grade: *****************Finished lab23****************
