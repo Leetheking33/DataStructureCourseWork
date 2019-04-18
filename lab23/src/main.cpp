@@ -21,9 +21,12 @@ int main(int argc, char *argv[]) {
     
     
     gal.print();
-    cout << "gal after remove (2, 4): " << endl;
+    cout << "gal after remove vert 6: " << endl;
     gal.removeVertex(6);
-
+    
+    gal.print(); 
+    cout << "gal after remove vert 6: " << endl;
+    gal.removeVertex(1); 
     gal.print();
 
     //gal.breadthFirstTraversal(print);

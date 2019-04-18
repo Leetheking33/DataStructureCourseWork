@@ -49,11 +49,7 @@ bool GraphAL<W>::removeVertex(int idx) {
     // Next, update all edges that end with somehting grater than idx by subtracting one from end.
     //  in other words, subtract 1 from all edges that end with a vertex > idx. 	
     if(mGraph.size() > idx){
-	    	/*if(idx == mGraph.size() - 1){
-			mGraph.erase(mGraph.begin() + idx);
-			return true;
-		}*/
-		
+	        
 		mGraph.erase(mGraph.begin() + idx);			
 
 		for(int j = 0; j < mGraph.size(); j++){
@@ -66,7 +62,6 @@ bool GraphAL<W>::removeVertex(int idx) {
 				}
 			       	if(it->getDestination() > idx){
 					it->updateEdge();
-					//std::cout << "error" << std::endl;
 				}	
 			}	
 		}
