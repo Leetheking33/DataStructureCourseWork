@@ -70,31 +70,61 @@ bool QuadTree::contains(float x, float y) {
     Quad *rover = root;
     float tempY, tempX, midx, midy;
 
-    while (rover != NULL) {
+    while (!rover->isLeaf()) {
         if (rover->getPoint(tempX,tempY) ){
             return tempX == x && tempY == y;
         }
-        midx = (node->getSX() + node->getEX()) / 2.0;
-        midy = (node->getSY() + node->getEY()) / 2.0;
-        if (x >= node->getSX() && x < midx && y >= node->getSY() && y < midy) { // Top Left
-            rover = rover->topLeftQuad();
-        } else if (x >= midx && x < node->getEX() && y >= node->getSY() && y < midy) { // Top Right
-            // You got this!
-        } else if (x >= midx && x < node->getEX() && y >= midy && y < node->getEY()) { // Bottom Right
-            // You got this!
-        } else if (x >= node->getSX() && x < midx && y >= midy && y < node->getEY()) { // Bottom Left
-            // You got this!
+        midx = (rover->getSX() + rover->getEX()) / 2.0;
+        midy = (rover->getSY() + rover->getEY()) / 2.0;
+        if (x >= rover->getSX() && x < midx && y >= rover->getSY() && y < midy) { // Top Left
+            rover = rover->getTopLeftQuad();
+        } else if (x >= midx && x < rover->getEX() && y >= rover->getSY() && y < midy) { // Top Right
+            rover = rover->getTopRightQuad();
+        } else if (x >= midx && x < rover->getEX() && y >= midy && y < rover->getEY()) { // Bottom Right
+            rover = rover->getBottomRightQuad();
+        } else if (x >= rover->getSX() && x < midx && y >= rover->getEY() && y < midy) { // Bottom Left
+            rover = rover->getBottomLeftQuad(); 
         }
     }
+    return false;
 }
 
 /* return the number of points in the box (sx, sy) -> (ex, ey) 
  * You may assume that sx < ex and sy < ey!
  */
 int QuadTree::countInRange(float sx, float sy, float ex, float ey) {
+    return 1;
 }
 
 bool QuadTree::remove(float x, float y) {
+
+    Quad *rover = root;
+    while(!rover->isLeaf()){
+
+        float midx = (rover->getSX() + rover->getEX()) / 2.0;
+        float midy = (rover->getSY() + rover->getEY()) / 2.0;
+
+        // First, lets check if we have a point.
+        float tempY, tempX;
+        if (rover->getPoint(tempX,tempY) ){
+            // Found point!
+            if (tempY == y && tempX == x) { 
+                rover->clearPoint();
+                return true; }
+        }
+
+        if (x >= rover->getSX() && x < midx && y >= rover->getSY() && y < midy) { // Top Left
+            rover = rover->getTopLeftQuad();
+        } else if (x >= midx && x < rover->getEX() && y >= rover->getSY() && y < midy) { // Top Right
+            rover = rover->getTopRightQuad();
+        } else if (x >= midx && x < rover->getEX() && y >= midy && y < rover->getEY()) { // Bottom Right
+            rover = rover->getBottomRightQuad();
+        } else if (x >= rover->getSX() && x < midx && y >= rover->getEY() && y < midy) { // Bottom Left
+            rover = rover->getBottomLeftQuad(); 
+        }
+
+    }
+    return false;
 }
 
 void QuadTree::print() {

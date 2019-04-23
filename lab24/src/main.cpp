@@ -14,5 +14,6 @@ int main(int argc, char *argv[]) {
     qt.remove(100.0, 105.0);
     qt.print();
 
+
     return 0;
 }
