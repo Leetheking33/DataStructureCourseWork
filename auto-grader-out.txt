@@ -1,2 +1,21 @@
-I am run number 004313.
-Pulling source code...
+I am run number 004333.
+*****************Examining lab24****************
+******************* add Test *********************
+g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
+Seg fault detected, please test and fix.
+******************* timed add Test *********************
+g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
+Seg fault detected, please test and fix.
+******************* remove Test *********************
+g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
+Seg fault detected, please test and fix.
+******************* timed remove Test *********************
+g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
+Seg fault detected, please test and fix.
+******************* range Test *********************
+g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
+Seg fault detected, please test and fix.
+******************* timed range Test *********************
+g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
+Seg fault detected, please test and fix.
+Auto-grader grade: *****************Finished lab24****************
