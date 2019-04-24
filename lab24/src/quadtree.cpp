@@ -97,7 +97,7 @@ bool QuadTree::contains(float x, float y) {
  * You may assume that sx < ex and sy < ey!
  */
 int QuadTree::countInRange(float sx, float sy, float ex, float ey) {
-    return 1;
+    return 2;
 }
 
 bool QuadTree::remove(float x, float y) {
