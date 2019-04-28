@@ -2,7 +2,13 @@
 #include <string.h>
 #include <fstream>
 #include <algorithm>
+#include <sstream>
+#include <istream>
+#include <iostream>
+#include <string>
+#include <iterator>
 #include "MinimumOverlap.hpp"
+using namespace std;
 
 bool print = false;
 bool validArguments(int argc, char *argv[]);
@@ -10,6 +16,7 @@ void createCover(char *arg, std::vector<int> &cover);
 void printCover(std::vector<int> &cover);
 
 int main(int argc, char *argv[]) {
+    /*
     std::vector<int> vec;
     unsigned int count=0;
     clock_t start, end;
@@ -60,7 +67,12 @@ int main(int argc, char *argv[]) {
     } else {
         printf("Unable to open 'data/timings.dat' for writting. No timing information written.\n");
     }
+    */
+    
+    MinimumOverlap group("/home/leetheking33/csci-315-spring-2019/project4/data/simple.set"); 	
+    vector<int> num = {3, 5, 10, 5, 5, 5, 5};
 
+    group.findMinimumOverlap(num, false);
     return 0;
 }
 
