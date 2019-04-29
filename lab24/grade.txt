@@ -1,19 +1,30 @@
 ******************* add Test *********************
 g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
-Seg fault detected, please test and fix.
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
 ******************* timed add Test *********************
 g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
-Seg fault detected, please test and fix.
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
 ******************* remove Test *********************
 g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
-Seg fault detected, please test and fix.
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
 ******************* timed remove Test *********************
 g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
-Seg fault detected, please test and fix.
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
 ******************* range Test *********************
 g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
-Seg fault detected, please test and fix.
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
 ******************* timed range Test *********************
 g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
-Seg fault detected, please test and fix.
-Auto-grader grade: *****************Finished lab24****************
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...

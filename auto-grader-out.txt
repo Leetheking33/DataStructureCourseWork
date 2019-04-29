@@ -1,2 +1,37 @@
 I am run number 004469.
 Pulling source code...
+------------------------------------------------
+Changes found in lab24
+------------------------------------------------
+*****************Examining lab24****************
+******************* add Test *********************
+g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* timed add Test *********************
+g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* remove Test *********************
+g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* timed remove Test *********************
+g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* range Test *********************
+g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+******************* timed range Test *********************
+g++ -o quad-tree-test -g -I src/ --std=c++14 -O2 src/quadtree.cpp src/main.cpp
+makefile:7: recipe for target 'all' failed
+*************COMPILATION ERROR*******************
+Compilation errors, please fix...
+Auto-grader grade: *****************Finished lab24****************
