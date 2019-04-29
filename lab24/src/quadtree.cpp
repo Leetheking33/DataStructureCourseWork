@@ -82,28 +82,7 @@ bool QuadTree::add(float x, float y) {
 
 bool QuadTree::contains(float x, float y) {
     return containsPoint(root, x, y);
-    /*
-    Quad *rover = root;
-    float tempY, tempX, midx, midy;
-
-    while (!rover->isLeaf()) {
-        if (rover->getPoint(tempX,tempY) ){
-            return tempX == x && tempY == y;
-        }
-        midx = (rover->getSX() + rover->getEX()) / 2.0;
-        midy = (rover->getSY() + rover->getEY()) / 2.0;
-        if (x >= rover->getSX() && x < midx && y >= rover->getSY() && y < midy) { // Top Left
-            rover = rover->getTopLeftQuad();
-        } else if (x >= midx && x < rover->getEX() && y >= rover->getSY() && y < midy) { // Top Right
-            rover = rover->getTopRightQuad();
-        } else if (x >= midx && x < rover->getEX() && y >= midy && y < rover->getEY()) { // Bottom Right
-            rover = rover->getBottomRightQuad();
-        } else if (x >= rover->getSX() && x < midx && y >= rover->getEY() && y < midy) { // Bottom Left
-            rover = rover->getBottomLeftQuad(); 
-        }
-    }
-    return false;
-    */
+ 
 }
 
     bool QuadTree::containsPoint(Quad *node, float x, float y){
