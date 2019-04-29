@@ -31,17 +31,20 @@ bool QuadTree::add(Quad *node, float x, float y) {
     }
     
     // go get it
-    if (x >= node->getSX() && x < midx && y >= node->getSY() && y < midy) { // Top Left
+    if (x >= node->getSX() && x < midx && y >= node->getSY() && y < midy){ 
+	// Top Left
         if( add(node->getTopLeftQuad(), x, y)){
             node->incNumOfPoints();
             return true;
         } 
-    } else if (x >= midx && x < node->getEX() && y >= node->getSY() && y < midy) { // Top Right
+    } else if (x >= midx && x < node->getEX() && y >= node->getSY() && y < midy){ 
+	// Top Right
         if( add(node->getTopRightQuad(), x, y)){
             node->incNumOfPoints();
             return true;
         }
-    } else if (x >= midx && x < node->getEX() && y >= midy && y < node->getEY()) { // Bottom Right
+    } else if (x >= midx && x < node->getEX() && y >= midy && y < node->getEY()){ 
+	// Bottom Right
         if( add(node->getBottomRightQuad(), x, y)){
             node->incNumOfPoints();
             return true;
