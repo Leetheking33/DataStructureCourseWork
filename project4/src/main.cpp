@@ -10,10 +10,6 @@ void createCover(char *arg, std::vector<int> &cover);
 void printCover(std::vector<int> &cover);
 
 int main(int argc, char *argv[]) {
-<<<<<<< HEAD
-    
-=======
->>>>>>> 3330d5fcbcc70d746e78dffd818ed71f4b93d4e2
     std::vector<int> vec;
     unsigned int count=0;
     clock_t start, end;
@@ -64,7 +60,6 @@ int main(int argc, char *argv[]) {
     } else {
         printf("Unable to open 'data/timings.dat' for writting. No timing information written.\n");
     }
-<<<<<<< HEAD
     
     
     /*
@@ -74,9 +69,6 @@ int main(int argc, char *argv[]) {
 
     group.findMinimumOverlap(num, false);
     */
-=======
-
->>>>>>> 3330d5fcbcc70d746e78dffd818ed71f4b93d4e2
     return 0;
 }
 
