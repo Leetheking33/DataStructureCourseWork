@@ -16,6 +16,15 @@ class student {
 };
 class MinimumOverlap {
     public:
+	//this vector will hold the groups that the cover students are in with
+	//out dupe groups
+	vector<int> noDupes;
+	
+	//students in cover including dupes
+	vector<int> mCover;
+
+	//mimimum amount of grades
+	unsigned int minimum = -1;
 	//vector of vectors each y vector holds the students in group
 	vector<vector<int> > groups; 	    
 	//contains the group combination for each student in vector
@@ -25,6 +34,11 @@ class MinimumOverlap {
         // Passes in a string pointing to the set/group file.
         // Make sure you store all the sets/groups!
         MinimumOverlap(const std::string &setFile);
+	
+	
+	//gets combos until amount
+	void comboUtil(vector<int> arr, int data[], int start, int end,
+			int index, int r);
 
         // Returns the minimum number of overlaps possible given a cover.
         // If print is true, it prints the set(s).

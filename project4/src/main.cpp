@@ -16,7 +16,7 @@ void createCover(char *arg, std::vector<int> &cover);
 void printCover(std::vector<int> &cover);
 
 int main(int argc, char *argv[]) {
-    /*
+    
     std::vector<int> vec;
     unsigned int count=0;
     clock_t start, end;
@@ -67,12 +67,15 @@ int main(int argc, char *argv[]) {
     } else {
         printf("Unable to open 'data/timings.dat' for writting. No timing information written.\n");
     }
-    */
     
+    
+    /*
+     * testing to make sure it works
     MinimumOverlap group("/home/leetheking33/csci-315-spring-2019/project4/data/simple.set"); 	
-    vector<int> num = {3, 5, 10, 5, 5, 5, 5};
+    vector<int> num = {1};
 
     group.findMinimumOverlap(num, false);
+    */
     return 0;
 }
 
