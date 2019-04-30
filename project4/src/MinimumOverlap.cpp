@@ -26,13 +26,15 @@ MinimumOverlap::MinimumOverlap(const std::string &setFile) {
         groups.push_back(line);
     }
     
-    /* print out vector of vectors to display groups */
+    /*
+     * print out vector of vectors to display groups
     for(int i = 0; i < groups.size(); i++){
             for (int j =0; j < groups[i].size(); j++){
                     cout << groups[i][j] << ", ";
             }
             cout << endl;
-    }		
+    }
+    */
     
 }
 
@@ -159,7 +161,7 @@ void MinimumOverlap::comboUtil(vector<int> arr, int data[], int start,
 			//cout << data[j] << ", ";
 			groupNums.push_back(data[j]);
 		}
-		cout << endl;
+		//cout << endl;
 		
 		// search groupNum which is the current combo of groups 
 		// then see if this combo contains all of the cover students
